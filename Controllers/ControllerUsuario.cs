@@ -110,7 +110,6 @@ namespace Controllers
             usuario.loginUsuario = usuarioEditado.loginUsuario;
             usuario.senhaUsuario = usuarioEditado.senhaUsuario;
             usuario.nivelDePermissão = usuarioEditado.nivelDePermissão;
-
             return true;
         }
 
