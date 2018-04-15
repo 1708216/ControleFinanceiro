@@ -8,7 +8,7 @@ namespace Model
 {
     public class Usuario
     {
-        public int idUsuario { get; set; }
+        public int UsuarioID { get; set; }
         public string nomeUsuario { get; set; }
         public string loginUsuario { get; set; }
         public string senhaUsuario { get; set; }

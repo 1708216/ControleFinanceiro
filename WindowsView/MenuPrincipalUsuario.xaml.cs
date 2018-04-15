@@ -26,9 +26,9 @@ namespace WindowsView
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            Close();
             MainWindow menuLogin = new MainWindow();
             menuLogin.Show();
+            Close();
         }
     }
 }

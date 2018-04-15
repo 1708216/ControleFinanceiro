@@ -20,7 +20,7 @@ namespace Controllers
             {
                 int id = ultimoId + 1;
                 ultimoId = id;
-                novoUsuario.idUsuario = id;
+                novoUsuario.UsuarioID = id;
                 listaUsuarios.Add(novoUsuario);
                 return true;
             }
@@ -74,7 +74,6 @@ namespace Controllers
             var u = from x in listaUsuarios
                     where x.loginUsuario.ToLower().Equals(login.Trim().ToLower())
                     select x;
-
             if (u != null)
             {
                 return u.FirstOrDefault();
@@ -83,12 +82,11 @@ namespace Controllers
             {
                 return null;
             }
-
         }
         public Usuario ProcurarUsuarioPorId(int id)
         {
             var u = from x in listaUsuarios
-                    where x.idUsuario.Equals(id)
+                    where x.UsuarioID.Equals(id)
                     select x;
             if (u != null)
             {
@@ -107,7 +105,7 @@ namespace Controllers
 
         public Boolean EditarUsuario(Usuario usuarioEditado)
         {
-            Usuario usuario = ProcurarUsuarioPorId(usuarioEditado.idUsuario);
+            Usuario usuario = ProcurarUsuarioPorId(usuarioEditado.UsuarioID);
             usuario.nomeUsuario = usuarioEditado.nomeUsuario;
             usuario.loginUsuario = usuarioEditado.loginUsuario;
             usuario.senhaUsuario = usuarioEditado.senhaUsuario;

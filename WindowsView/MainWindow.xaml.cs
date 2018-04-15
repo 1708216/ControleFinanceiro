@@ -71,13 +71,13 @@ namespace WindowsView
                 Usuario usuarioParaPermissao = cUsuario.ProcurarUsuarioPorLogin(usuario.loginUsuario);
                 if (TipoDePermissao.administrador == (TipoDePermissao)usuarioParaPermissao.nivelDePermissão)
                 {
-                    MenuAdministrador mnAdmin = new MenuAdministrador(usuarioParaPermissao);
+                    MenuPrincipalAdministrador mnAdmin = new MenuPrincipalAdministrador(usuarioParaPermissao);
                     Close();
                     mnAdmin.Show();
                 }
                 else
                 {
-                    MenuUsuario mnUsuario = new MenuUsuario();
+                    MenuPrincipalUsuario mnUsuario = new MenuPrincipalUsuario();
                     Close();
                     mnUsuario.Show();
 
@@ -85,7 +85,7 @@ namespace WindowsView
             }
             else
             {
-                ErroLoginOuSenha msn = new ErroLoginOuSenha();
+                MensagemErroLoginOuSenha msn = new MensagemErroLoginOuSenha();
                 msn.ShowDialog();
             }
 

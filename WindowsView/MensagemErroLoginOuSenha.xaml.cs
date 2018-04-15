@@ -11,23 +11,21 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-using Model;
 
 namespace WindowsView
 {
     /// <summary>
-    /// Interaction logic for MenuPrincipalAdministrador.xaml
+    /// Interaction logic for ErroLoginOuSenha.xaml
     /// </summary>
-    public partial class MenuPrincipalAdministrador : Window
+    public partial class MensagemErroLoginOuSenha : Window
     {
-        static Usuario usuarioLogado = new Usuario();
-
-        public MenuPrincipalAdministrador(Usuario usuarioRecebido)
+        public MensagemErroLoginOuSenha()
         {
-            usuarioLogado = usuarioRecebido;
             InitializeComponent();
-          //  nomeUsuario.Text = "Olá, " + usuarioLogado.nomeUsuario + " !";
         }
-
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Close();
+        }
     }
 }
