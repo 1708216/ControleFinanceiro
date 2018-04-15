@@ -66,8 +66,22 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="MenuPrincipalAdministrador.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MenuPrincipalUsuario.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="MenuPrincipalAdministrador.xaml.cs">
+      <DependentUpon>MenuPrincipalAdministrador.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MenuPrincipalUsuario.xaml.cs">
+      <DependentUpon>MenuPrincipalUsuario.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -92,6 +106,135 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="imagem\ico-condominio.gif" />
+    <Resource Include="imagem\icone-iptu2_1472674294.gif" />
+    <Resource Include="imagem\receitas.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="imagem\iconeDespesaGasolina.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="imagem\cifrao-em-uma-casa_318-37655.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="imagem\ContaCelular.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="imagem\contaDeLuz.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="imagem\contasanepar.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="imagem\dentista.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="imagem\download.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="imagem\editarUsuario.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="imagem\fundoDoMenuLogin.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="imagem\retanguloAzulDasLaterais.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="imagem\iconePresente.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="imagem\sinal-de-mais-em-um-circulo_318-53198.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="imagem\site-salao-2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="imagem\iconeAdicionarUsuario.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="imagem\iconeDespesaCartaoDeCredito.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="imagem\iconeDespesaMecânico.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="imagem\check_ok_accept_apply_1582.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="imagem\ContaEducacao.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="imagem\como-planejar-os-gastos-de-uma-viagem-alimentação.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="imagem\cutlery_84069.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="imagem\diarista.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="imagem\energy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="imagem\food %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="imagem\icone_fantrip_preto.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="imagem\iconeBar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="imagem\iconeContaDeGas.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="imagem\iconeFarmacia.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="imagem\iconeMercado.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="imagem\ICONES_CULTURA.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="imagem\iconlixeira.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="imagem\if_Service Manager_18214.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="imagem\ipva.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="imagem\lanche.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="imagem\logout.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="imagem\recyclebinfilled_recycling_full_garbage_1993.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="imagem\refeicao.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="imagem\sign-error-icon_34362.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="imagem\weight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Controllers\Controllers.csproj">
+      <Project>{579608d7-0f1c-427f-acb8-6767d3d39cf8}</Project>
+      <Name>Controllers</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Model\Model.csproj">
+      <Project>{0b02d2b1-b720-4468-8946-7b0c24ae69c1}</Project>
+      <Name>Model</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

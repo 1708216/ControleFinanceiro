@@ -1,0 +1,45 @@
+﻿<Window x:Class="WindowsView.MenuPrincipalUsuario"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WindowsView"
+        mc:Ignorable="d"
+        Title="MenuPrincipalUsuario" Height="502.18" Width="780.731">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="102*"/>
+            <ColumnDefinition Width="83*"/>
+            <ColumnDefinition Width="10*"/>
+            <ColumnDefinition Width="120*"/>
+            <ColumnDefinition Width="10*"/>
+            <ColumnDefinition Width="120*"/>
+            <ColumnDefinition Width="10*"/>
+            <ColumnDefinition Width="120*"/>
+            <ColumnDefinition Width="10*"/>
+            <ColumnDefinition Width="120*"/>
+            <ColumnDefinition Width="70*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="129*"/>
+            <RowDefinition Height="120*"/>
+            <RowDefinition Height="9*"/>
+            <RowDefinition Height="122*"/>
+            <RowDefinition Height="93*"/>
+        </Grid.RowDefinitions>
+        <Image HorizontalAlignment="Left" Height="473" VerticalAlignment="Top" Width="100" Margin="0,0,0,-0.2" Source="imagem/retanguloAzulDasLaterais.jpg" Stretch="Fill" Grid.RowSpan="5">
+            <Image.OpacityMask>
+                <ImageBrush ImageSource="imagem/retanguloAzulDasLaterais.jpg" Stretch="UniformToFill"/>
+            </Image.OpacityMask>
+        </Image>
+        <Label Content="Menu Usuário" HorizontalAlignment="Left" Margin="9.2,36,0,0" VerticalAlignment="Top" FontSize="22" FontWeight="Bold" FontFamily="Segoe UI Semibold" Height="39" Width="150" Grid.Column="2" Grid.ColumnSpan="4"/>
+        <Button x:Name="btndescricaoDespesa" Content="Button" Margin="0.2,0.2,68.4,0.8" Background="#FF060937" Grid.Column="9" Grid.Row="1" Grid.ColumnSpan="2"/>
+        <Button x:Name="btnAdicionarDespesa" Content="ADICIONAR DESPESA&#xD;&#xA;RÁPIDA" Margin="0.6,1.2,0.8,8.6" Background="#FF060937" RenderTransformOrigin="0.441,0.884" Grid.ColumnSpan="3" Grid.Column="3" Grid.Row="1" FontSize="22" Foreground="White" FontWeight="Bold" TextOptions.TextFormattingMode="Display" TextOptions.TextHintingMode="Animated"  Grid.RowSpan="2"/>
+        <Button Content="Button" Margin="0,1.2,0.4,8.6" Background="#FF060937" Grid.Row="1" Grid.Column="6" Grid.ColumnSpan="2" Grid.RowSpan="2" HorizontalAlignment="Right" Width="120"/>
+        <Button x:Name="btnAdicionarReceita" HorizontalAlignment="Left" Margin="8.2,0,0,0.2" Width="252" Background="#FF060937" Grid.Row="3" Grid.Column="6" Grid.ColumnSpan="5" Content="ADICIONAR RECEITA&#xD;&#xA;RÁPIDA" FontSize="22" FontWeight="Bold" Foreground="#FFF7F7F7" TextOptions.TextFormattingMode="Display" Height="120" VerticalAlignment="Bottom"/>
+        <Button x:Name="btnLogout" Content="Button" Margin="0.6,2.4,9.8,0.2" Background="#FF060937" Grid.Row="3" Grid.Column="3" Grid.ColumnSpan="2"/>
+        <Button Grid.Column="5" HorizontalAlignment="Left" Margin="0.2,1.4,0,0.2" Grid.Row="3" Width="120" Grid.ColumnSpan="2" Background="#FF060937" Click="Button_Click">
+            <Image Height="100" Width="100" Source="imagem/logout.png" Cursor="AppStarting"/>
+        </Button>
+    </Grid>
+</Window>

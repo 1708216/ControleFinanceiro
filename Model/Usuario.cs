@@ -13,5 +13,6 @@ namespace Model
         public string loginUsuario { get; set; }
         public string senhaUsuario { get; set; }
         public int nivelDePermissão { get; set; }
+
     }
 }

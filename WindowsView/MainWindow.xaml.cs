@@ -12,6 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Controllers;
+using Model;
 
 namespace WindowsView
 {
@@ -20,9 +22,73 @@ namespace WindowsView
     /// </summary>
     public partial class MainWindow : Window
     {
+        enum TipoDePermissao
+        {
+            administrador = 1,
+            usuarioPadrão = 2,
+        }
+
         public MainWindow()
         {
+            CriarAdmin();
+            CriarUsu();
             InitializeComponent();
+        }
+
+        public void CriarAdmin()
+        {
+            Usuario usuario = new Usuario();
+            ControllerUsuario cUsu = new ControllerUsuario();
+            usuario.loginUsuario = "admin";
+            usuario.nomeUsuario = "Administrador";
+            usuario.senhaUsuario = "123";
+            usuario.nivelDePermissão = 1;
+            cUsu.SalvarUsuario(usuario);
+
+        }
+        public void CriarUsu()
+        {
+            Usuario usuario = new Usuario();
+            ControllerUsuario cUsu = new ControllerUsuario();
+            usuario.loginUsuario = "marcelo";
+            usuario.nomeUsuario = "Marcelo";
+            usuario.senhaUsuario = "123";
+            usuario.nivelDePermissão = 2;
+            cUsu.SalvarUsuario(usuario);
+
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Usuario usuario = new Usuario();
+            ControllerUsuario cUsuario = new ControllerUsuario();
+
+            usuario.loginUsuario = btnAcessoLogin.Text;
+            usuario.senhaUsuario = btnSenha.Password;
+
+            if (cUsuario.ValidarLoginESenha(usuario))
+            {
+                Usuario usuarioParaPermissao = cUsuario.ProcurarUsuarioPorLogin(usuario.loginUsuario);
+                if (TipoDePermissao.administrador == (TipoDePermissao)usuarioParaPermissao.nivelDePermissão)
+                {
+                    MenuAdministrador mnAdmin = new MenuAdministrador(usuarioParaPermissao);
+                    Close();
+                    mnAdmin.Show();
+                }
+                else
+                {
+                    MenuUsuario mnUsuario = new MenuUsuario();
+                    Close();
+                    mnUsuario.Show();
+
+                }
+            }
+            else
+            {
+                ErroLoginOuSenha msn = new ErroLoginOuSenha();
+                msn.ShowDialog();
+            }
+
         }
     }
 }
