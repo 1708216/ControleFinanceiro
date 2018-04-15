@@ -81,6 +81,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="MenuUsuarioAdicionarDespesaRapida.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MenuPrincipalAdministrador.xaml.cs">
@@ -88,6 +92,9 @@
     </Compile>
     <Compile Include="MenuPrincipalUsuario.xaml.cs">
       <DependentUpon>MenuPrincipalUsuario.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MenuUsuarioAdicionarDespesaRapida.xaml.cs">
+      <DependentUpon>MenuUsuarioAdicionarDespesaRapida.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
@@ -115,33 +122,33 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="imagem\ico-condominio.gif" />
-    <Resource Include="imagem\icone-iptu2_1472674294.gif" />
+    <Resource Include="imagem\iconeDespesaCondominio.gif" />
+    <Resource Include="imagem\iconeDespesaIPTU.gif" />
     <Resource Include="imagem\receitas.gif" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="imagem\iconeDespesaGasolina.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="imagem\cifrao-em-uma-casa_318-37655.jpg" />
+    <Resource Include="imagem\iconeDespesaFinanciamento.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="imagem\ContaCelular.jpg" />
+    <Resource Include="imagem\iconeDespesaCelular.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="imagem\contaDeLuz.jpg" />
+    <Resource Include="imagem\iconeDespesaDeLuz.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="imagem\contasanepar.jpg" />
+    <Resource Include="imagem\iconeDespesaSanepar.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="imagem\dentista.jpg" />
+    <Resource Include="imagem\iconeDespesadentista.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="imagem\download.jpg" />
+    <Resource Include="imagem\iconeDespesaSeguroCarro.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="imagem\editarUsuario.jpg" />
+    <Resource Include="imagem\iconeMenuEditarUsuario.jpg" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="imagem\fundoDoMenuLogin.jpg" />
@@ -150,13 +157,13 @@
     <Resource Include="imagem\retanguloAzulDasLaterais.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="imagem\iconePresente.jpg" />
+    <Resource Include="imagem\iconeDespesaPresente.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="imagem\sinal-de-mais-em-um-circulo_318-53198.jpg" />
+    <Resource Include="imagem\iconeDeMaisParaAdicionar.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="imagem\site-salao-2.jpg" />
+    <Resource Include="imagem\iconeDespesaCabeleireiro.jpg" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="imagem\iconeAdicionarUsuario.png" />
@@ -168,70 +175,64 @@
     <Resource Include="imagem\iconeDespesaMecânico.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="imagem\check_ok_accept_apply_1582.png" />
+    <Resource Include="imagem\iconeMensagemExito.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="imagem\ContaEducacao.png" />
+    <Resource Include="imagem\iconeDespesaEducacao.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="imagem\como-planejar-os-gastos-de-uma-viagem-alimentação.png" />
+    <Resource Include="imagem\iconeDespesaRefeicao.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="imagem\cutlery_84069.png" />
+    <Resource Include="imagem\iconeDespesaDiarista.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="imagem\diarista.png" />
+    <Resource Include="imagem\iconeDespesaGasolina.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="imagem\energy.png" />
+    <Resource Include="imagem\iconeDespesaLanche.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="imagem\food %281%29.png" />
+    <Resource Include="imagem\iconeDespesaViagem.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="imagem\icone_fantrip_preto.png" />
+    <Resource Include="imagem\iconeDespesaBar.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="imagem\iconeBar.png" />
+    <Resource Include="imagem\iconeDespesaContaDeGas.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="imagem\iconeContaDeGas.png" />
+    <Resource Include="imagem\iconeDespesaFarmacia.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="imagem\iconeFarmacia.png" />
+    <Resource Include="imagem\iconeDespesaMercado.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="imagem\iconeMercado.png" />
+    <Resource Include="imagem\iconeDespesaLazer.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="imagem\ICONES_CULTURA.png" />
+    <Resource Include="imagem\iconeExcluir.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="imagem\iconlixeira.png" />
+    <Resource Include="imagem\iconeEditar.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="imagem\if_Service Manager_18214.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="imagem\ipva.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="imagem\lanche.png" />
+    <Resource Include="imagem\iconeDespesaIpva.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="imagem\logout.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="imagem\recyclebinfilled_recycling_full_garbage_1993.png" />
+    <Content Include="imagem\iconeLixeiraEmVermelhoEBranco.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="imagem\refeicao.png" />
+    <Resource Include="imagem\iconePratoRefeicao.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="imagem\iconeMensagemErro.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="imagem\weight.png" />
+    <Resource Include="imagem\iconeDespesaAcademia.png" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Controllers\Controllers.csproj">
