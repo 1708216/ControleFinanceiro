@@ -30,5 +30,13 @@ namespace WindowsView
             menuLogin.Show();
             Close();
         }
+
+        private void btnAdicionarDespesa_Click_1(object sender, RoutedEventArgs e)
+        {
+            
+            MenuUsuarioAdicionarDespesaRapida mnAddDespesaRapida = new MenuUsuarioAdicionarDespesaRapida();
+            mnAddDespesaRapida.ShowDialog();
+
+        }
     }
 }

@@ -130,19 +130,16 @@
     <Resource Include="imagem\iconeDespesaGasolina.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="imagem\iconeDespesaFinanciamento.jpg" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="imagem\iconeDespesaCelular.jpg" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="imagem\iconeDespesaDeLuz.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="imagem\iconeDespesaSanepar.jpg" />
+    <Resource Include="imagem\iconeDespesaAgua.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="imagem\iconeDespesadentista.jpg" />
+    <Resource Include="imagem\iconeDespesaDentista.jpg" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="imagem\iconeDespesaSeguroCarro.jpg" />
@@ -172,7 +169,7 @@
     <Resource Include="imagem\iconeDespesaCartaoDeCredito.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="imagem\iconeDespesaMecânico.png" />
+    <Resource Include="imagem\iconeDespesaMecanico.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="imagem\iconeMensagemExito.png" />
@@ -223,6 +220,9 @@
     <Resource Include="imagem\logout.png" />
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="imagem\iconeDespesaComboInternet.png" />
+    <Resource Include="imagem\iconeDespesaMedica.png" />
+    <Resource Include="imagem\iconeDespesaFinanciamentoCasa.jpg" />
     <Content Include="imagem\iconeLixeiraEmVermelhoEBranco.jpg" />
   </ItemGroup>
   <ItemGroup>

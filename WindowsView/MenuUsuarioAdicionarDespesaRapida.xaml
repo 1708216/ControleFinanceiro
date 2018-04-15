@@ -1,11 +1,10 @@
-﻿<Window x:Class="WindowsView.MenuUsuarioAdicionarDespesaRapida"
+﻿<Window x:Name="MenuAdiconarDespesaRapida" x:Class="WindowsView.MenuUsuarioAdicionarDespesaRapida"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WindowsView"
-        mc:Ignorable="d"
-        Title="MenuUsuarioAdicionarDespesaRapida" Height="495.428" Width="785.854">
+        mc:Ignorable="d" Height="495.428" Width="785.854">
     <Grid Margin="-1,0,1.2,0">
         <Grid.RowDefinitions>
             <RowDefinition Height="65*"/>
@@ -37,92 +36,92 @@
             <ColumnDefinition Width="5*"/>
             <ColumnDefinition Width="24*"/>
         </Grid.ColumnDefinitions>
-        <Button HorizontalAlignment="Left" Margin="0,69,0,0" VerticalAlignment="Top" Width="84" Height="91" Background="#FF060937" Grid.RowSpan="2" Grid.Column="1" Grid.ColumnSpan="2" Click="Button_Click">
-            <Image Height="62" Width="52" Source="imagem/iconeMercado.png"/>
+        <Button HorizontalAlignment="Left" Margin="0,69,0,0" VerticalAlignment="Top" Width="84" Height="91" Background="#FF060937" Grid.RowSpan="2" Grid.Column="1" Grid.ColumnSpan="2">
+            <Image Height="62" Width="52" Source="imagem/iconeDespesaMercado.png"/>
         </Button>
         <Button HorizontalAlignment="Left" Margin="0.8,69,0,0" VerticalAlignment="Top" Width="82" Height="91" Background="#FF060937" Grid.Column="3" Grid.ColumnSpan="2" Grid.RowSpan="2">
             <Image Height="62" Width="52
-                   " Source="imagem/"/>
+                   " Source="imagem/iconeDespesaComboInternet.png"/>
         </Button>
         <Button HorizontalAlignment="Left" Margin="0.6,69,0,0" VerticalAlignment="Top" Width="82" Height="91" Background="#FF060937" Grid.Column="5" Grid.ColumnSpan="2" Grid.RowSpan="2">
-            <Image Height="62" Width="52" Source="imagem/iconeContaDeLuz.jpg"/>
+            <Image Height="62" Width="52" Source="imagem/iconeDespesaDeLuz.jpg"/>
         </Button>
         <Button HorizontalAlignment="Left" Margin="0.4,69,0,0" VerticalAlignment="Top" Width="80" Height="91" Background="#FF060937" Grid.Column="7" Grid.RowSpan="2">
-            <Image Height="62" Width="52" Source="imagem/iconeContasanepar.jpg" Stretch="Fill"/>
+            <Image Height="62" Width="52" Source="imagem/iconeDespesaAgua.jpg" Stretch="Fill"/>
         </Button>
         <Button HorizontalAlignment="Left" Margin="0.2,69,0,0" VerticalAlignment="Top" Width="81" Height="91" Background="#FF060937" Grid.Column="9" Grid.RowSpan="2">
-            <Image Height="62" Width="52" Source="imagem/CartaoCredit.png"/>
+            <Image Height="62" Width="52" Source="imagem/iconeDespesaCartaoDeCredito.png"/>
         </Button>
         <Button HorizontalAlignment="Left" Margin="4.6,69,0,0" VerticalAlignment="Top" Width="83" Height="91" Background="#FF060937" Grid.Column="10" Grid.RowSpan="2" Grid.ColumnSpan="3">
-            <Image Height="62" Width="52" Source="imagem/ContaEducacao.png"/>
+            <Image Height="62" Width="52" Source="imagem/iconeDespesaEducacao.png"/>
         </Button>
         <Button HorizontalAlignment="Left" Margin="0,7,0,0" Grid.Row="2" VerticalAlignment="Top" Width="84" Height="89" Background="#FF060937" Grid.RowSpan="2" Grid.Column="1" Grid.ColumnSpan="2">
-            <Image Height="62" Width="52" Source="imagem/iconeRefeicao.png"/>
+            <Image Height="62" Width="52" Source="imagem/iconeDespesaEducacao.png"/>
         </Button>
         <Button HorizontalAlignment="Right" Margin="0,0.8,0.6,0" Grid.Row="3" VerticalAlignment="Top" Width="81" Height="88" Background="#FF060937" Grid.Column="3">
-            <Image Height="62" Width="52" Source="imagem/food (1).png"/>
+            <Image Height="62" Width="52" Source="imagem/iconeDespesaRefeicao.png"/>
         </Button>
         <Button HorizontalAlignment="Left" Margin="0.8,7,0,0" Grid.Row="2" VerticalAlignment="Top" Width="81" Height="89" Background="#FF060937" Grid.Column="5" Grid.ColumnSpan="2" Grid.RowSpan="2">
-            <Image Height="62" Width="52" Source="imagem/iconeMecanico.png"/>
+            <Image Height="62" Width="52" Source="imagem/iconedespesaMecanico.png"/>
         </Button>
         <Button HorizontalAlignment="Left" Margin="0.4,0.8,0,0" Grid.Row="3" VerticalAlignment="Top" Width="82" Height="89" Background="#FF060937" Grid.Column="7">
-            <Image Height="62" Width="52" Source="imagem/iconeAcademia.png"/>
+            <Image Height="62" Width="52" Source="imagem/iconeDespesaAcademia.png"/>
         </Button>
         <Button HorizontalAlignment="Left" Margin="0.4,7,0,0" Grid.Row="2" VerticalAlignment="Top" Width="81" Height="89" Background="#FF060937" Grid.Column="9" Grid.RowSpan="2">
-            <Image Height="62" Width="52" Source="imagem/variante-estetoscopio-medico_318-43680.jpg"/>
+            <Image Height="62" Width="52" Source="imagem/iconeDespesaMedica.png"/>
         </Button>
         <Button HorizontalAlignment="Left" Margin="0,7,0,0" Grid.Row="2" VerticalAlignment="Top" Width="82" Height="89" Background="#FF060937" Grid.Column="11" Grid.RowSpan="2">
-            <Image Height="62" Width="52" Source="imagem/iconeBar.png"/>
+            <Image Height="62" Width="52" Source="imagem/iconeDespesaBar.png"/>
         </Button>
         <Button HorizontalAlignment="Left" Grid.Row="5" VerticalAlignment="Top" Width="82" Height="91" Background="#FF060937" Margin="0,0.2,0,0" Grid.RowSpan="2" Grid.Column="1">
-            <Image Height="62" Width="52" Source="imagem/site-salao-2.jpg"/>
+            <Image Height="62" Width="52" Source="imagem/iconeDespesaCabeleireiro.jpg"/>
         </Button>
         <Button HorizontalAlignment="Left" Margin="4.6,0.2,0,0" Grid.Row="5" VerticalAlignment="Top" Width="83" Height="91" Background="#FF060937" Grid.Column="2" Grid.RowSpan="2" Grid.ColumnSpan="3">
-            <Image Height="62" Width="52" Source="imagem/iconeDiarista.png" Stretch="UniformToFill"/>
+            <Image Height="52" Width="58" Source="imagem/iconeDespesaDiarista.png" Stretch="UniformToFill"/>
         </Button>
         <Button HorizontalAlignment="Left" Grid.Row="5" VerticalAlignment="Top" Width="82" Height="90" Background="#FF060937" Grid.Column="5" Margin="0.6,0.2,0,0" Grid.ColumnSpan="2" >
-            <Image Height="62" Width="52" Source="imagem/iconePostoGasolina.png"/>
+            <Image Height="62" Width="52" Source="imagem/iconeDespesaGasolina.png"/>
         </Button>
         <Button HorizontalAlignment="Left" Margin="0.4,0.2,0,0" Grid.Row="5" VerticalAlignment="Top" Width="81" Height="91" Background="#FF060937" Grid.Column="7" Grid.RowSpan="2">
-            <Image Height="62" Width="52" Source="imagem/iconeCondominio.gif" Stretch="Fill"/>
+            <Image Height="62" Width="52" Source="imagem/iconeDespesaCondominio.gif" Stretch="Fill"/>
         </Button>
         <Button HorizontalAlignment="Left" Grid.Row="5" VerticalAlignment="Top" Width="81" Height="89" Background="#FF060937" Grid.Column="9" Margin="0.2,1.2,0,0">
-            <Image Height="55" Width="65" Source="imagem/iconeIpva.png" Stretch="Fill"/>
+            <Image Height="55" Width="65" Source="imagem/iconeDespesaIpva.png" Stretch="Fill"/>
         </Button>
         <Button HorizontalAlignment="Left" Margin="0.8,0.2,0,0" Grid.Row="5" VerticalAlignment="Top" Width="82" Height="90" Background="#FF060937" Grid.Column="11" Grid.ColumnSpan="2">
-            <Image Height="62" Width="52" Source="imagem/iconeContaDeGas.png"/>
+            <Image Height="62" Width="52" Source="imagem/iconeDespesaContaDeGas.png"/>
         </Button>
         <Button HorizontalAlignment="Left" Margin="0,6.8,0,0" Grid.Row="6" VerticalAlignment="Top" Width="82" Height="91" Background="#FF060937" Grid.RowSpan="3" Grid.Column="1">
-            <Image Height="62" Width="52" Source="imagem/iconePresente.jpg"/>
+            <Image Height="62" Width="52" Source="imagem/iconeDespesaPresente.jpg"/>
         </Button>
         <Button HorizontalAlignment="Left" Margin="4.6,6.8,0,0" Grid.Row="6" VerticalAlignment="Top" Width="82" Height="91" Background="#FF060937" Grid.Column="2" Grid.RowSpan="3" Grid.ColumnSpan="2">
-            <Image Height="62" Width="52" Source="imagem/cifrao-em-uma-casa_318-37655.jpg"/>
+            <Image Height="62" Width="52" Source="imagem/iconeDespesaFinanciamentoCasa.jpg"/>
         </Button>
         <Button HorizontalAlignment="Left" Margin="0.8,6.8,0,0" Grid.Row="6" VerticalAlignment="Top" Width="82" Height="91" Background="#FF060937" Grid.Column="5" Grid.ColumnSpan="2" Grid.RowSpan="3">
-            <Image Height="62" Width="52" Source="imagem/icone-iptu2_1472674294.gif" Stretch="Fill"/>
+            <Image Height="62" Width="52" Source="imagem/iconeDespesaIptu.gif" Stretch="Fill"/>
         </Button>
         <Button HorizontalAlignment="Left" Margin="4.4,6.8,0,0" Grid.Row="6" VerticalAlignment="Top" Width="82" Height="91" Background="#FF060937" Grid.Column="6" Grid.ColumnSpan="2" Grid.RowSpan="3">
-            <Image Height="62" Width="52" Source="imagem/iconeFarmacia.png"/>
+            <Image Height="62" Width="52" Source="imagem/iconeDespesaFarmacia.png"/>
         </Button>
         <Button HorizontalAlignment="Left" Margin="0.2,6.8,0,0" Grid.Row="6" VerticalAlignment="Top" Width="81" Height="91" Background="#FF060937" Grid.Column="9" Grid.RowSpan="3">
-            <Image Height="62" Width="52" Source="imagem/ContaCelular.jpg"/>
+            <Image Height="62" Width="52" Source="imagem/iconeDespesaCelular.jpg"/>
         </Button>
         <Button HorizontalAlignment="Left" Margin="0,6.8,0,0" Grid.Row="6" VerticalAlignment="Top" Width="83" Height="91" Background="#FF060937" Grid.Column="11" Grid.RowSpan="3" Grid.ColumnSpan="2">
-            <Image Height="62" Width="52" Source="imagem/ICONES_CULTURA.png" Stretch="Fill"/>
+            <Image Height="62" Width="52" Source="imagem/iconeDespesaLazer.png" Stretch="Fill"/>
         </Button>
         <Button HorizontalAlignment="Left" Margin="0,6.8,0,0" Grid.Row="6" VerticalAlignment="Top" Width="82" Height="91" Background="#FF060937" Grid.Column="13" Grid.RowSpan="3" Grid.ColumnSpan="2">
-            <Image Height="62" Width="52" Source="imagem/sinal-de-mais-em-um-circulo_318-53198.jpg"/>
+            <Image Height="62" Width="52" Source="imagem/iconeDeMaisParaAdicionar.jpg"/>
         </Button>
         <Button HorizontalAlignment="Left" Margin="5.4,0.2,0,0" Grid.Row="5" VerticalAlignment="Top" Width="83" Height="90" Background="#FF060937" Grid.Column="12" Grid.ColumnSpan="3">
-            <Image Height="62" Width="52" Source="imagem/icone_fantrip_preto.png"/>
+            <Image Height="62" Width="52" Source="imagem/iconeDespesaViagem.png"/>
         </Button>
         <Button HorizontalAlignment="Left" Margin="5.4,7,0,0" Grid.Row="2" VerticalAlignment="Top" Width="83" Height="89" Background="#FF060937" Grid.Column="12" Grid.RowSpan="2" Grid.ColumnSpan="3">
-            <Image Height="73" Width="66" Source="imagem/dentista.jpg"/>
+            <Image Height="73" Width="66" Source="imagem/iconeDespesaDentista.jpg"/>
         </Button>
         <Button HorizontalAlignment="Left" Margin="5.4,69,0,0" VerticalAlignment="Top" Width="83" Height="91" Background="#FF060937" Grid.Column="12" Grid.RowSpan="2" Grid.ColumnSpan="3">
-            <Image Height="70" Width="62" Source="imagem/iconesegurodocarro.jpg"/>
+            <Image Height="70" Width="62" Source="imagem/iconeDespesaSeguroCarro.jpg"/>
         </Button>
-        <Image HorizontalAlignment="Left" Height="468" Grid.RowSpan="10" VerticalAlignment="Top" Width="87" Source="imagem/lateralAzul.jpg" Stretch="Fill"/>
+        <Image HorizontalAlignment="Left" Height="468" Grid.RowSpan="10" VerticalAlignment="Top" Width="87" Source="imagem/retanguloAzulDasLaterais.jpg" Stretch="Fill"/>
         <Label Content="Selecione a Despesa" HorizontalAlignment="Left" Margin="119,10,0,0" VerticalAlignment="Top" Grid.ColumnSpan="6" Width="214" FontSize="20" Height="32" FontFamily="Segoe UI Black" FontWeight="Bold"/>
 
     </Grid>
