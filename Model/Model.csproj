@@ -55,6 +55,10 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Receita.cs" />
+    <Compile Include="Registro.cs" />
+    <Compile Include="RegistroDeDespesa.cs" />
+    <Compile Include="RegistroDeReceita.cs" />
+    <Compile Include="Usuario.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>

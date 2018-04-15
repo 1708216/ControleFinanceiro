@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace Model
 {
-    class Despesa
+    public class Despesa
     {
         public int DespesaID {get; set;}
         public string Descricao {get; set;}
         private int NumeroOperador {get; set;}
 
-        private Despesa()
+        public Despesa()
         {
             NumeroOperador = 1;
         }

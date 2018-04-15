@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace Model
 {
-    class Receita
+    public class Receita
     {
         public int ReceitaID {get; set;}
         public string Descricao {get; set;}
         private int NumeroOperador {get; set;}
 
-        private Receita()
+        public Receita()
         {
             NumeroOperador = 2;
         }
