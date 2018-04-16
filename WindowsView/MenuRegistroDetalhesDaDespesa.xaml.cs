@@ -22,11 +22,12 @@ namespace WindowsView
     public partial class MenuRegistroDetalhesDaDespesa : Window
     {
 
-        static RegistroDeDespesa registro = new RegistroDeDespesa();
+        private static Despesa despesaAdicionar;
 
-        public MenuRegistroDetalhesDaDespesa()
+        public MenuRegistroDetalhesDaDespesa(Despesa despesa)
         {
             InitializeComponent();
+            despesaAdicionar = despesa;
         }
 
         private void ComboListaUsuario_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -36,10 +37,16 @@ namespace WindowsView
 
         private void btnAdicionarDespesa_Click(object sender, RoutedEventArgs e)
         {
-
+            RegistroDeDespesa registro = new RegistroDeDespesa();
+            registro.despesa = despesaAdicionar; 
             registro.UsuarioID = int.Parse(txtValorDespesa.Text);
             registro.Data = DateTime.Parse(boxDataDespesa.Text);
             registro.Valor = double.Parse(txtValorDespesa.Text);
+
+            Controller Cd = new ControllerDespesa();
+            Cd.SalvarDespesa(registro);
+
+
             Close();
 
         }
@@ -47,11 +54,6 @@ namespace WindowsView
         private void btnCancela_Click(object sender, RoutedEventArgs e)
         {
             Close();
-        }
-
-        public RegistroDeDespesa retornarRegistro()
-        {
-            return registro;
         }
 
     }

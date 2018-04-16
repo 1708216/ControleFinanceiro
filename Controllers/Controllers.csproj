@@ -78,6 +78,7 @@
     <Compile Include="ContextoSigleton.cs" />
     <Compile Include="ControllerDespesa.cs" />
     <Compile Include="ControllerReceita.cs" />
+    <Compile Include="ControllerRegistroDespesa.cs" />
     <Compile Include="ControllerUsuario.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>

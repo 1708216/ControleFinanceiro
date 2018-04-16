@@ -39,11 +39,8 @@ namespace WindowsView
 
         private void CadastrarDespesaClicada(Despesa despesaClicada)
         {
-            ControllerDespesa Cd = new ControllerDespesa();
-
-
-           // Cd.SalvarDespesa(despesaClicada);
-
+            MenuRegistroDetalhesDaDespesa rgDetalhes = new MenuRegistroDetalhesDaDespesa(despesaClicada);
+            rgDetalhes.ShowDialog();
         }
     }
 }
