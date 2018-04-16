@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Controllers
 {
-    class ControllerDespesa
+    public class ControllerDespesa
     {
         static ObservableCollection<Despesa> listaDespesas = new ObservableCollection<Despesa>();
         static int ultimoID = 0;

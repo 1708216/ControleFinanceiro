@@ -11,6 +11,8 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using Model;
+using Controllers;
 
 namespace WindowsView
 {
@@ -19,9 +21,29 @@ namespace WindowsView
     /// </summary>
     public partial class MenuUsuarioAdicionarDespesaRapida : Window
     {
+        static Despesa despesa = new Despesa();
+
         public MenuUsuarioAdicionarDespesaRapida()
         {
             InitializeComponent();
+        }
+
+        private void btnDespesaMercado_Click(object sender, RoutedEventArgs e)
+        {
+            despesa.DespesaID = 1;
+            despesa.Descricao = "MERCADO";
+            CadastrarDespesaClicada(despesa);
+        }
+
+
+
+        private void CadastrarDespesaClicada(Despesa despesaClicada)
+        {
+            ControllerDespesa Cd = new ControllerDespesa();
+
+
+           // Cd.SalvarDespesa(despesaClicada);
+
         }
     }
 }

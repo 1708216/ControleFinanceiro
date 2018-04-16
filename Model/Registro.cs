@@ -8,8 +8,10 @@ namespace Model
 {
     public abstract class Registro
     {
-        int ResgistroID { get; set; }
-        DateTime Data { get; set;}
-        double Valor { get; set; }
+        public  int ResgistroID { get; set; }
+        public DateTime Data { get; set;}
+        public double Valor { get; set; }
+        public int UsuarioID { get; set; }
+
      }
 }

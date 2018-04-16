@@ -36,7 +36,7 @@
             <ColumnDefinition Width="5*"/>
             <ColumnDefinition Width="24*"/>
         </Grid.ColumnDefinitions>
-        <Button HorizontalAlignment="Left" Margin="0,69,0,0" VerticalAlignment="Top" Width="84" Height="91" Background="#FF060937" Grid.RowSpan="2" Grid.Column="1" Grid.ColumnSpan="2">
+        <Button x:Name="btnDespesaMercado" HorizontalAlignment="Left" Margin="0,69,0,0" VerticalAlignment="Top" Width="84" Height="91" Background="#FF060937" Grid.RowSpan="2" Grid.Column="1" Grid.ColumnSpan="2" Click="btnDespesaMercado_Click">
             <Image Height="62" Width="52" Source="imagem/iconeDespesaMercado.png"/>
         </Button>
         <Button HorizontalAlignment="Left" Margin="0.8,69,0,0" VerticalAlignment="Top" Width="82" Height="91" Background="#FF060937" Grid.Column="3" Grid.ColumnSpan="2" Grid.RowSpan="2">

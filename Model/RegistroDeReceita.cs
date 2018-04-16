@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Model
 {
-    class RegistroDeReceita : Registro
+    public class RegistroDeReceita : Registro
     {
         int RegistroReceitaID {get;set;}
         Receita receita { get; set; }
