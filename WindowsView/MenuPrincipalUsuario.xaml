@@ -41,6 +41,6 @@
         <Button Grid.Column="5" HorizontalAlignment="Left" Margin="0.2,1.4,0,0.2" Grid.Row="3" Width="120" Grid.ColumnSpan="2" Background="#FF060937" Click="Button_Click">
             <Image Height="100" Width="100" Source="imagem/logout.png" Cursor="AppStarting"/>
         </Button>
-        <TextBox x:Name="nomeUsuario" Grid.ColumnSpan="4" Grid.Column="7" HorizontalAlignment="Left" Height="23" Margin="61.6,31,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="208" Text="Nome do Usuário" Background="White" BorderBrush="White" FontWeight="Bold" FontSize="18" SelectionBrush="#FFF7F8F9" IsEnabled="False" Foreground="#FF060937"/>
+        <TextBox x:Name="nomeUsuario" Grid.ColumnSpan="4" Grid.Column="7" HorizontalAlignment="Left" Height="23" Margin="61.6,31,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="208" Text="Nome do Usuário" Background="White" BorderBrush="White" FontWeight="Bold" FontSize="18" SelectionBrush="#FFF7F8F9" IsEnabled="False" Foreground="Red"/>
     </Grid>
 </Window>

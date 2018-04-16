@@ -14,5 +14,10 @@ namespace Model
         public string senhaUsuario { get; set; }
         public int nivelDePermissão { get; set; }
 
+        public override string ToString()
+        {
+            return string.Format(this.nomeUsuario);
+        }
+
     }
 }

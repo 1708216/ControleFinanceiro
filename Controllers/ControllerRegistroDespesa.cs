@@ -15,7 +15,7 @@ namespace Controllers
 
             if(registro == null)
             {
-                ContextoSigleton.Instancia.RegistroDeDespesas.Add(registro);
+                ContextoSigleton.Instancia.RegistroDeDespesas.Add(registroRecebido);
                 ContextoSigleton.Instancia.SaveChanges();
                 return true;
             }
