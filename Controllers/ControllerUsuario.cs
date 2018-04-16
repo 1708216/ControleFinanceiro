@@ -47,10 +47,10 @@ namespace Controllers
             }
         }
 
-        public Usuario ProcurarUsuarioPorNome(string usuario)
+        public Usuario ProcurarUsuarioPorNome(string nomeUsuario)
         {
             var u = from x in ContextoSigleton.Instancia.Usuarios 
-                    where x.nomeUsuario.ToLower().Equals(usuario.Trim().ToLower())
+                    where x.nomeUsuario.ToLower().Equals(nomeUsuario.Trim().ToLower())
                     select x;
 
             if (u != null)

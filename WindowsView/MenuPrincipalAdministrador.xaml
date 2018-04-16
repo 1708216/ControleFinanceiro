@@ -18,7 +18,7 @@
         </Image>
         <TextBlock x:Name="nomeUsuario" HorizontalAlignment="Left" Margin="587,21,0,0" TextWrapping="Wrap" Text="Nome do Usuario" VerticalAlignment="Top" Width="154" FontSize="16" FontWeight="Bold"/>
         <Label Content="Menu Administrador" HorizontalAlignment="Left" Margin="173,10,0,0" VerticalAlignment="Top" FontSize="22" FontWeight="Bold"/>
-        <Button x:Name="btnAdminCadastarUsuario" HorizontalAlignment="Left" Margin="173,114,0,0" VerticalAlignment="Top" Width="120" Height="86" Background="#FF060937">
+        <Button x:Name="btnAdminCadastarUsuario" HorizontalAlignment="Left" Margin="173,114,0,0" VerticalAlignment="Top" Width="120" Height="86" Background="#FF060937" Click="btnAdminCadastarUsuario_Click">
             <Image Height="72" Source="imagem/iconeAdicionarUsuario.png" Stretch="Fill" Width="63">
                 <Image.OpacityMask>
                     <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">

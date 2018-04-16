@@ -1,0 +1,19 @@
+﻿<Window x:Name="msgSucesso" x:Class="WindowsView.MensagemDeSucesso"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WindowsView"
+        mc:Ignorable="d"
+        Title="MensagemDeSucesso" Height="122.927" Width="358.536">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="15*"/>
+            <ColumnDefinition Width="73*"/>
+        </Grid.ColumnDefinitions>
+        <Label Content="Operação realizada com Sucesso!&#xA;" HorizontalAlignment="Left" Margin="18.09,10,0,0" VerticalAlignment="Top" Width="230" FontWeight="Bold" FontSize="14" Height="38" Grid.Column="1"/>
+        <Button Content="OK&#xA;" HorizontalAlignment="Left" Margin="59.09,46,0,0" VerticalAlignment="Top" Width="112" Height="23" Click="Button_Click" Grid.Column="1"/>
+        <Image Margin="31,25,288,34.6" Source="imagem/iconeMensagemExito.png" Stretch="Fill" Grid.ColumnSpan="2"/>
+
+    </Grid>
+</Window>

@@ -29,5 +29,10 @@ namespace WindowsView
             nomeUsuario.Text = "Olá, " + usuarioLogado.nomeUsuario + " !";
         }
 
+        private void btnAdminCadastarUsuario_Click(object sender, RoutedEventArgs e)
+        {
+            MenuAdministradorCadastrarNovoUsuario mnCadastrar = new MenuAdministradorCadastrarNovoUsuario();
+            mnCadastrar.ShowDialog();
+        }
     }
 }
