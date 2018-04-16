@@ -44,5 +44,11 @@ namespace WindowsView
             mnAddDespesaRapida.ShowDialog();
 
         }
+
+        private void btnVisualizarDespesas_Click(object sender, RoutedEventArgs e)
+        {
+            MenuVisualizacaoDespesas visualizar = new MenuVisualizacaoDespesas();
+            visualizar.ShowDialog();
+        }
     }
 }

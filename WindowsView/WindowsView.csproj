@@ -120,6 +120,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="MenuVisualizacaoDespesas.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MenuAdministradorCadastrarNovoUsuario.xaml.cs">
@@ -136,6 +140,9 @@
     </Compile>
     <Compile Include="MenuUsuarioAdicionarDespesaRapida.xaml.cs">
       <DependentUpon>MenuUsuarioAdicionarDespesaRapida.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MenuVisualizacaoDespesas.xaml.cs">
+      <DependentUpon>MenuVisualizacaoDespesas.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
@@ -262,6 +269,7 @@
     <Resource Include="imagem\logout.png" />
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="imagem\iconeVisualizar.png" />
     <Resource Include="imagem\iconeDespesaComboInternet.png" />
     <Resource Include="imagem\iconeDespesaMedica.png" />
     <Resource Include="imagem\iconeDespesaFinanciamentoCasa.jpg" />
