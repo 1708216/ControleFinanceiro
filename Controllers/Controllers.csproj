@@ -75,6 +75,7 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="ContextoSigleton.cs" />
     <Compile Include="ControllerDespesa.cs" />
     <Compile Include="ControllerReceita.cs" />
     <Compile Include="ControllerUsuario.cs" />

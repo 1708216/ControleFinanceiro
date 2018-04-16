@@ -26,7 +26,7 @@ namespace WindowsView
         {
             usuarioLogado = usuarioRecebido;
             InitializeComponent();
-          //  nomeUsuario.Text = "Olá, " + usuarioLogado.nomeUsuario + " !";
+            nomeUsuario.Text = "Olá, " + usuarioLogado.nomeUsuario + " !";
         }
 
     }

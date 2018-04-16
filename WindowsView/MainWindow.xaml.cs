@@ -77,7 +77,7 @@ namespace WindowsView
                 }
                 else
                 {
-                    MenuPrincipalUsuario mnUsuario = new MenuPrincipalUsuario();
+                    MenuPrincipalUsuario mnUsuario = new MenuPrincipalUsuario(usuarioParaPermissao);
                     Close();
                     mnUsuario.Show();
 

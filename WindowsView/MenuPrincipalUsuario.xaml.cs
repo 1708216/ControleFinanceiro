@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using Model;
 
 namespace WindowsView
 {
@@ -19,9 +20,14 @@ namespace WindowsView
     /// </summary>
     public partial class MenuPrincipalUsuario : Window
     {
-        public MenuPrincipalUsuario()
+
+        static Usuario usuarioLogado = new Usuario();
+
+        public MenuPrincipalUsuario(Usuario usuarioRecebido)
         {
+            usuarioLogado = usuarioRecebido;
             InitializeComponent();
+            nomeUsuario.Text = "Olá, " + usuarioLogado.nomeUsuario;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)

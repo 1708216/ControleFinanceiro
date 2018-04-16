@@ -4,9 +4,40 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WindowsView"
-        mc:Ignorable="d"
-        Title="MenuPrincipalAdministrador" Height="300" Width="300">
+        mc:Ignorable="d"   Height="502.18" Width="780.731">
     <Grid>
-        
+        <Image Margin="-184,184,484.4,183.8" Source="imagem/retanguloAzulDasLaterais.jpg" Stretch="Fill" RenderTransformOrigin="0.5,0.5">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleY="-1"/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="89.839"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+        <TextBlock x:Name="nomeUsuario" HorizontalAlignment="Left" Margin="587,21,0,0" TextWrapping="Wrap" Text="Nome do Usuario" VerticalAlignment="Top" Width="154" FontSize="16" FontWeight="Bold"/>
+        <Label Content="Menu Administrador" HorizontalAlignment="Left" Margin="173,10,0,0" VerticalAlignment="Top" FontSize="22" FontWeight="Bold"/>
+        <Button x:Name="btnAdminCadastarUsuario" HorizontalAlignment="Left" Margin="173,114,0,0" VerticalAlignment="Top" Width="120" Height="86" Background="#FF060937">
+            <Image Height="72" Source="imagem/iconeAdicionarUsuario.png" Stretch="Fill" Width="63">
+                <Image.OpacityMask>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="Black" Offset="0"/>
+                        <GradientStop Color="White" Offset="1"/>
+                    </LinearGradientBrush>
+                </Image.OpacityMask>
+            </Image>
+        </Button>
+        <Button x:Name="btnCadastrarOperacao" Content="Cadastrar Operações &#xD;&#xA;Financeiras&#xD;&#xA;" HorizontalAlignment="Left" Margin="308,114,0,0" VerticalAlignment="Top" Width="265" Background="#FF060937" Height="86" FontSize="16" Foreground="White" FontWeight="Bold"/>
+        <Button x:Name="btnExclurUsuario" HorizontalAlignment="Left" Margin="585,114,0,0" VerticalAlignment="Top" Width="120" Background="#FF060937" Height="86">
+            <Image Height="63" Width="68" Source="imagem/iconeExcluir.png"/>
+        </Button>
+        <Button x:Name="btnSairDoMenuAdmin" HorizontalAlignment="Left" Margin="585,211,0,0" VerticalAlignment="Top" Width="120" Background="#FF060937" Height="86">
+            <Image Height="70" Source="imagem/logout.png" Stretch="Fill" Width="66" RenderTransformOrigin="0.5,0.5"/>
+        </Button>
+        <Button x:Name="btnAdmEditarUsuario" HorizontalAlignment="Left" Margin="447,211,0,0" VerticalAlignment="Top" Width="120" Height="86" Background="#FF060937">
+            <Image Height="64" Width="84" Source="imagem/iconeMenueditarUsuario.jpg"/>
+        </Button>
+        <Button x:Name="btnDescricaoOperacao" Content="Cadastrar Descrição &#xD;&#xA;Das Operações &#xD;&#xA;Financeiras" HorizontalAlignment="Left" Margin="173,211,0,0" VerticalAlignment="Top" Width="256" Height="86" Foreground="White" BorderBrush="#FF060937" Background="#FF060937" FontWeight="Bold" FontSize="16"/>
     </Grid>
 </Window>

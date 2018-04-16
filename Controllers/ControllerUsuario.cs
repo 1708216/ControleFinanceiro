@@ -9,26 +9,21 @@ namespace Controllers
 {
     public class ControllerUsuario
     {
-        static List<Usuario> listaUsuarios = new List<Usuario>();
-        static int ultimoId = 0;
 
         public Boolean SalvarUsuario(Usuario novoUsuario)
         {
             Usuario usuario = ProcurarUsuarioPorNome(novoUsuario.nomeUsuario);
-
+             
             if (usuario == null)
             {
-                int id = ultimoId + 1;
-                ultimoId = id;
-                novoUsuario.UsuarioID = id;
-                listaUsuarios.Add(novoUsuario);
+                ContextoSigleton.Instancia.Usuarios.Add(novoUsuario);
+                ContextoSigleton.Instancia.SaveChanges();
                 return true;
             }
             else
             {
                 return false;
             }
-
         }
 
         public Boolean ValidarLoginESenha(Usuario usuario)
@@ -52,10 +47,9 @@ namespace Controllers
             }
         }
 
-
         public Usuario ProcurarUsuarioPorNome(string usuario)
         {
-            var u = from x in listaUsuarios
+            var u = from x in ContextoSigleton.Instancia.Usuarios 
                     where x.nomeUsuario.ToLower().Equals(usuario.Trim().ToLower())
                     select x;
 
@@ -71,7 +65,7 @@ namespace Controllers
 
         public Usuario ProcurarUsuarioPorLogin(string login)
         {
-            var u = from x in listaUsuarios
+            var u = from x in ContextoSigleton.Instancia.Usuarios
                     where x.loginUsuario.ToLower().Equals(login.Trim().ToLower())
                     select x;
             if (u != null)
@@ -85,7 +79,7 @@ namespace Controllers
         }
         public Usuario ProcurarUsuarioPorId(int id)
         {
-            var u = from x in listaUsuarios
+            var u = from x in ContextoSigleton.Instancia.Usuarios
                     where x.UsuarioID.Equals(id)
                     select x;
             if (u != null)
@@ -100,26 +94,40 @@ namespace Controllers
 
         public List<Usuario> RetornarListaDeTodosOsUsuarios()
         {
-            return listaUsuarios;
+            return ContextoSigleton.Instancia.Usuarios.ToList();
         }
 
         public Boolean EditarUsuario(Usuario usuarioEditado)
         {
-            Usuario usuario = ProcurarUsuarioPorId(usuarioEditado.UsuarioID);
-            usuario.nomeUsuario = usuarioEditado.nomeUsuario;
-            usuario.loginUsuario = usuarioEditado.loginUsuario;
-            usuario.senhaUsuario = usuarioEditado.senhaUsuario;
-            usuario.nivelDePermissão = usuarioEditado.nivelDePermissão;
-            return true;
+            Usuario usuarioParaEditar = ProcurarUsuarioPorId(usuarioEditado.UsuarioID);
+            if(usuarioParaEditar != null)
+            {
+                usuarioParaEditar.nomeUsuario = usuarioEditado.nomeUsuario;
+                usuarioParaEditar.loginUsuario = usuarioEditado.loginUsuario;
+                usuarioParaEditar.senhaUsuario = usuarioEditado.senhaUsuario;
+                usuarioParaEditar.nivelDePermissão = usuarioEditado.nivelDePermissão;
+
+                ContextoSigleton.Instancia.Entry(usuarioParaEditar).State =
+                    System.Data.Entity.EntityState.Modified;
+
+                ContextoSigleton.Instancia.SaveChanges();
+
+                return true;
+            }
+            else
+            {
+                return false;
+            }        
         }
 
-        public Boolean ExcluirUsuario(int id)
+        public Boolean ExcluirUsuario(int usuarioID)
         {
-            Usuario usuario = ProcurarUsuarioPorId(id);
+            Usuario u = ContextoSigleton.Instancia.Usuarios.Find(usuarioID);
 
-            if (usuario != null)
+            if (u != null)
             {
-                listaUsuarios.Remove(usuario);
+                ContextoSigleton.Instancia.Entry(u).State = System.Data.Entity.EntityState.Deleted;
+                ContextoSigleton.Instancia.SaveChanges();
                 return true;
             }
             else
