@@ -19,6 +19,8 @@ namespace WindowsView
         {
             CriarAdmin();
             CriarUsu();
+            CriarDespesaMercado();
+            CriarDespesaInternet();
             InitializeComponent();
         }
 
@@ -44,6 +46,22 @@ namespace WindowsView
             cUsu.SalvarUsuario(usuario);
 
         }
+
+        public void CriarDespesaMercado()
+        {
+            Despesa despesa = new Despesa();
+            ControllerDespesa Cdes = new ControllerDespesa();
+            despesa.Descricao = "MERCADO";
+            Cdes.SalvarDespesa(despesa);
+        }
+        public void CriarDespesaInternet()
+        {
+            Despesa despesa = new Despesa();
+            ControllerDespesa Cdes = new ControllerDespesa();
+            despesa.Descricao = "INTERNET";
+            Cdes.SalvarDespesa(despesa);
+        }
+
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {

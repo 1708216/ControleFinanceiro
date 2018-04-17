@@ -16,5 +16,10 @@ namespace Model
         {
             NumeroOperador = 1;
         }
+
+        public override string ToString()
+        {
+            return string.Format(this.Descricao);
+        }
     }
 }
