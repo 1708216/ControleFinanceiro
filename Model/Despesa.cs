@@ -12,11 +12,6 @@ namespace Model
         public string Descricao {get; set;}
         private int NumeroOperador {get; set;}
 
-        public Despesa()
-        {
-            NumeroOperador = 1;
-        }
-
         public override string ToString()
         {
             return string.Format(this.Descricao);

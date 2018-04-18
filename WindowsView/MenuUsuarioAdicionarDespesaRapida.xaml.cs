@@ -30,11 +30,18 @@ namespace WindowsView
         }
 
 
-
         private void CadastrarDespesaClicada(string nomeDespesaClicada)
         {
             //criar um método para retornar o id da despesa e inserir no registro;
             despesa = Cd.ProcurarDespesaPorNome(nomeDespesaClicada);
+
+            //if (despesa == null)
+            //{
+            //    Despesa despesa = new Despesa();
+            //    despesa.Descricao = nomeDespesaClicada;
+
+            //}
+
             MenuRegistroDetalhesDaDespesa rgDetalhes = new MenuRegistroDetalhesDaDespesa(despesa);
             rgDetalhes.ShowDialog();
         }

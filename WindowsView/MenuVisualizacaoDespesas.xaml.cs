@@ -24,8 +24,9 @@ namespace WindowsView
         public MenuVisualizacaoDespesas()
         {
             InitializeComponent();
-            ControllerRegistroDespesa CrDespesas = new ControllerRegistroDespesa();
-            DataGridDeDespesas.ItemsSource = CrDespesas.RetornarTodosOsRegistrosDespesas();
+           ControllerRegistroDespesa CrDespesas = new ControllerRegistroDespesa();
+           DataGridDeDespesas.ItemsSource = CrDespesas.RetornarTodosOsRegistrosDespesas();
+
         }
 
         private void DataGridDeDespesas_SelectionChanged(object sender, SelectionChangedEventArgs e)
