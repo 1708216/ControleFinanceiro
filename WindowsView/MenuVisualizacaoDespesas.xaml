@@ -7,7 +7,8 @@
         mc:Ignorable="d"
         Title="MenuVisualizacaoDespesas" Height="454.39" Width="751.464">
     <Grid>
-        <DataGrid x:Name="DataGridDeDespesas" HorizontalAlignment="Left" Height="262" Margin="30,107,0,0" VerticalAlignment="Top" Width="693" SelectionChanged="DataGridDeDespesas_SelectionChanged" GridLinesVisibility="Horizontal"/>
+        <DataGrid x:Name="DataGridDeDespesas" HorizontalAlignment="Left" Height="283" Margin="30,83,0,0" VerticalAlignment="Top" Width="693" SelectionChanged="DataGridDeDespesas_SelectionChanged"  GridLinesVisibility="Horizontal" />
+        
         <Button Content="Button" HorizontalAlignment="Left" Margin="453,384,0,0" VerticalAlignment="Top" Width="75" Height="19" RenderTransformOrigin="0.864,0.368"/>
         <Button x:Name="btnFechar" Content="Fechar" HorizontalAlignment="Left" Margin="558,384,0,0" VerticalAlignment="Top" Width="75" Click="btnFechar_Click"/>
 

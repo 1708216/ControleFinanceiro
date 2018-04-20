@@ -22,12 +22,12 @@ namespace WindowsView
     public partial class MenuRegistroDetalhesDaDespesa : Window
     {
 
-        private static Despesa despesaAdicionar;
+        private static Despesa despesaParaAdicionar;
 
         public MenuRegistroDetalhesDaDespesa(Despesa despesa)
         {
             InitializeComponent();
-            despesaAdicionar = despesa;
+            despesaParaAdicionar = despesa;
 
             ControllerUsuario Cu = new ControllerUsuario();
             ComboListaUsuario.ItemsSource = Cu.RetornarListaDeTodosOsUsuarios();
@@ -41,15 +41,30 @@ namespace WindowsView
 
         private void btnAdicionarDespesa_Click(object sender, RoutedEventArgs e)
         {
-            RegistroDeDespesa registro = new RegistroDeDespesa();
-            registro.despesa = despesaAdicionar;
-            Usuario usuario = ComboListaUsuario.SelectedItem as Usuario;
-            registro.UsuarioID = usuario.UsuarioID;
-            registro.Data = DateTime.Parse(boxDataDespesa.Text);
-            registro.Valor = double.Parse(txtValorDespesa.Text);
-            ControllerRegistroDespesa CrDespesa= new ControllerRegistroDespesa();
-            CrDespesa.SalvarRegistro(registro);
-            Close();
+
+            try
+            {
+
+                RegistroDeDespesa registro = new RegistroDeDespesa();
+                registro.despesa = despesaParaAdicionar;
+                Usuario usuario = ComboListaUsuario.SelectedItem as Usuario;
+                registro.UsuarioID = usuario.UsuarioID;
+                registro.Data = DateTime.Parse(boxDataDespesa.Text);
+                registro.Valor = double.Parse(txtValorDespesa.Text);
+                ControllerRegistroDespesa CrDespesa = new ControllerRegistroDespesa();
+                CrDespesa.SalvarRegistro(registro);
+                Close();
+
+            }
+            catch(FormatException)
+            {
+                // personalizar uma mensagem com a informação que o campo é inválido ou em branco 
+
+                MensagemDeErro msn = new MensagemDeErro();
+                msn.ShowDialog();
+            }
+
+            
 
         }
 

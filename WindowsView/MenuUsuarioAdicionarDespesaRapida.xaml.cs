@@ -29,12 +29,17 @@ namespace WindowsView
             CadastrarDespesaClicada("INTERNET");
         }
 
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            CadastrarDespesaClicada("LUZ");
+        }
 
         private void CadastrarDespesaClicada(string nomeDespesaClicada)
         {
             //criar um método para retornar o id da despesa e inserir no registro;
-            despesa = Cd.ProcurarDespesaPorNome(nomeDespesaClicada);
+            despesa= Cd.ProcurarDespesaPorNome(nomeDespesaClicada);
 
+            //não pode voltar nullo, se não trava. Se o usuario digitar um objeto que não existe.
             //if (despesa == null)
             //{
             //    Despesa despesa = new Despesa();
@@ -46,5 +51,6 @@ namespace WindowsView
             rgDetalhes.ShowDialog();
         }
 
+ 
     }
 }

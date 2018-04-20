@@ -17,51 +17,8 @@ namespace WindowsView
 
         public MainWindow()
         {
-            CriarAdmin();
-            CriarUsu();
-            CriarDespesaMercado();
-            CriarDespesaInternet();
             InitializeComponent();
         }
-
-        public void CriarAdmin()
-        {
-            Usuario usuario = new Usuario();
-            ControllerUsuario cUsu = new ControllerUsuario();
-            usuario.loginUsuario = "admin";
-            usuario.nomeUsuario = "Administrador";
-            usuario.senhaUsuario = "123";
-            usuario.nivelDePermissão = 1;
-            cUsu.SalvarUsuario(usuario);
-
-        }
-        public void CriarUsu()
-        {
-            Usuario usuario = new Usuario();
-            ControllerUsuario cUsu = new ControllerUsuario();
-            usuario.loginUsuario = "marcelo";
-            usuario.nomeUsuario = "Marcelo";
-            usuario.senhaUsuario = "123";
-            usuario.nivelDePermissão = 2;
-            cUsu.SalvarUsuario(usuario);
-
-        }
-
-        public void CriarDespesaMercado()
-        {
-            Despesa despesa = new Despesa();
-            ControllerDespesa Cdes = new ControllerDespesa();
-            despesa.Descricao = "MERCADO";
-            Cdes.SalvarDespesa(despesa);
-        }
-        public void CriarDespesaInternet()
-        {
-            Despesa despesa = new Despesa();
-            ControllerDespesa Cdes = new ControllerDespesa();
-            despesa.Descricao = "INTERNET";
-            Cdes.SalvarDespesa(despesa);
-        }
-
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {

@@ -9,6 +9,9 @@ namespace Model
     public class RegistroDeDespesa : Registro
     {
         public int RegistroDeDespesaID { get; set; }
+        public int DespesaID { get; set; }
+        public virtual Despesa despesa { get; set; }
+
         // vou transformar o objeto em uma string de descrição da despesa
         // public string descricaoDespesa { get; set; }
         //   public string tipoDeoperacao { get; set; }
@@ -16,15 +19,10 @@ namespace Model
         //inicialmente eu criaria criaria um objeto para estanciar uma descrição de despesa
         //para ser renchido no menu outras despesas, 
         //mas precisaria de um banco já com os itens iniciais
-
-        
-        public int DespesaID { get; set; }
-        public virtual Despesa despesa { get; set; }
-
-        public RegistroDeDespesa()
-       {
-           Despesa despesa = new Despesa();
-        }
+       // public RegistroDeDespesa()
+       //{
+       //    Despesa despesa = new Despesa();
+       // }
 
     }
 }

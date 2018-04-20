@@ -28,7 +28,7 @@
                 </Image.OpacityMask>
             </Image>
         </Button>
-        <Button x:Name="btnCadastrarOperacao" Content="Cadastrar Operações &#xD;&#xA;Financeiras&#xD;&#xA;" HorizontalAlignment="Left" Margin="308,114,0,0" VerticalAlignment="Top" Width="265" Background="#FF060937" Height="86" FontSize="16" Foreground="White" FontWeight="Bold"/>
+        <Button x:Name="btnCadastrarOperacao" Content="&#xD;&#xA;Cadastrar Descrição de&#xD;&#xA;Despesa&#xA;&#xA;" HorizontalAlignment="Left" Margin="308,114,0,0" VerticalAlignment="Top" Width="265" Background="#FF060937" Height="86" FontSize="16" Foreground="White" FontWeight="Bold"/>
         <Button x:Name="btnExclurUsuario" HorizontalAlignment="Left" Margin="585,114,0,0" VerticalAlignment="Top" Width="120" Background="#FF060937" Height="86">
             <Image Height="63" Width="68" Source="imagem/iconeExcluir.png"/>
         </Button>
@@ -38,6 +38,6 @@
         <Button x:Name="btnAdmEditarUsuario" HorizontalAlignment="Left" Margin="447,211,0,0" VerticalAlignment="Top" Width="120" Height="86" Background="#FF060937">
             <Image Height="64" Width="84" Source="imagem/iconeMenueditarUsuario.jpg"/>
         </Button>
-        <Button x:Name="btnDescricaoOperacao" Content="Cadastrar Descrição &#xD;&#xA;Das Operações &#xD;&#xA;Financeiras" HorizontalAlignment="Left" Margin="173,211,0,0" VerticalAlignment="Top" Width="256" Height="86" Foreground="White" BorderBrush="#FF060937" Background="#FF060937" FontWeight="Bold" FontSize="16"/>
+        <Button x:Name="btnDescricaoOperacao" Content="Cadastrar Descrição &#xA;de Receita" HorizontalAlignment="Left" Margin="173,211,0,0" VerticalAlignment="Top" Width="256" Height="86" Foreground="White" BorderBrush="#FF060937" Background="#FF060937" FontWeight="Bold" FontSize="16"/>
     </Grid>
 </Window>

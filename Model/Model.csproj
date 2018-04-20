@@ -68,6 +68,7 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="DAL\Contexto.cs" />
+    <Compile Include="DAL\ControleFinanceiroDBInitializer.cs" />
     <Compile Include="Receita.cs" />
     <Compile Include="Registro.cs" />
     <Compile Include="RegistroDeDespesa.cs" />
