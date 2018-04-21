@@ -1,16 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 using Model;
 using Controllers;
 
@@ -49,9 +39,11 @@ namespace WindowsView
                 registro.despesa = despesaParaAdicionar;
                 Usuario usuario = ComboListaUsuario.SelectedItem as Usuario;
                 registro.UsuarioID = usuario.UsuarioID;
+
                 DateTime data = DateTime.Parse(boxDataDespesa.Text);
-                registro.Data = data.ToString(d);
-            //    registro.Valor = double.Parse(txtValorDespesa.Text);
+                string dataConvertida = String.Format("{0: MMMM}", data).ToLower();
+                registro.Data = dataConvertida.ToUpper();
+                registro.Valor = double.Parse(txtValorDespesa.Text);
                 ControllerRegistroDespesa CrDespesa = new ControllerRegistroDespesa();
                 CrDespesa.SalvarRegistro(registro);
                 Close();

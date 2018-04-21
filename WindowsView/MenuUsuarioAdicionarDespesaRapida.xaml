@@ -19,106 +19,106 @@
             <RowDefinition Height="7*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="140*"/>
-            <ColumnDefinition Width="80*"/>
+            <ColumnDefinition Width="141.6"/>
+            <ColumnDefinition Width="81.6"/>
             <ColumnDefinition Width="5*"/>
-            <ColumnDefinition Width="80*"/>
+            <ColumnDefinition Width="81.6"/>
+            <ColumnDefinition Width="6*"/>
+            <ColumnDefinition Width="81.6"/>
+            <ColumnDefinition Width="6*"/>
+            <ColumnDefinition Width="81.6"/>
+            <ColumnDefinition Width="6*"/>
+            <ColumnDefinition Width="82.4"/>
+            <ColumnDefinition Width="6*"/>
+            <ColumnDefinition Width="81.6"/>
+            <ColumnDefinition Width="6*"/>
+            <ColumnDefinition Width="82.4"/>
             <ColumnDefinition Width="5*"/>
-            <ColumnDefinition Width="80*"/>
-            <ColumnDefinition Width="5*"/>
-            <ColumnDefinition Width="80*"/>
-            <ColumnDefinition Width="5*"/>
-            <ColumnDefinition Width="80*"/>
-            <ColumnDefinition Width="5*"/>
-            <ColumnDefinition Width="80*"/>
-            <ColumnDefinition Width="5*"/>
-            <ColumnDefinition Width="80*"/>
-            <ColumnDefinition Width="5*"/>
-            <ColumnDefinition Width="24*"/>
+            <ColumnDefinition Width="24.8"/>
         </Grid.ColumnDefinitions>
         <Button x:Name="btnDespesaMercado" HorizontalAlignment="Left" Margin="0,69,0,0" VerticalAlignment="Top" Width="84" Height="91" Background="#FF060937" Grid.RowSpan="2" Grid.Column="1" Grid.ColumnSpan="2" Click="btnDespesaMercado_Click">
             <Image Height="62" Width="52" Source="imagem/iconeDespesaMercado.png"/>
         </Button>
-        <Button HorizontalAlignment="Left" Margin="0.8,69,0,0" VerticalAlignment="Top" Width="82" Height="91" Background="#FF060937" Grid.Column="3" Grid.ColumnSpan="2" Grid.RowSpan="2" Click="Button_Click">
+        <Button x:Name="btnDespesaInternet" HorizontalAlignment="Left" Margin="0.8,69,0,0" VerticalAlignment="Top" Width="82" Height="91" Background="#FF060937" Grid.Column="3" Grid.ColumnSpan="2" Grid.RowSpan="2" Click="btnDespesaInternet_Click">
             <Image Height="62" Width="52
                    " Source="imagem/iconeDespesaComboInternet.png"/>
         </Button>
-        <Button HorizontalAlignment="Left" Margin="0.6,69,0,0" VerticalAlignment="Top" Width="82" Height="91" Background="#FF060937" Grid.Column="5" Grid.ColumnSpan="2" Grid.RowSpan="2" Click="Button_Click_1">
+        <Button x:Name="btnDespesaLuz" HorizontalAlignment="Left" Margin="0.6,69,0,0" VerticalAlignment="Top" Width="82" Height="91" Background="#FF060937" Grid.Column="5" Grid.ColumnSpan="2" Grid.RowSpan="2" Click="btnDespesaLuz_Click">
             <Image Height="62" Width="52" Source="imagem/iconeDespesaDeLuz.jpg"/>
         </Button>
-        <Button HorizontalAlignment="Left" Margin="0.4,69,0,0" VerticalAlignment="Top" Width="80" Height="91" Background="#FF060937" Grid.Column="7" Grid.RowSpan="2">
+        <Button x:Name="btnDespesaAgua" HorizontalAlignment="Left" Margin="0.4,69,0,0" VerticalAlignment="Top" Width="80" Height="91" Background="#FF060937" Grid.Column="7" Grid.RowSpan="2" Click="btnDespesaAgua_Click">
             <Image Height="62" Width="52" Source="imagem/iconeDespesaAgua.jpg" Stretch="Fill"/>
         </Button>
-        <Button HorizontalAlignment="Left" Margin="0.2,69,0,0" VerticalAlignment="Top" Width="81" Height="91" Background="#FF060937" Grid.Column="9" Grid.RowSpan="2">
+        <Button x:Name="btnDespesaCarataoCredito" HorizontalAlignment="Left" Margin="0.2,69,0,0" VerticalAlignment="Top" Width="81" Height="91" Background="#FF060937" Grid.Column="9" Grid.RowSpan="2" Click="btnDespesaCarataoCredito_Click">
             <Image Height="62" Width="52" Source="imagem/iconeDespesaCartaoDeCredito.png"/>
         </Button>
-        <Button HorizontalAlignment="Left" Margin="4.6,69,0,0" VerticalAlignment="Top" Width="83" Height="91" Background="#FF060937" Grid.Column="10" Grid.RowSpan="2" Grid.ColumnSpan="3">
+        <Button x:Name="btnDespesaEducacao" HorizontalAlignment="Left" Margin="4.6,69,0,0" VerticalAlignment="Top" Width="83" Height="91" Background="#FF060937" Grid.Column="10" Grid.RowSpan="2" Grid.ColumnSpan="3" Click="btnDespesaEducacao_Click">
             <Image Height="62" Width="52" Source="imagem/iconeDespesaEducacao.png"/>
         </Button>
-        <Button HorizontalAlignment="Left" Margin="0,7,0,0" Grid.Row="2" VerticalAlignment="Top" Width="84" Height="89" Background="#FF060937" Grid.RowSpan="2" Grid.Column="1" Grid.ColumnSpan="2">
-            <Image Height="62" Width="52" Source="imagem/iconeDespesaEducacao.png"/>
+        <Button x:Name="btnDespesaLanche" HorizontalAlignment="Left" Margin="0,7,0,0" Grid.Row="2" VerticalAlignment="Top" Width="84" Height="89" Background="#FF060937" Grid.RowSpan="2" Grid.Column="1" Grid.ColumnSpan="2" Click="btnDespesaLanche_Click">
+            <Image Height="62" Width="52" Source="imagem/iconeDespesaLanche.png"/>
         </Button>
-        <Button HorizontalAlignment="Right" Margin="0,0.8,0.6,0" Grid.Row="3" VerticalAlignment="Top" Width="81" Height="88" Background="#FF060937" Grid.Column="3">
+        <Button x:Name="btnDespesaAlmoco" HorizontalAlignment="Right" Margin="0,0.8,0.6,0" Grid.Row="3" VerticalAlignment="Top" Width="81" Height="88" Background="#FF060937" Grid.Column="3" Click="btnDespesaAlmoco_Click">
             <Image Height="62" Width="52" Source="imagem/iconeDespesaRefeicao.png"/>
         </Button>
-        <Button HorizontalAlignment="Left" Margin="0.8,7,0,0" Grid.Row="2" VerticalAlignment="Top" Width="81" Height="89" Background="#FF060937" Grid.Column="5" Grid.ColumnSpan="2" Grid.RowSpan="2">
+        <Button x:Name="brnDespesaMecanico" HorizontalAlignment="Left" Margin="1,6.8,0,1" Grid.Row="2" Width="81" Background="#FF060937" Grid.Column="5" Grid.ColumnSpan="2" Grid.RowSpan="2" Click="brnDespesaMecanico_Click">
             <Image Height="62" Width="52" Source="imagem/iconedespesaMecanico.png"/>
         </Button>
-        <Button HorizontalAlignment="Left" Margin="0.4,0.8,0,0" Grid.Row="3" VerticalAlignment="Top" Width="82" Height="89" Background="#FF060937" Grid.Column="7">
+        <Button x:Name="btnDespesaAcademia" HorizontalAlignment="Left" Margin="0,0.6,0,0" Grid.Row="3" Width="82" Background="#FF060937" Grid.Column="7" Grid.ColumnSpan="2" Click="btnDespesaAcademia_Click">
             <Image Height="62" Width="52" Source="imagem/iconeDespesaAcademia.png"/>
         </Button>
-        <Button HorizontalAlignment="Left" Margin="0.4,7,0,0" Grid.Row="2" VerticalAlignment="Top" Width="81" Height="89" Background="#FF060937" Grid.Column="9" Grid.RowSpan="2">
+        <Button x:Name="btnDespesaMedico" HorizontalAlignment="Left" Margin="0.8,6.8,0,1" Grid.Row="2" Width="81" Background="#FF060937" Grid.Column="9" Grid.RowSpan="2" Click="btnDespesaMedico_Click">
             <Image Height="62" Width="52" Source="imagem/iconeDespesaMedica.png"/>
         </Button>
-        <Button HorizontalAlignment="Left" Margin="0,7,0,0" Grid.Row="2" VerticalAlignment="Top" Width="82" Height="89" Background="#FF060937" Grid.Column="11" Grid.RowSpan="2">
+        <Button x:Name="btnDespesaBar" HorizontalAlignment="Left" Margin="0,6.8,0,1" Grid.Row="2" Width="82" Background="#FF060937" Grid.Column="11" Grid.RowSpan="2" Grid.ColumnSpan="2" Click="btnDespesaBar_Click">
             <Image Height="62" Width="52" Source="imagem/iconeDespesaBar.png"/>
         </Button>
-        <Button HorizontalAlignment="Left" Grid.Row="5" VerticalAlignment="Top" Width="82" Height="91" Background="#FF060937" Margin="0,0.2,0,0" Grid.RowSpan="2" Grid.Column="1">
+        <Button x:Name="btnDespesaCabeleireiro" HorizontalAlignment="Left" Grid.Row="5" VerticalAlignment="Top" Width="82" Height="91" Background="#FF060937" Margin="0,0.2,0,0" Grid.RowSpan="2" Grid.Column="1" Click="btnDespesaCabeleireiro_Click">
             <Image Height="62" Width="52" Source="imagem/iconeDespesaCabeleireiro.jpg"/>
         </Button>
-        <Button HorizontalAlignment="Left" Margin="4.6,0.2,0,0" Grid.Row="5" VerticalAlignment="Top" Width="83" Height="91" Background="#FF060937" Grid.Column="2" Grid.RowSpan="2" Grid.ColumnSpan="3">
+        <Button x:Name="btnDespesaEmpregadaDomestica" HorizontalAlignment="Left" Margin="4.6,0.2,0,0" Grid.Row="5" VerticalAlignment="Top" Width="83" Height="91" Background="#FF060937" Grid.Column="2" Grid.RowSpan="2" Grid.ColumnSpan="3" Click="btnDespesaEmpregadaDomestica_Click">
             <Image Height="52" Width="58" Source="imagem/iconeDespesaDiarista.png" Stretch="UniformToFill"/>
         </Button>
-        <Button HorizontalAlignment="Left" Grid.Row="5" VerticalAlignment="Top" Width="82" Height="90" Background="#FF060937" Grid.Column="5" Margin="0.6,0.2,0,0" Grid.ColumnSpan="2" >
+        <Button x:Name="btnDespesaGasolina" HorizontalAlignment="Left" Grid.Row="5" VerticalAlignment="Top" Width="82" Height="90" Background="#FF060937" Grid.Column="5" Margin="0.6,0.2,0,0" Grid.ColumnSpan="2" Click="btnDespesaGasolina_Click" >
             <Image Height="62" Width="52" Source="imagem/iconeDespesaGasolina.png"/>
         </Button>
-        <Button HorizontalAlignment="Left" Margin="0.4,0.2,0,0" Grid.Row="5" VerticalAlignment="Top" Width="81" Height="91" Background="#FF060937" Grid.Column="7" Grid.RowSpan="2">
+        <Button x:Name="btnDespesaCondominio" HorizontalAlignment="Left" Margin="0.4,0.2,0,0" Grid.Row="5" VerticalAlignment="Top" Width="81" Height="91" Background="#FF060937" Grid.Column="7" Grid.RowSpan="2" Click="btnDespesaCondominio_Click">
             <Image Height="62" Width="52" Source="imagem/iconeDespesaCondominio.gif" Stretch="Fill"/>
         </Button>
-        <Button HorizontalAlignment="Left" Grid.Row="5" VerticalAlignment="Top" Width="81" Height="89" Background="#FF060937" Grid.Column="9" Margin="0.2,1.2,0,0">
+        <Button x:Name="btnDespesaIPVA" HorizontalAlignment="Left" Grid.Row="5" VerticalAlignment="Top" Width="81" Height="89" Background="#FF060937" Grid.Column="9" Margin="0.2,1.2,0,0" Click="btnDespesaIPVA_Click">
             <Image Height="55" Width="65" Source="imagem/iconeDespesaIpva.png" Stretch="Fill"/>
         </Button>
-        <Button HorizontalAlignment="Left" Margin="0.8,0.2,0,0" Grid.Row="5" VerticalAlignment="Top" Width="82" Height="90" Background="#FF060937" Grid.Column="11" Grid.ColumnSpan="2">
+        <Button x:Name="btnDespesaGas" HorizontalAlignment="Left" Margin="0.8,0.2,0,0" Grid.Row="5" VerticalAlignment="Top" Width="82" Height="90" Background="#FF060937" Grid.Column="11" Grid.ColumnSpan="2" Click="btnDespesaGas_Click">
             <Image Height="62" Width="52" Source="imagem/iconeDespesaContaDeGas.png"/>
         </Button>
-        <Button HorizontalAlignment="Left" Margin="0,6.8,0,0" Grid.Row="6" VerticalAlignment="Top" Width="82" Height="91" Background="#FF060937" Grid.RowSpan="3" Grid.Column="1">
+        <Button x:Name="btnDespesaPresente" HorizontalAlignment="Left" Margin="0.4,6.4,0,7.4" Grid.Row="6" Width="82" Background="#FF060937" Grid.RowSpan="3" Grid.Column="1" Grid.ColumnSpan="2" Click="btnDespesaPresente_Click">
             <Image Height="62" Width="52" Source="imagem/iconeDespesaPresente.jpg"/>
         </Button>
-        <Button HorizontalAlignment="Left" Margin="4.6,6.8,0,0" Grid.Row="6" VerticalAlignment="Top" Width="82" Height="91" Background="#FF060937" Grid.Column="2" Grid.RowSpan="3" Grid.ColumnSpan="2">
+        <Button x:Name="btnDespesaFinanciamentoImobiliario" HorizontalAlignment="Left" Margin="0,6.4,0,7.4" Grid.Row="6" Width="82" Background="#FF060937" Grid.Column="3" Grid.RowSpan="3" Grid.ColumnSpan="2" Click="btnDespesaFinanciamentoImobiliario_Click">
             <Image Height="62" Width="52" Source="imagem/iconeDespesaFinanciamentoCasa.jpg"/>
         </Button>
-        <Button HorizontalAlignment="Left" Margin="0.8,6.8,0,0" Grid.Row="6" VerticalAlignment="Top" Width="82" Height="91" Background="#FF060937" Grid.Column="5" Grid.ColumnSpan="2" Grid.RowSpan="3">
+        <Button x:Name="btnDespesaIPTU1" HorizontalAlignment="Left" Margin="0.8,6.8,0,0" Grid.Row="6" VerticalAlignment="Top" Width="82" Height="91" Background="#FF060937" Grid.Column="5" Grid.ColumnSpan="2" Grid.RowSpan="3" Click="btnDespesaIPTU1_Click">
             <Image Height="62" Width="52" Source="imagem/iconeDespesaIptu.gif" Stretch="Fill"/>
         </Button>
-        <Button HorizontalAlignment="Left" Margin="4.4,6.8,0,0" Grid.Row="6" VerticalAlignment="Top" Width="82" Height="91" Background="#FF060937" Grid.Column="6" Grid.ColumnSpan="2" Grid.RowSpan="3">
+        <Button x:Name="btnDespesaRemedio" HorizontalAlignment="Left" Margin="4.4,6.8,0,0" Grid.Row="6" VerticalAlignment="Top" Width="82" Height="91" Background="#FF060937" Grid.Column="6" Grid.ColumnSpan="2" Grid.RowSpan="3" Click="btnDespesaRemedio_Click">
             <Image Height="62" Width="52" Source="imagem/iconeDespesaFarmacia.png"/>
         </Button>
-        <Button HorizontalAlignment="Left" Margin="0.2,6.8,0,0" Grid.Row="6" VerticalAlignment="Top" Width="81" Height="91" Background="#FF060937" Grid.Column="9" Grid.RowSpan="3">
+        <Button x:Name="btnDespesaCelular" HorizontalAlignment="Left" Margin="0.2,6.8,0,0" Grid.Row="6" VerticalAlignment="Top" Width="81" Height="91" Background="#FF060937" Grid.Column="9" Grid.RowSpan="3" Click="btnDespesaCelular_Click">
             <Image Height="62" Width="52" Source="imagem/iconeDespesaCelular.jpg"/>
         </Button>
-        <Button HorizontalAlignment="Left" Margin="0,6.8,0,0" Grid.Row="6" VerticalAlignment="Top" Width="83" Height="91" Background="#FF060937" Grid.Column="11" Grid.RowSpan="3" Grid.ColumnSpan="2">
+        <Button x:Name="btnDespesaLazer" HorizontalAlignment="Left" Margin="0,6.8,0,0" Grid.Row="6" VerticalAlignment="Top" Width="83" Height="91" Background="#FF060937" Grid.Column="11" Grid.RowSpan="3" Grid.ColumnSpan="2" Click="btnDespesaLazer_Click">
             <Image Height="62" Width="52" Source="imagem/iconeDespesaLazer.png" Stretch="Fill"/>
         </Button>
         <Button HorizontalAlignment="Left" Margin="0,6.8,0,0" Grid.Row="6" VerticalAlignment="Top" Width="82" Height="91" Background="#FF060937" Grid.Column="13" Grid.RowSpan="3" Grid.ColumnSpan="2">
             <Image Height="62" Width="52" Source="imagem/iconeDeMaisParaAdicionar.jpg"/>
         </Button>
-        <Button HorizontalAlignment="Left" Margin="5.4,0.2,0,0" Grid.Row="5" VerticalAlignment="Top" Width="83" Height="90" Background="#FF060937" Grid.Column="12" Grid.ColumnSpan="3">
+        <Button x:Name="btnDespesaViagem" HorizontalAlignment="Left" Margin="5.4,0.2,0,0" Grid.Row="5" VerticalAlignment="Top" Width="83" Height="90" Background="#FF060937" Grid.Column="12" Grid.ColumnSpan="3" Click="btnDespesaViagem_Click">
             <Image Height="62" Width="52" Source="imagem/iconeDespesaViagem.png"/>
         </Button>
-        <Button HorizontalAlignment="Left" Margin="5.4,7,0,0" Grid.Row="2" VerticalAlignment="Top" Width="83" Height="89" Background="#FF060937" Grid.Column="12" Grid.RowSpan="2" Grid.ColumnSpan="3">
+        <Button x:Name="btnDespesaOdontológica" HorizontalAlignment="Left" Margin="5.4,7,0,0" Grid.Row="2" VerticalAlignment="Top" Width="83" Height="89" Background="#FF060937" Grid.Column="12" Grid.RowSpan="2" Grid.ColumnSpan="3" Click="btnDespesaOdontológica_Click">
             <Image Height="73" Width="66" Source="imagem/iconeDespesaDentista.jpg"/>
         </Button>
-        <Button HorizontalAlignment="Left" Margin="5.4,69,0,0" VerticalAlignment="Top" Width="83" Height="91" Background="#FF060937" Grid.Column="12" Grid.RowSpan="2" Grid.ColumnSpan="3">
+        <Button x:Name="btnDespesaSeguroCarro" HorizontalAlignment="Left" Margin="5.4,69,0,6.4" Width="83" Background="#FF060937" Grid.Column="12" Grid.RowSpan="3" Grid.ColumnSpan="2" Click="btnDespesaSeguroCarro_Click">
             <Image Height="70" Width="62" Source="imagem/iconeDespesaSeguroCarro.jpg"/>
         </Button>
         <Image HorizontalAlignment="Left" Height="468" Grid.RowSpan="10" VerticalAlignment="Top" Width="87" Source="imagem/retanguloAzulDasLaterais.jpg" Stretch="Fill"/>

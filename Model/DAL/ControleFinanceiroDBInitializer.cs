@@ -34,9 +34,33 @@ namespace Model.DAL
                 nivelDePermissão = 2
             });
             itensDoMenuInserirDespesas.Add(new Despesa() { DespesaID = 1, Descricao = "MERCADO" });
-            itensDoMenuInserirDespesas.Add(new Despesa() { Descricao = "INTERNET" });
-            itensDoMenuInserirDespesas.Add(new Despesa() { Descricao = "LUZ" });
-
+            itensDoMenuInserirDespesas.Add(new Despesa() { DespesaID = 2 ,Descricao = "INTERNET" });
+            itensDoMenuInserirDespesas.Add(new Despesa() { DespesaID = 3, Descricao = "LUZ" });
+            itensDoMenuInserirDespesas.Add(new Despesa() { DespesaID = 4, Descricao = "ÁGUA" });
+            itensDoMenuInserirDespesas.Add(new Despesa() { DespesaID = 5, Descricao = "CARTÃO DE CRÉDITO" });
+            itensDoMenuInserirDespesas.Add(new Despesa() { DespesaID = 6, Descricao = "EDUCACÃO" });
+            itensDoMenuInserirDespesas.Add(new Despesa() { DespesaID = 7, Descricao = "SEGURO DO CARRO" });
+            itensDoMenuInserirDespesas.Add(new Despesa() { DespesaID = 8, Descricao = "LANCHE" });
+            itensDoMenuInserirDespesas.Add(new Despesa() { DespesaID = 9, Descricao = "ALMOÇO" });
+            itensDoMenuInserirDespesas.Add(new Despesa() { DespesaID = 10, Descricao = "MECÂNICO" });
+            itensDoMenuInserirDespesas.Add(new Despesa() { DespesaID = 11, Descricao = "ACADEMIA" });
+            itensDoMenuInserirDespesas.Add(new Despesa() { DespesaID = 12, Descricao = "DESPESAS MÉDICAS" });
+            itensDoMenuInserirDespesas.Add(new Despesa() { DespesaID = 13, Descricao = "BAR" });
+            itensDoMenuInserirDespesas.Add(new Despesa() { DespesaID = 14, Descricao = "DENTISTA" });
+            itensDoMenuInserirDespesas.Add(new Despesa() { DespesaID = 12, Descricao = "SALÃO DE BELEZA" });
+            itensDoMenuInserirDespesas.Add(new Despesa() { DespesaID = 13, Descricao = "EMPREGADA DOMESTICA" });
+            itensDoMenuInserirDespesas.Add(new Despesa() { DespesaID = 14, Descricao = "GASOLINA" });
+            itensDoMenuInserirDespesas.Add(new Despesa() { DespesaID = 12, Descricao = "CONDOMÍNIO" });
+            itensDoMenuInserirDespesas.Add(new Despesa() { DespesaID = 13, Descricao = "IPVA" });
+            itensDoMenuInserirDespesas.Add(new Despesa() { DespesaID = 14, Descricao = "GÁS" });
+            itensDoMenuInserirDespesas.Add(new Despesa() { DespesaID = 12, Descricao = "DESPESAS COM VIAGEM" });
+            itensDoMenuInserirDespesas.Add(new Despesa() { DespesaID = 13, Descricao = "PRESENTE" });
+            itensDoMenuInserirDespesas.Add(new Despesa() { DespesaID = 14, Descricao = "FINANCIAMENTO IMOBILIÁRIO" });
+            itensDoMenuInserirDespesas.Add(new Despesa() { DespesaID = 12, Descricao = "IPTU" });
+            itensDoMenuInserirDespesas.Add(new Despesa() { DespesaID = 13, Descricao = "FARMÁCIA" });
+            itensDoMenuInserirDespesas.Add(new Despesa() { DespesaID = 14, Descricao = "PLANO DO CELULAR" });
+            itensDoMenuInserirDespesas.Add(new Despesa() { DespesaID = 12, Descricao = "LAZER" });
+    
             contexto.Despesas.AddRange(itensDoMenuInserirDespesas);
             contexto.Usuarios.AddRange(usuarioAdministrador);
             contexto.SaveChanges();

@@ -9,11 +9,11 @@ namespace Controllers
 {
     public class ControllerRegistroDespesa
     {
-        public Boolean SalvarRegistro (RegistroDeDespesa registroRecebido)
+        public Boolean SalvarRegistro(RegistroDeDespesa registroRecebido)
         {
             RegistroDeDespesa registro = ProcurarRegistroPorId(registroRecebido.RegistroDeDespesaID);
 
-            if(registro == null)
+            if (registro == null)
             {
                 ContextoSigleton.Instancia.RegistroDeDespesas.Add(registroRecebido);
                 ContextoSigleton.Instancia.SaveChanges();
@@ -22,10 +22,10 @@ namespace Controllers
             else
             {
                 return false;
-            }      
+            }
         }
 
-        public RegistroDeDespesa ProcurarRegistroPorId ( int Id)
+        public RegistroDeDespesa ProcurarRegistroPorId(int Id)
         {
             var d = from x in ContextoSigleton.Instancia.RegistroDeDespesas
                     where x.RegistroDeDespesaID.Equals(Id)
@@ -41,6 +41,32 @@ namespace Controllers
             }
         }
 
+        public IEnumerable<RegistroDeDespesa> RetornarAsDespesaDoMes(String mes)
+        {
+            IEnumerable<RegistroDeDespesa> DespesasSelecionadas = from x in ContextoSigleton.Instancia.RegistroDeDespesas
+                                                                  where x.Data.Contains(mes)
+                                                                  select x;
+            return DespesasSelecionadas;
+        }
+
+
+
+        public double RetornarSomaDasDespesaDoMes(String mesRecebido)
+        {
+
+            double soma = 0;
+            IEnumerable<RegistroDeDespesa> despesasDoMes = RetornarAsDespesaDoMes(mesRecebido);
+
+            foreach (Registro despesa in despesasDoMes)
+            {
+                soma = soma + despesa.Valor;
+            }
+            return soma;
+        }
+
+
+
+
         public List<RegistroDeDespesa> RetornarTodosOsRegistrosDespesas()
         {
             return ContextoSigleton.Instancia.RegistroDeDespesas.ToList();
@@ -54,7 +80,7 @@ namespace Controllers
                 registroParaEditar.Data = registroEditado.Data;
                 registroParaEditar.UsuarioID = registroEditado.UsuarioID;
                 registroParaEditar.despesa = registroEditado.despesa;
-      
+
                 ContextoSigleton.Instancia.Entry(registroParaEditar).State =
                     System.Data.Entity.EntityState.Modified;
                 ContextoSigleton.Instancia.SaveChanges();
@@ -83,7 +109,5 @@ namespace Controllers
             }
 
         }
-
-
     }
 }
