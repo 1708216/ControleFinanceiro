@@ -37,7 +37,7 @@ namespace WindowsView
 
         private void btnExclurUsuario_Click(object sender, RoutedEventArgs e)
         {
-            MenuAdministradorExcluirUsuario mnExcluir = new MenuAdministradorExcluirUsuario();
+            MenuAdministradorExcluirUsuario mnExcluir = new MenuAdministradorExcluirUsuario(usuarioLogado.UsuarioID);
             mnExcluir.ShowDialog();
         }
     }

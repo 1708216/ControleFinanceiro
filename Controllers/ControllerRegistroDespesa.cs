@@ -66,15 +66,16 @@ namespace Controllers
 
 
 
-
         public List<RegistroDeDespesa> RetornarTodosOsRegistrosDespesas()
         {
             return ContextoSigleton.Instancia.RegistroDeDespesas.ToList();
         }
 
-        public Boolean EditarUsuario(RegistroDeDespesa registroEditado)
+
+        public Boolean EditarRegistroDeDespesa(RegistroDeDespesa registroEditado)
         {
             RegistroDeDespesa registroParaEditar = ProcurarRegistroPorId(registroEditado.RegistroDeDespesaID);
+
             if (registroParaEditar != null)
             {
                 registroParaEditar.Data = registroEditado.Data;
@@ -93,7 +94,7 @@ namespace Controllers
             }
         }
 
-        public Boolean ExcluirUsuario(int usuarioID)
+        public Boolean ExcluirRegistroDeDespesa(int usuarioID, int usuarioLogadoID)
         {
             Usuario u = ContextoSigleton.Instancia.Usuarios.Find(usuarioID);
 
@@ -107,7 +108,6 @@ namespace Controllers
             {
                 return false;
             }
-
         }
     }
 }

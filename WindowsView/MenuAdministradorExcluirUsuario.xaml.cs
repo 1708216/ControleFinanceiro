@@ -21,9 +21,12 @@ namespace WindowsView
     /// </summary>
     public partial class MenuAdministradorExcluirUsuario : Window
     {
-        public MenuAdministradorExcluirUsuario()
+        int usuarioLogadoID;
+
+        public MenuAdministradorExcluirUsuario(int usuarioRecebidoID)
         {
             InitializeComponent();
+            usuarioLogadoID = usuarioRecebidoID;
             ControllerUsuario Cu = new ControllerUsuario();
             ComboListaDeUsuarios.ItemsSource = Cu.RetornarListaDeTodosOsUsuarios();
         }
@@ -37,5 +40,24 @@ namespace WindowsView
             txtSenha.Text = usuario.senhaUsuario;
             txtNivelPermissao.Text = usuario.nivelDePermissão.ToString();
         }
+
+        private void btnAdminExcluir_Click(object sender, RoutedEventArgs e)
+        {
+            int idUsuario = int.Parse(txtIdExcluir.Text);
+            ControllerUsuario cu = new ControllerUsuario();
+
+            if (cu.ExcluirUsuario(idUsuario,usuarioLogadoID))
+            {
+                MensagemDeSucesso msn = new MensagemDeSucesso();
+                msn.ShowDialog();
+                Close();
+            }
+            else
+            {
+                MensagemDeErro msn = new MensagemDeErro();
+                msn.ShowDialog();
+            }
+        }
     }
 }
+

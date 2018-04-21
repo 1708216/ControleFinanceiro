@@ -11,7 +11,7 @@ namespace Controllers
         public Boolean SalvarUsuario(Usuario novoUsuario)
         {
             Usuario usuario = ProcurarUsuarioPorNome(novoUsuario.nomeUsuario);
-             
+
             if (usuario == null)
             {
                 ContextoSigleton.Instancia.Usuarios.Add(novoUsuario);
@@ -47,7 +47,7 @@ namespace Controllers
 
         public Usuario ProcurarUsuarioPorNome(string nomeUsuario)
         {
-            var u = from x in ContextoSigleton.Instancia.Usuarios 
+            var u = from x in ContextoSigleton.Instancia.Usuarios
                     where x.nomeUsuario.ToLower().Equals(nomeUsuario.Trim().ToLower())
                     select x;
 
@@ -98,7 +98,8 @@ namespace Controllers
         public Boolean EditarUsuario(Usuario usuarioEditado)
         {
             Usuario usuarioParaEditar = ProcurarUsuarioPorId(usuarioEditado.UsuarioID);
-            if(usuarioParaEditar != null)
+
+            if (usuarioParaEditar != null)
             {
                 usuarioParaEditar.nomeUsuario = usuarioEditado.nomeUsuario;
                 usuarioParaEditar.loginUsuario = usuarioEditado.loginUsuario;
@@ -115,24 +116,31 @@ namespace Controllers
             else
             {
                 return false;
-            }        
+            }
         }
 
-        public Boolean ExcluirUsuario(int usuarioID)
+        public Boolean ExcluirUsuario(int usuarioID, int usuarioLogadoID)
         {
             Usuario u = ContextoSigleton.Instancia.Usuarios.Find(usuarioID);
+            int id = u.UsuarioID;
 
-            if (u != null)
+            if (id != usuarioLogadoID)
             {
-                ContextoSigleton.Instancia.Entry(u).State = System.Data.Entity.EntityState.Deleted;
-                ContextoSigleton.Instancia.SaveChanges();
-                return true;
+                if (u != null)
+                {
+                    ContextoSigleton.Instancia.Entry(u).State = System.Data.Entity.EntityState.Deleted;
+                    ContextoSigleton.Instancia.SaveChanges();
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
             }
             else
             {
                 return false;
             }
-
         }
     }
 }
