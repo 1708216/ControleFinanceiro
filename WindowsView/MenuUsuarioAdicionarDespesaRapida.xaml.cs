@@ -29,7 +29,6 @@ namespace WindowsView
             {
                 //criar mensagem personalizada.
             }
-
             MenuRegistroDetalhesDaDespesa rgDetalhes = new MenuRegistroDetalhesDaDespesa(despesa);
             rgDetalhes.ShowDialog();
         }

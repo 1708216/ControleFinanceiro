@@ -29,7 +29,7 @@
             </Image>
         </Button>
         <Button x:Name="btnCadastrarOperacao" Content="&#xD;&#xA;Cadastrar Descrição de&#xD;&#xA;Despesa&#xA;&#xA;" HorizontalAlignment="Left" Margin="308,114,0,0" VerticalAlignment="Top" Width="265" Background="#FF060937" Height="86" FontSize="16" Foreground="White" FontWeight="Bold"/>
-        <Button x:Name="btnExclurUsuario" HorizontalAlignment="Left" Margin="585,114,0,0" VerticalAlignment="Top" Width="120" Background="#FF060937" Height="86">
+        <Button x:Name="btnExclurUsuario" HorizontalAlignment="Left" Margin="585,114,0,0" VerticalAlignment="Top" Width="120" Background="#FF060937" Height="86" Click="btnExclurUsuario_Click">
             <Image Height="63" Width="68" Source="imagem/iconeExcluir.png"/>
         </Button>
         <Button x:Name="btnSairDoMenuAdmin" HorizontalAlignment="Left" Margin="585,211,0,0" VerticalAlignment="Top" Width="120" Background="#FF060937" Height="86">

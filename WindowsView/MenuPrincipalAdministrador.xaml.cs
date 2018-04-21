@@ -34,5 +34,11 @@ namespace WindowsView
             MenuAdministradorCadastrarNovoUsuario mnCadastrar = new MenuAdministradorCadastrarNovoUsuario();
             mnCadastrar.ShowDialog();
         }
+
+        private void btnExclurUsuario_Click(object sender, RoutedEventArgs e)
+        {
+            MenuAdministradorExcluirUsuario mnExcluir = new MenuAdministradorExcluirUsuario();
+            mnExcluir.ShowDialog();
+        }
     }
 }

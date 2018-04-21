@@ -108,6 +108,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="MenuAdministradorExcluirUsuario.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MenuDeRelatorioDeGastosDoMes.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -139,6 +143,9 @@
     </Compile>
     <Compile Include="MenuAdministradorCadastrarNovoUsuario.xaml.cs">
       <DependentUpon>MenuAdministradorCadastrarNovoUsuario.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MenuAdministradorExcluirUsuario.xaml.cs">
+      <DependentUpon>MenuAdministradorExcluirUsuario.xaml</DependentUpon>
     </Compile>
     <Compile Include="MenuDeRelatorioDeGastosDoMes.xaml.cs">
       <DependentUpon>MenuDeRelatorioDeGastosDoMes.xaml</DependentUpon>
