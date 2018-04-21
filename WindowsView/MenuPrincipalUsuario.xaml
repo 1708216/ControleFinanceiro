@@ -33,7 +33,7 @@
             </Image.OpacityMask>
         </Image>
         <Label Content="Menu Usuário" HorizontalAlignment="Left" Margin="52.4,23,0,0" VerticalAlignment="Top" FontSize="22" FontWeight="Bold" FontFamily="Segoe UI Semibold" Height="39" Width="150" Grid.Column="1" Grid.ColumnSpan="3"/>
-        <Button x:Name="btndescricaoDespesa" Content="Button" Margin="0.2,0.2,68.4,0.8" Background="#FF060937" Grid.Column="9" Grid.Row="1" Grid.ColumnSpan="2"/>
+        <Button x:Name="btnVisualizarSituacaFinanceira" Content="Button" Margin="0.2,0.2,68.4,0.8" Background="#FF060937" Grid.Column="9" Grid.Row="1" Grid.ColumnSpan="2" Click="btnVisualizarSituacaFinanceira_Click"/>
         <Button x:Name="btnAdicionarDespesa" Content="ADICIONAR DESPESA&#xA;          RÁPIDA" Margin="0.6,1.2,0.8,8.6" Background="#FF060937" RenderTransformOrigin="0.441,0.884" Grid.ColumnSpan="3" Grid.Column="3" Grid.Row="1" FontSize="22" Foreground="White" FontWeight="Bold" TextOptions.TextFormattingMode="Display" TextOptions.TextHintingMode="Animated"  Grid.RowSpan="2" Click="btnAdicionarDespesa_Click_1"/>
         <Button Margin="0,1.2,0.4,8.6" Background="#FF060937" Grid.Row="1" Grid.Column="6" Grid.ColumnSpan="2" Grid.RowSpan="2" HorizontalAlignment="Right" Width="120" Click="btnVisualizarDespesas_Click">
             <Image Height="72" Width="88" Source="imagem/iconeVisualizar.png"/>

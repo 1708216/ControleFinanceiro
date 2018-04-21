@@ -49,8 +49,9 @@ namespace WindowsView
                 registro.despesa = despesaParaAdicionar;
                 Usuario usuario = ComboListaUsuario.SelectedItem as Usuario;
                 registro.UsuarioID = usuario.UsuarioID;
-                registro.Data = DateTime.Parse(boxDataDespesa.Text);
-                registro.Valor = double.Parse(txtValorDespesa.Text);
+                DateTime data = DateTime.Parse(boxDataDespesa.Text);
+                registro.Data = data.ToString(d);
+            //    registro.Valor = double.Parse(txtValorDespesa.Text);
                 ControllerRegistroDespesa CrDespesa = new ControllerRegistroDespesa();
                 CrDespesa.SalvarRegistro(registro);
                 Close();

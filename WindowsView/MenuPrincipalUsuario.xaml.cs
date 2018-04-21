@@ -50,5 +50,11 @@ namespace WindowsView
             MenuVisualizacaoDespesas visualizar = new MenuVisualizacaoDespesas();
             visualizar.ShowDialog();
         }
+
+        private void btnVisualizarSituacaFinanceira_Click(object sender, RoutedEventArgs e)
+        {
+            MenuDeRelatorioDeGastosDoMes menuMes = new MenuDeRelatorioDeGastosDoMes();
+            menuMes.ShowDialog();
+        }
     }
 }

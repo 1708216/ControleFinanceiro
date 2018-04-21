@@ -5,8 +5,47 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WindowsView"
         mc:Ignorable="d"
-        Title="MenuDeRelatorioDeGastosDoMes" Height="272.927" Width="580.976">
+        Title="MenuDeRelatorioDeGastosDoMes" Height="301.829" Width="575.122">
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="58*"/>
+            <RowDefinition Height="58*"/>
+            <RowDefinition Height="33*"/>
+            <RowDefinition Height="27*"/>
+            <RowDefinition Height="32*"/>
+            <RowDefinition Height="64*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="102*"/>
+            <ColumnDefinition Width="134*"/>
+            <ColumnDefinition Width="171*"/>
+            <ColumnDefinition Width="124*"/>
+            <ColumnDefinition Width="37*"/>
+        </Grid.ColumnDefinitions>
+        <Image HorizontalAlignment="Left" Width="58" Source="imagem/retanguloAzulDasLaterais.jpg" StretchDirection="DownOnly" Stretch="Fill" Grid.RowSpan="6"/>
+        <Label Content="RELATÓRIO " HorizontalAlignment="Left" Margin="0.6,18,0,0" VerticalAlignment="Top" FontSize="20" FontWeight="Bold" FontFamily="Segoe UI Black" Height="40" Width="135" Grid.ColumnSpan="2" RenderTransformOrigin="0.506,0.159" Grid.RowSpan="2" Grid.Column="1"/>
+        <ComboBox x:Name="ComBoxMesDoRelatorio" HorizontalAlignment="Right" Margin="0,0.4,2,0" VerticalAlignment="Top" Width="120" IsSynchronizedWithCurrentItem="True" FontFamily="Segoe UI Black" FontWeight="Bold" FontStyle="Italic" Grid.Column="3" Grid.Row="1" Height="23">
+            <ListBoxItem Content="JANEIRO"/>
+            <ListBoxItem Content="FEVEVEREIRO"/>
+            <ListBoxItem Content="MARÇO"/>
+            <ListBoxItem Content="ABRIL"/>
+            <ListBoxItem Content="MAIO"/>
+            <ListBoxItem Content="JUNHO"/>
+            <ListBoxItem Content="JULHO"/>
+            <ListBoxItem Content="AGOSTO"/>
+            <ListBoxItem Content="SETEMBRO"/>
+            <ListBoxItem Content="OUTUBRO"/>
+            <ListBoxItem Content="NOVEMBRO"/>
+            <ListBoxItem Content="DEZEMBRO"/>
+            <ListBoxItem/>
+        </ComboBox>
+        <Label Content="Selecione o mês" HorizontalAlignment="Left" Margin="72.2,0.4,0,0" VerticalAlignment="Top" Grid.Column="2" Height="26" Width="96" Grid.Row="1"/>
+        <Label Content="TOTAL DE DESPESAS " HorizontalAlignment="Left" Margin="0.6,2.2,0,0" VerticalAlignment="Top" Grid.Row="3" Height="25" Width="113" Grid.Column="1" RenderTransformOrigin="0.576,0.505"/>
+        <Label Content="TOTAL DE RECEITAS " HorizontalAlignment="Left" Margin="0.6,3,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.496,0.149" Grid.Row="2" Height="26" Width="113" Grid.Column="1"/>
+        <Label Content="RESULTADO FINAL :&#xD;&#xA;" HorizontalAlignment="Left" Margin="1.6,7,0,0" VerticalAlignment="Top" Width="112" Height="25" Grid.Row="4" Grid.Column="1"/>
+        <TextBlock Grid.Column="2" HorizontalAlignment="Left" Margin="0.2,30,0,0" Grid.Row="2" TextWrapping="Wrap" VerticalAlignment="Top" Width="168" Height="30" FontSize="24" Foreground="Red" Grid.RowSpan="2"><Run Text=" "/><Run Text="TextBlock"/></TextBlock>
+        <TextBlock Grid.Column="2" HorizontalAlignment="Left" Margin="0.2,57.4,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="168" Height="34" FontSize="24" Foreground="#FF2242EE" Grid.RowSpan="3"><Run Text=" "/><Run Text="TextBlock"/></TextBlock>
+        <TextBlock Grid.Column="2" HorizontalAlignment="Left" Margin="0.2,26.2,0,0" Grid.Row="3" TextWrapping="Wrap" VerticalAlignment="Top" Width="171" Height="33" FontSize="24" Grid.RowSpan="2"><Run Text=" "/><Run Text="TextBlock"/></TextBlock>
 
     </Grid>
 </Window>
