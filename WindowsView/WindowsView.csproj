@@ -140,7 +140,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="MenuRegistroDetalhesDaReceita.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MenuUsuarioAdicionarDespesaRapida.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MenuUsuarioAdicionarReceitaRapida.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -180,8 +188,14 @@
     <Compile Include="MenuRegistroDetalhesDaDespesa.xaml.cs">
       <DependentUpon>MenuRegistroDetalhesDaDespesa.xaml</DependentUpon>
     </Compile>
+    <Compile Include="MenuRegistroDetalhesDaReceita.xaml.cs">
+      <DependentUpon>MenuRegistroDetalhesDaReceita.xaml</DependentUpon>
+    </Compile>
     <Compile Include="MenuUsuarioAdicionarDespesaRapida.xaml.cs">
       <DependentUpon>MenuUsuarioAdicionarDespesaRapida.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MenuUsuarioAdicionarReceitaRapida.xaml.cs">
+      <DependentUpon>MenuUsuarioAdicionarReceitaRapida.xaml</DependentUpon>
     </Compile>
     <Compile Include="MenuVisualizacaoDespesas.xaml.cs">
       <DependentUpon>MenuVisualizacaoDespesas.xaml</DependentUpon>
@@ -311,6 +325,19 @@
     <Resource Include="imagem\logout.png" />
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="imagem\iconeReceitaMegaSena.png" />
+    <Resource Include="imagem\iconeReceitaVendas.jpg" />
+    <Resource Include="imagem\iconeReceitasDiversas.jpg" />
+    <Resource Include="imagem\receitaAposentadoria.jpg" />
+    <Resource Include="imagem\iconeReceitaHorasExtras.png" />
+    <Resource Include="imagem\iconeReceita13Salario2.jpg" />
+    <Resource Include="imagem\iconeReceitaFerias.png" />
+    <Resource Include="imagem\iconeReceitaAluguel.png" />
+    <Resource Include="imagem\iconeReceitabolsaDeEstudo.png" />
+    <Resource Include="imagem\iconeReceitaInvestimentos.png" />
+    <Resource Include="imagem\iconeReceitaPensao.jpg" />
+    <Resource Include="imagem\iconeReceitaRestituicaoIRRF.jpg" />
+    <Resource Include="imagem\iconeReceitaSalario.png" />
     <Resource Include="imagem\iconeResualtadoDoMes.jpg" />
     <Resource Include="imagem\iconeVisualizar.png" />
     <Resource Include="imagem\iconeDespesaComboInternet.png" />

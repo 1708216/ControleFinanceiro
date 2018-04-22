@@ -12,7 +12,7 @@ namespace WindowsView
     public partial class MenuUsuarioAdicionarDespesaRapida : Window
     {
         private static Despesa despesa = new Despesa();
-        private static ControllerDespesa Cd = new ControllerDespesa();
+
 
         public MenuUsuarioAdicionarDespesaRapida()
         {
@@ -23,6 +23,7 @@ namespace WindowsView
         {
             try
             {
+                ControllerDespesa Cd = new ControllerDespesa();
                 despesa = Cd.ProcurarDespesaPorNome(nomeDespesaClicada);
             }
             catch (ResourceReferenceKeyNotFoundException)
@@ -32,9 +33,7 @@ namespace WindowsView
             MenuRegistroDetalhesDaDespesa rgDetalhes = new MenuRegistroDetalhesDaDespesa(despesa);
             rgDetalhes.ShowDialog();
         }
-
-
-
+        
         private void btnDespesaMercado_Click(object sender, RoutedEventArgs e)
         {
             CadastrarDespesaClicada("MERCADO");

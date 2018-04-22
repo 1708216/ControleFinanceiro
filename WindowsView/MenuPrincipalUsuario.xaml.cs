@@ -39,7 +39,7 @@ namespace WindowsView
 
         private void btnAdicionarDespesa_Click_1(object sender, RoutedEventArgs e)
         {
-            
+
             MenuUsuarioAdicionarDespesaRapida mnAddDespesaRapida = new MenuUsuarioAdicionarDespesaRapida();
             mnAddDespesaRapida.ShowDialog();
 
@@ -56,5 +56,13 @@ namespace WindowsView
             MenuDeRelatorioDeGastosDoMes menuMes = new MenuDeRelatorioDeGastosDoMes();
             menuMes.ShowDialog();
         }
+
+        private void btnAdicionarReceita_Click(object sender, RoutedEventArgs e)
+        {
+            MenuUsuarioAdicionarReceitaRapida menuReceita = new MenuUsuarioAdicionarReceitaRapida();
+            menuReceita.ShowDialog();
+        }
+
+ 
     }
 }

@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Data.Entity;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 
 namespace Model.DAL
@@ -14,7 +10,9 @@ namespace Model.DAL
         protected override void Seed(Contexto contexto)
         {
             List<Despesa> itensDoMenuInserirDespesas = new List<Despesa>();
+            List<Receita> itensDoMenuInserirReceita = new List<Receita>();
             List<Usuario> usuarioAdministrador = new List<Usuario>();
+
 
             usuarioAdministrador.Add(new Usuario()
             {
@@ -33,8 +31,9 @@ namespace Model.DAL
                 senhaUsuario = "teste",
                 nivelDePermissão = 2
             });
+
             itensDoMenuInserirDespesas.Add(new Despesa() { DespesaID = 1, Descricao = "MERCADO" });
-            itensDoMenuInserirDespesas.Add(new Despesa() { DespesaID = 2 ,Descricao = "INTERNET" });
+            itensDoMenuInserirDespesas.Add(new Despesa() { DespesaID = 2, Descricao = "INTERNET" });
             itensDoMenuInserirDespesas.Add(new Despesa() { DespesaID = 3, Descricao = "LUZ" });
             itensDoMenuInserirDespesas.Add(new Despesa() { DespesaID = 4, Descricao = "ÁGUA" });
             itensDoMenuInserirDespesas.Add(new Despesa() { DespesaID = 5, Descricao = "CARTÃO DE CRÉDITO" });
@@ -60,13 +59,26 @@ namespace Model.DAL
             itensDoMenuInserirDespesas.Add(new Despesa() { DespesaID = 13, Descricao = "FARMÁCIA" });
             itensDoMenuInserirDespesas.Add(new Despesa() { DespesaID = 14, Descricao = "PLANO DO CELULAR" });
             itensDoMenuInserirDespesas.Add(new Despesa() { DespesaID = 12, Descricao = "LAZER" });
-    
+
+            itensDoMenuInserirReceita.Add(new Receita() { ReceitaID = 1, Descricao = "SALÁRIO" });
+            itensDoMenuInserirReceita.Add(new Receita() { ReceitaID = 2, Descricao = "BOLSA DE ESTUDOS" });
+            itensDoMenuInserirReceita.Add(new Receita() { ReceitaID = 3, Descricao = "ALUGUEL" });
+            itensDoMenuInserirReceita.Add(new Receita() { ReceitaID = 4, Descricao = "13° SALÁRIO" });
+            itensDoMenuInserirReceita.Add(new Receita() { ReceitaID = 5, Descricao = "FÉRIAS" });
+            itensDoMenuInserirReceita.Add(new Receita() { ReceitaID = 6, Descricao = "INVESTIMENTOS" });
+            itensDoMenuInserirReceita.Add(new Receita() { ReceitaID = 7, Descricao = "PENSÃO" });
+            itensDoMenuInserirReceita.Add(new Receita() { ReceitaID = 8, Descricao = "RESTITUIÇÃO DO IRRF" });
+            itensDoMenuInserirReceita.Add(new Receita() { ReceitaID = 9, Descricao = "HORAS EXTRAS" });
+            itensDoMenuInserirReceita.Add(new Receita() { ReceitaID = 10, Descricao = "APOSENTADORIA”" });
+            itensDoMenuInserirReceita.Add(new Receita() { ReceitaID = 11, Descricao = "VENDA" });
+            itensDoMenuInserirReceita.Add(new Receita() { ReceitaID = 12, Descricao = "DIVERSAS" });
+
             contexto.Despesas.AddRange(itensDoMenuInserirDespesas);
             contexto.Usuarios.AddRange(usuarioAdministrador);
             contexto.SaveChanges();
-    
+
+        }
+
+
     }
-
-
-}
 }

@@ -1,30 +1,81 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using Model;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Model;
-using System.Collections.ObjectModel;
 
 namespace Controllers
 {
     public class ControllerReceita
     {
-
-        static ObservableCollection<Receita> listaReceitas = new ObservableCollection<Receita>();
-        static int ultimoID = 0;
-        
         public Boolean SalvarReceita(Receita receitaRecebida)
         {
-            int id = ultimoID + 1;
-            ultimoID = id;
-            receitaRecebida.ReceitaID = id;
-            listaReceitas.Add(receitaRecebida);
-            return true;
+            Receita receita = ProcurarReceitaPorId(receitaRecebida.ReceitaID);
+
+            if (receita == null)
+            {
+                ContextoSigleton.Instancia.Receitas.Add(receitaRecebida);
+                ContextoSigleton.Instancia.SaveChanges();
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
 
-        public ObservableCollection<Receita> RetornarListaDeReceitas()
+        public List<Receita> RetornarListaDeReceita()
         {
-            return listaReceitas;
+            return ContextoSigleton.Instancia.Receitas.ToList();
+
+        }
+
+        public Receita ProcurarReceitaPorId(int id)
+        {
+            var u = from x in ContextoSigleton.Instancia.Receitas
+                    where x.ReceitaID.Equals(id)
+                    select x;
+            if (u != null)
+            {
+                return u.FirstOrDefault();
+            }
+            else
+            {
+                return null;
+            }
+        }
+
+        public Receita ProcurarReceitaPorNome(string nome)
+        {
+            var d = from x in ContextoSigleton.Instancia.Receitas
+                    where x.Descricao.ToLower().Equals(nome.Trim().ToLower())
+                    select x;
+            if (d != null)
+            {
+                return d.FirstOrDefault();
+            }
+            else
+            {
+                return null;
+            }
+        }
+
+        public Boolean ExcluirReceita(int receitaID)
+        {
+            Despesa d = ContextoSigleton.Instancia.Despesas.Find(receitaID);
+            if (d != null)
+            {
+                ContextoSigleton.Instancia.Entry(d).State = System.Data.Entity.EntityState.Deleted;
+                ContextoSigleton.Instancia.SaveChanges();
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+
         }
 
     }

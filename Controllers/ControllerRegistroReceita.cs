@@ -26,7 +26,7 @@ namespace Controllers
         public RegistroDeReceita ProcurarRegistroPorId(int Id)
         {
             var d = from x in ContextoSigleton.Instancia.RegistroDeReceitas
-                    where x.RegistroReceitaID.Equals(Id)
+                    where x.RegistroDeReceitaID.Equals(Id)
                     select x;
 
             if (d != null)
@@ -50,14 +50,14 @@ namespace Controllers
         public double RetornarSomaDasReceitasDoMes(String mesRecebido)
         {
 
-            double soma = 0;
+            double somaReceitas = 0;
             IEnumerable<RegistroDeReceita> receitasDoMes = RetornarAsReceitasDoMes(mesRecebido);
 
             foreach (Registro receita in receitasDoMes)
             {
-                soma = soma + receita.Valor;
+                somaReceitas = somaReceitas + receita.Valor;
             }
-            return soma;
+            return somaReceitas;
         }
 
 
@@ -70,7 +70,7 @@ namespace Controllers
 
         public Boolean EditarRegistroDeReceita(RegistroDeReceita registroEditado)
         {
-            RegistroDeReceita registroParaEditar = ProcurarRegistroPorId(registroEditado.RegistroReceitaID);
+            RegistroDeReceita registroParaEditar = ProcurarRegistroPorId(registroEditado.RegistroDeReceitaID);
 
             if (registroParaEditar != null)
             {

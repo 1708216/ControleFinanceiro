@@ -1,0 +1,80 @@
+﻿<Window x:Class="WindowsView.MenuUsuarioAdicionarReceitaRapida"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WindowsView"
+        mc:Ignorable="d" Height="495.428" Width="785.854">
+    <Grid Margin="-1,0,1.2,0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="65*"/>
+            <RowDefinition Height="84*"/>
+            <RowDefinition Height="7*"/>
+            <RowDefinition Height="84*"/>
+            <RowDefinition Height="7*"/>
+            <RowDefinition Height="84*"/>
+            <RowDefinition Height="7*"/>
+            <RowDefinition Height="84*"/>
+            <RowDefinition Height="7*"/>
+            <RowDefinition Height="7*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="141.6"/>
+            <ColumnDefinition Width="81.6"/>
+            <ColumnDefinition Width="5*"/>
+            <ColumnDefinition Width="81.6"/>
+            <ColumnDefinition Width="6*"/>
+            <ColumnDefinition Width="81.6"/>
+            <ColumnDefinition Width="6*"/>
+            <ColumnDefinition Width="81.6"/>
+            <ColumnDefinition Width="6*"/>
+            <ColumnDefinition Width="82.4"/>
+            <ColumnDefinition Width="6*"/>
+            <ColumnDefinition Width="81.6"/>
+            <ColumnDefinition Width="6*"/>
+            <ColumnDefinition Width="82.4"/>
+            <ColumnDefinition Width="5*"/>
+            <ColumnDefinition Width="24.8"/>
+        </Grid.ColumnDefinitions>
+        <Button x:Name="btnReceitaSalario" HorizontalAlignment="Left" Margin="0.4,69,0,0" VerticalAlignment="Top" Width="168" Height="91" Background="#FF060937" Grid.RowSpan="3" Grid.ColumnSpan="4" Grid.Column="1" Click="btnReceitaSalario_Click">
+            <Image Height="71" Width="105" Source="imagem/iconeReceitaSalario.png"/>
+        </Button>
+        <Button x:Name="btnReceitaBolsaDeEstudo" HorizontalAlignment="Left" Margin="6.2,69,0,0" VerticalAlignment="Top" Width="169" Height="91" Background="#FF060937" Grid.Column="4" Grid.ColumnSpan="4" Grid.RowSpan="3" Click="btnReceitaBolsaDeEstudo_Click">
+            <Image Height="62" Width="80" Source="imagem/iconeReceitabolsaDeEstudo.png"/>
+        </Button>
+        <Button x:Name="btnReceitaAluguel" HorizontalAlignment="Left" Margin="0.8,69,0,0" VerticalAlignment="Top" Width="170" Height="91" Background="#FF060937" Grid.Column="9" Grid.RowSpan="3" Grid.ColumnSpan="4" Click="btnReceitaAluguel_Click">
+            <Image Height="69" Width="76" Source="imagem/iconeReceitaAluguel.png"/>
+        </Button>
+        <Button x:Name="btnReceitaInvestimento" HorizontalAlignment="Left" Margin="0,6.8,0,0" Grid.Row="2" VerticalAlignment="Top" Width="170" Height="89" Background="#FF060937" Grid.Column="3" Grid.ColumnSpan="4" Grid.RowSpan="2" Click="btnReceitaInvestimento_Click">
+            <Image Height="62" Width="93" Source="imagem/iconeReceitaInvestimentos.png"/>
+        </Button>
+        <Button x:Name="brnReceitaAposentadoria" HorizontalAlignment="Left" Margin="1,6.8,0,1" Grid.Row="2" Width="169" Background="#FF060937" Grid.Column="7" Grid.ColumnSpan="3" Grid.RowSpan="2" Click="brnReceitaAposentadoria_Click">
+            <Image Height="64" Width="72" Source="imagem/iconeReceitaPensao.jpg"/>
+        </Button>
+        <Button x:Name="btnRecitaRestitiucao" HorizontalAlignment="Left" Margin="0.2,6.8,0,1" Grid.Row="2" Width="169" Background="#FF060937" Grid.Column="11" Grid.RowSpan="2" Grid.ColumnSpan="3" Click="btnRecitaRestitiucao_Click">
+            <Image Height="67" Width="106" Source="imagem/iconeReceitaRestituicaoIRRF.jpg"/>
+        </Button>
+        <Button x:Name="btnReceitaHoraExtra" HorizontalAlignment="Left" Grid.Row="5" VerticalAlignment="Top" Width="168" Height="91" Background="#FF060937" Margin="0.4,0,0,0" Grid.RowSpan="2" Grid.Column="1" Grid.ColumnSpan="4" Click="btnReceitaHoraExtra_Click">
+            <Image Height="57" Width="94" Source="imagem/iconeReceitaHorasExtras.png"/>
+        </Button>
+        <Button x:Name="btnReceitaAposentadoria" HorizontalAlignment="Left" Grid.Row="5" VerticalAlignment="Top" Width="170" Height="90" Background="#FF060937" Grid.Column="5" Margin="1,0,0,0" Grid.ColumnSpan="4" Grid.RowSpan="2" Click="btnReceitaAposentadoria_Click" >
+            <Image Height="57" Width="85" Source="imagem/receitaAposentadoria.jpg"/>
+        </Button>
+        <Button x:Name="btnReceitaVendaExtra" HorizontalAlignment="Left" Grid.Row="5" VerticalAlignment="Top" Width="171" Height="89" Background="#FF060937" Grid.Column="9" Margin="0,1,0,0" Grid.ColumnSpan="4" Grid.RowSpan="2" Click="btnReceitaVendaExtra_Click">
+            <Image Height="67" Width="73" Source="imagem/iconeReceitaMegaSena.png"/>
+        </Button>
+        <Button x:Name="btnReceitaDiversas" HorizontalAlignment="Left" Margin="5.4,0.2,0,0" Grid.Row="5" VerticalAlignment="Top" Width="83" Height="90" Background="#FF060937" Grid.Column="12" Grid.ColumnSpan="3">
+            <Image Height="60" Width="73" Source="imagem/iconeReceitasDiversas.jpg"/>
+        </Button>
+        <Button x:Name="btnReceitaFerias" HorizontalAlignment="Left" Margin="140,6.8,0,0" Grid.Row="2" VerticalAlignment="Top" Width="83" Height="89" Background="#FF060937" Grid.ColumnSpan="2" Grid.RowSpan="2" Click="btnReceitaFerias_Click">
+            <Image Height="67" Width="64" Source="imagem/iconeReceitaFerias.png"/>
+        </Button>
+        <Button x:Name="btnReceita13Salario" HorizontalAlignment="Left" Margin="5.4,69,0,6.4" Width="83" Background="#FF060937" Grid.Column="12" Grid.RowSpan="3" Grid.ColumnSpan="2" Click="btnReceita13Salario_Click">
+            <Image Height="67" Width="51" Source="imagem/iconeReceita13Salario2.jpg"/>
+        </Button>
+        <Image HorizontalAlignment="Left" Height="468" Grid.RowSpan="10" VerticalAlignment="Top" Width="87" Source="imagem/retanguloAzulDasLaterais.jpg" Stretch="Fill"/>
+        <Label Content="Selecione a Receita" HorizontalAlignment="Left" Margin="119,10,0,0" VerticalAlignment="Top" Grid.ColumnSpan="6" Width="214" FontSize="20" Height="32" FontFamily="Segoe UI Black" FontWeight="Bold"/>
+        <Button x:Name="btnFecharJanela" Content="Fechar" Grid.Column="11" HorizontalAlignment="Left" Margin="75,10.2,0,0" Grid.Row="7" VerticalAlignment="Top" Width="94" Grid.ColumnSpan="3" Height="22" Background="#FF060937" Foreground="#FFFDFDFD" Click="btnFecharJanela_Click"/>
+
+    </Grid>
+</Window>
