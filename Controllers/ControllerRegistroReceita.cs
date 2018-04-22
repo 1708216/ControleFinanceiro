@@ -3,19 +3,17 @@ using Model;
 using System.Linq;
 using System.Collections.Generic;
 
-
-
 namespace Controllers
 {
-    public class ControllerRegistroDespesa
+    public class ControllerRegistroReceita
     {
-        public Boolean SalvarRegistro(RegistroDeDespesa registroRecebido)
+        public Boolean SalvarRegistro(RegistroDeReceita registroRecebido)
         {
-            RegistroDeDespesa registro = ProcurarRegistroPorId(registroRecebido.RegistroDeDespesaID);
+            RegistroDeReceita registro = ProcurarRegistroPorId (registroRecebido.ReceitaID);
 
             if (registro == null)
             {
-                ContextoSigleton.Instancia.RegistroDeDespesas.Add(registroRecebido);
+                ContextoSigleton.Instancia.RegistroDeReceitas.Add(registroRecebido);
                 ContextoSigleton.Instancia.SaveChanges();
                 return true;
             }
@@ -25,10 +23,10 @@ namespace Controllers
             }
         }
 
-        public RegistroDeDespesa ProcurarRegistroPorId(int Id)
+        public RegistroDeReceita ProcurarRegistroPorId(int Id)
         {
-            var d = from x in ContextoSigleton.Instancia.RegistroDeDespesas
-                    where x.RegistroDeDespesaID.Equals(Id)
+            var d = from x in ContextoSigleton.Instancia.RegistroDeReceitas
+                    where x.RegistroReceitaID.Equals(Id)
                     select x;
 
             if (d != null)
@@ -41,44 +39,44 @@ namespace Controllers
             }
         }
 
-        public IEnumerable<RegistroDeDespesa> RetornarAsDespesaDoMes(String mes)
+        public IEnumerable<RegistroDeReceita> RetornarAsReceitasDoMes(String mes)
         {
-            IEnumerable<RegistroDeDespesa> DespesasSelecionadas = from x in ContextoSigleton.Instancia.RegistroDeDespesas
+            IEnumerable<RegistroDeReceita> ReceitasSelecionadas = from x in ContextoSigleton.Instancia.RegistroDeReceitas
                                                                   where x.Data.Contains(mes)
                                                                   select x;
-            return DespesasSelecionadas;
+            return ReceitasSelecionadas;
         }
 
-        public double RetornarSomaDasDespesaDoMes(String mesRecebido)
+        public double RetornarSomaDasReceitasDoMes(String mesRecebido)
         {
 
             double soma = 0;
-            IEnumerable<RegistroDeDespesa> despesasDoMes = RetornarAsDespesaDoMes(mesRecebido);
+            IEnumerable<RegistroDeReceita> receitasDoMes = RetornarAsReceitasDoMes(mesRecebido);
 
-            foreach (Registro despesa in despesasDoMes)
+            foreach (Registro receita in receitasDoMes)
             {
-                soma = soma + despesa.Valor;
+                soma = soma + receita.Valor;
             }
             return soma;
         }
 
 
 
-        public List<RegistroDeDespesa> RetornarTodosOsRegistrosDespesas()
+        public List<RegistroDeReceita> RetornarTodosOsRegistrosReceitas()
         {
-            return ContextoSigleton.Instancia.RegistroDeDespesas.ToList();
+            return ContextoSigleton.Instancia.RegistroDeReceitas.ToList();
         }
 
 
-        public Boolean EditarRegistroDeDespesa(RegistroDeDespesa registroEditado)
+        public Boolean EditarRegistroDeReceita(RegistroDeReceita registroEditado)
         {
-            RegistroDeDespesa registroParaEditar = ProcurarRegistroPorId(registroEditado.RegistroDeDespesaID);
+            RegistroDeReceita registroParaEditar = ProcurarRegistroPorId(registroEditado.RegistroReceitaID);
 
             if (registroParaEditar != null)
             {
                 registroParaEditar.Data = registroEditado.Data;
                 registroParaEditar.UsuarioID = registroEditado.UsuarioID;
-                registroParaEditar.despesa = registroEditado.despesa;
+                registroParaEditar.receita = registroEditado.receita;
 
                 ContextoSigleton.Instancia.Entry(registroParaEditar).State =
                     System.Data.Entity.EntityState.Modified;
@@ -92,10 +90,9 @@ namespace Controllers
             }
         }
 
-        public Boolean ExcluirRegistroDeDespesa(int registroDeDepesaID)
+        public Boolean ExcluirRegistroDeReceita(int registroDeDespesaID)
         {
-            RegistroDeDespesa u = ContextoSigleton.Instancia.RegistroDeDespesas.Find(registroDeDepesaID);
-
+            RegistroDeReceita u = ContextoSigleton.Instancia.RegistroDeReceitas.Find(registroDeDespesaID);
             if (u != null)
             {
                 ContextoSigleton.Instancia.Entry(u).State = System.Data.Entity.EntityState.Deleted;

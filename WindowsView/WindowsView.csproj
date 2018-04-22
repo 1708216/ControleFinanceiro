@@ -311,6 +311,7 @@
     <Resource Include="imagem\logout.png" />
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="imagem\iconeResualtadoDoMes.jpg" />
     <Resource Include="imagem\iconeVisualizar.png" />
     <Resource Include="imagem\iconeDespesaComboInternet.png" />
     <Resource Include="imagem\iconeDespesaMedica.png" />

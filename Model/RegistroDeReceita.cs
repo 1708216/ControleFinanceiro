@@ -8,12 +8,8 @@ namespace Model
 {
     public class RegistroDeReceita : Registro
     {
-        int RegistroReceitaID {get;set;}
-        Receita receita { get; set; }
-
-        public RegistroDeReceita ()
-        {
-            Receita receita = new Receita();
-        }
+        public int RegistroReceitaID {get;set;}
+        public int ReceitaID { get; set; }
+        public virtual Receita receita { get; set; }
     }
 }

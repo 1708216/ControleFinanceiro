@@ -21,8 +21,6 @@ namespace WindowsView
     public partial class MenuDeRelatorioDeGastosDoMes : Window
     {
 
-
-
         public MenuDeRelatorioDeGastosDoMes()
         {
 
@@ -32,14 +30,16 @@ namespace WindowsView
         }
 
 
-        private void ComboBoxMesRelatorio_ContextMenuClosing(object sender, ContextMenuEventArgs e)
+        private void txtTotalDespesa_ContextMenuClosing(object sender, ContextMenuEventArgs e)
         {
 
         }
 
-        private void txtTotalDespesa_ContextMenuClosing(object sender, ContextMenuEventArgs e)
+        private void ComboBoxMesRelatorio_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            
+            string mesSelecionado = ComboBoxMesRelatorio.SelectedItem.ToString();
+            ControllerRegistroDespesa Cd = new ControllerRegistroDespesa();
+            txtTotalDespesa.Text = Cd.RetornarSomaDasDespesaDoMes(mesSelecionado).ToString();
         }
 
         private void btnSelecao_Click(object sender, RoutedEventArgs e)
@@ -49,9 +49,8 @@ namespace WindowsView
                 string mesSelecionado = ComboBoxMesRelatorio.SelectedItem.ToString();
                 ControllerRegistroDespesa Cd = new ControllerRegistroDespesa();
                 txtTotalDespesa.Text = Cd.RetornarSomaDasDespesaDoMes(mesSelecionado).ToString();
-
-
-
+             
+              
             }
             catch (NullReferenceException)
             {
@@ -78,5 +77,7 @@ namespace WindowsView
             meses.Add("DEZEMBRO");
             return meses;
         }
+
+
     }
 }
