@@ -46,5 +46,19 @@ namespace WindowsView
             MenuAdministradorEditarUsuario mnEditar = new MenuAdministradorEditarUsuario();
             mnEditar.ShowDialog();
         }
+
+        private void btnCadastrarOperacao_Click(object sender, RoutedEventArgs e)
+        {
+            MenuAdministradorAdicionarNomeDeDespesa mnAdicionarNomeDespesa = new MenuAdministradorAdicionarNomeDeDespesa();
+            mnAdicionarNomeDespesa.ShowDialog();
+        }
+
+        private void btnSairDoMenuAdmin_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow mnLogin = new MainWindow();
+            mnLogin.Show();
+            Close();
+
+        }
     }
 }

@@ -1,0 +1,16 @@
+﻿<Window x:Class="WindowsView.MensagemRatificacaoDeMudanca"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WindowsView"
+        mc:Ignorable="d"
+        Title="MensagemRatificacaoDeMudanca" Height="142.683" Width="401.707">
+    <Grid>
+        <Image HorizontalAlignment="Left" Height="58" Margin="22,16,0,0" VerticalAlignment="Top" Width="58" Source="imagem/iconeMensagemErro.png"/>
+        <Label Content="Ao excluir o item todas as descrições associadoas&#xD;&#xA; à operação serão apagadas! &#xD;&#xA;Tem certeza que deseja deletar a operação ? " HorizontalAlignment="Left" Margin="85,10,0,0" VerticalAlignment="Top" Width="275" Height="67"/>
+        <Button x:Name="btnSim" Content="Sim" HorizontalAlignment="Left" Margin="111,77,0,0" VerticalAlignment="Top" Width="75" Click="btnSim_Click"/>
+        <Button x:Name="btnNao" Content="Não" HorizontalAlignment="Left" Margin="218,77,0,0" VerticalAlignment="Top" Width="75" Click="btnNao_Click_1"/>
+
+    </Grid>
+</Window>

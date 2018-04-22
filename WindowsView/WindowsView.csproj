@@ -100,7 +100,15 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="MensagemRatificacaoDeMudanca.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MenuAdiministradorAdicionarUsuario.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MenuAdministradorAdicionarNomeDeDespesa.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -142,8 +150,14 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="MensagemRatificacaoDeMudanca.xaml.cs">
+      <DependentUpon>MensagemRatificacaoDeMudanca.xaml</DependentUpon>
+    </Compile>
     <Compile Include="MenuAdiministradorAdicionarUsuario.xaml.cs">
       <DependentUpon>MenuAdiministradorAdicionarUsuario.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MenuAdministradorAdicionarNomeDeDespesa.xaml.cs">
+      <DependentUpon>MenuAdministradorAdicionarNomeDeDespesa.xaml</DependentUpon>
     </Compile>
     <Compile Include="MenuAdministradorCadastrarNovoUsuario.xaml.cs">
       <DependentUpon>MenuAdministradorCadastrarNovoUsuario.xaml</DependentUpon>
