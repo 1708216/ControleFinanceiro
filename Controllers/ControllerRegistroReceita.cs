@@ -60,8 +60,6 @@ namespace Controllers
             return somaReceitas;
         }
 
-
-
         public List<RegistroDeReceita> RetornarTodosOsRegistrosReceitas()
         {
             return ContextoSigleton.Instancia.RegistroDeReceitas.ToList();

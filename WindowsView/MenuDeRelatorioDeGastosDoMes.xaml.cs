@@ -37,26 +37,28 @@ namespace WindowsView
 
         private void ComboBoxMesRelatorio_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            string mesSelecionado = ComboBoxMesRelatorio.SelectedItem.ToString();
-            ControllerRegistroDespesa Cd = new ControllerRegistroDespesa();
-            txtTotalDespesa.Text = Cd.RetornarSomaDasDespesaDoMes(mesSelecionado).ToString();
-        }
-
-        private void btnSelecao_Click(object sender, RoutedEventArgs e)
-        {
             try
             {
                 string mesSelecionado = ComboBoxMesRelatorio.SelectedItem.ToString();
                 ControllerRegistroDespesa Cd = new ControllerRegistroDespesa();
-                txtTotalDespesa.Text = Cd.RetornarSomaDasDespesaDoMes(mesSelecionado).ToString();
-             
-              
+                ControllerRegistroReceita Cr = new ControllerRegistroReceita();
+                double totalDespesa = Cd.RetornarSomaDasDespesaDoMes(mesSelecionado);
+                double totalReceita = Cr.RetornarSomaDasReceitasDoMes(mesSelecionado);
+                txtTotalDespesa.Text = totalDespesa.ToString();
+                txtTotalReceita.Text = totalReceita.ToString();
+                txtResultadoFinal.Text = (totalReceita - totalDespesa).ToString();
+
+
+                //Mudando a Abordagem para realizar o cálculo final.
+                 //txtTotalDespesa.Text = Cd.RetornarSomaDasDespesaDoMes(mesSelecionado).ToString();
+                //ControllerRegistroReceita Cr = new ControllerRegistroReceita();
+                //txtTotalReceita.Text = Cr.RetornarSomaDasReceitasDoMes(mesSelecionado).ToString();
             }
             catch (NullReferenceException)
             {
-                
+
             }
-         
+
         }
 
         private List<String> ListaDeMeses()
