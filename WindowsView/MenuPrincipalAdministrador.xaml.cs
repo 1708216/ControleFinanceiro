@@ -40,5 +40,11 @@ namespace WindowsView
             MenuAdministradorExcluirUsuario mnExcluir = new MenuAdministradorExcluirUsuario(usuarioLogado.UsuarioID);
             mnExcluir.ShowDialog();
         }
+
+        private void btnAdmEditarUsuario_Click(object sender, RoutedEventArgs e)
+        {
+            MenuAdministradorEditarUsuario mnEditar = new MenuAdministradorEditarUsuario();
+            mnEditar.ShowDialog();
+        }
     }
 }
