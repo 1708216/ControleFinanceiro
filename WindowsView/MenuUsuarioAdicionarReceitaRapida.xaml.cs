@@ -98,5 +98,7 @@ namespace WindowsView
         {
             Close();
         }
+
+ 
     }
 }

@@ -48,7 +48,7 @@
         <Button x:Name="btnReceitaInvestimento" HorizontalAlignment="Left" Margin="0,6.8,0,0" Grid.Row="2" VerticalAlignment="Top" Width="170" Height="89" Background="#FF060937" Grid.Column="3" Grid.ColumnSpan="4" Grid.RowSpan="2" Click="btnReceitaInvestimento_Click">
             <Image Height="62" Width="93" Source="imagem/iconeReceitaInvestimentos.png"/>
         </Button>
-        <Button x:Name="brnReceitaAposentadoria" HorizontalAlignment="Left" Margin="1,6.8,0,1" Grid.Row="2" Width="169" Background="#FF060937" Grid.Column="7" Grid.ColumnSpan="3" Grid.RowSpan="2" Click="brnReceitaAposentadoria_Click">
+        <Button x:Name="brnReceitaPensao" HorizontalAlignment="Left" Margin="1,6.8,0,1" Grid.Row="2" Width="169" Background="#FF060937" Grid.Column="7" Grid.ColumnSpan="3" Grid.RowSpan="2" Click="brnReceitaPensao_Click">
             <Image Height="64" Width="72" Source="imagem/iconeReceitaPensao.jpg"/>
         </Button>
         <Button x:Name="btnRecitaRestitiucao" HorizontalAlignment="Left" Margin="0.2,6.8,0,1" Grid.Row="2" Width="169" Background="#FF060937" Grid.Column="11" Grid.RowSpan="2" Grid.ColumnSpan="3" Click="btnRecitaRestitiucao_Click">
