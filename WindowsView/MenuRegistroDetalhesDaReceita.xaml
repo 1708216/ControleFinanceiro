@@ -13,7 +13,7 @@
         <Label Content="Valor:" HorizontalAlignment="Left" Margin="33,61,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="txtValorReceita" HorizontalAlignment="Left" Height="23" Margin="88,65,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <Button x:Name="btnAdicionarReceita" Content="Adicionar" HorizontalAlignment="Left" Margin="121,117,0,0" VerticalAlignment="Top" Width="75" Click="btnAdicionarReceita_Click" />
-        <Button x:Name="btnCancela" Content="Cancel" HorizontalAlignment="Left" Margin="217,117,0,0" VerticalAlignment="Top" Width="75" />
+        <Button x:Name="btnCancela" Content="Cancel" HorizontalAlignment="Left" Margin="217,117,0,0" VerticalAlignment="Top" Width="75" Click="btnCancela_Click" />
 
     </Grid>
 </Window>

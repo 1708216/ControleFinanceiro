@@ -41,12 +41,29 @@ namespace WindowsView
         {
             try
             {
+                RegistroDeReceita registro = new RegistroDeReceita();
+                registro.receita = receitaParaAdicionar;
+                Usuario usuario = ComboListaUsuario.SelectedItem as Usuario;
+                registro.UsuarioID = usuario.UsuarioID;
 
+                DateTime data = DateTime.Parse(boxDataReceita.Text);
+                string dataConvertida = string.Format("{0:MMMM}", data);
+                registro.Data = dataConvertida.ToUpper();
+                registro.Valor = double.Parse(txtValorReceita.Text);
+                ControllerRegistroReceita CrReceita = new ControllerRegistroReceita();
+                CrReceita.SalvarRegistro(registro);
+                Close();
             }
             catch (FormatException)
             {
-
+                MensagemDeErro msn = new MensagemDeErro();
+                msn.ShowDialog();
             }
+        }
+
+        private void btnCancela_Click(object sender, RoutedEventArgs e)
+        {
+            Close();
         }
     }
 }
