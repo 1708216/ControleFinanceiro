@@ -12,7 +12,7 @@ namespace WindowsView
         enum TipoDePermissao
         {
             administrador = 1,
-            usuarioPadrão = 2,
+            usuarioPadrao = 2,
         }
 
         public MainWindow()

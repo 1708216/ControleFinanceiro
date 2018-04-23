@@ -11,9 +11,8 @@ namespace WindowsView
     /// </summary>
     public partial class MenuAdministradorCadastrarNovoUsuario : Window
     {
-
-        int permisao = 2;
-  
+        int permissao = 2;
+        
         public MenuAdministradorCadastrarNovoUsuario()
         {
             InitializeComponent();
@@ -28,7 +27,7 @@ namespace WindowsView
                 usuario.nomeUsuario = txtNomeUsuario.Text;
                 usuario.loginUsuario = txtLogin.Text;
                 usuario.senhaUsuario = txtSenha.Text;
-                usuario.nivelDePermissão = permisao;
+                usuario.nivelDePermissão = permissao;
 
                 if (cUsu.SalvarUsuario(usuario))
                 {
@@ -61,11 +60,11 @@ namespace WindowsView
             RadioButton radio = sender as RadioButton;
             if ((radio.Content.ToString()).Equals("Administrador"))
             {
-                permisao = 1;
+                permissao = 1;      
             }
             else
             {
-                permisao = 2;
+                permissao = 2;
             }
 
         }
