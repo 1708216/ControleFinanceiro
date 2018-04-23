@@ -1,0 +1,15 @@
+﻿<Window x:Name="msnCampoInvalido" x:Class="WindowsView.MensagemDeErroCampoInvalido"
+       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WindowsView"
+        mc:Ignorable="d"
+        Title="MensagemDeErroCampoInvalido" Height="154.391" Width="409.024">
+    <Grid>
+        <Label Content="Campo com caracteres inválidos!" HorizontalAlignment="Left" Margin="128,20,0,0" VerticalAlignment="Top" Width="230" FontWeight="Bold" FontSize="14" Height="38"/>
+        <Button x:Name="CampoInvalido" Content="OK&#xA;" HorizontalAlignment="Left" Margin="190,63,0,0" VerticalAlignment="Top" Width="112" Height="23" Click="CampoInvalido_Click"/>
+        <Image Margin="20,15,309.4,51.8" Source="imagem/iconeMensagemErro.png" Stretch="Fill" RenderTransformOrigin="-0.382,-0.16"/>
+
+    </Grid>
+</Window>

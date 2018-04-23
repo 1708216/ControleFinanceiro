@@ -57,8 +57,8 @@ namespace WindowsView
             }
             catch (FormatException)
             {
-                MensagemDeErro msn = new MensagemDeErro();
-                msn.ShowDialog();
+                MensagemDeErroPreenchimentoObrig msnCampoObrigatorio = new MensagemDeErroPreenchimentoObrig();
+                msnCampoObrigatorio.ShowDialog();
             }
 
 

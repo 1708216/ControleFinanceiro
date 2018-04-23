@@ -56,13 +56,14 @@ namespace WindowsView
             }
             catch (FormatException)
             {
-                MensagemDeErro msn = new MensagemDeErro();
-                msn.ShowDialog();
+
+                MensagemDeErroCampoInvalido msnCampoInvalido = new MensagemDeErroCampoInvalido();
+                msnCampoInvalido.ShowDialog();
             }
             catch (NullReferenceException)
             {
-                MensagemDeErro msn = new MensagemDeErro();
-                msn.ShowDialog();
+                MensagemDeErroPreenchimentoObrig msnCampoObrigatorio = new MensagemDeErroPreenchimentoObrig();
+                msnCampoObrigatorio.ShowDialog();
             }
         }
 

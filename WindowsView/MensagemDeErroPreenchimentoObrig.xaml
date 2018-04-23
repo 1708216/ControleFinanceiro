@@ -1,0 +1,15 @@
+﻿<Window x:Name="CamposNaoPreenchido" x:Class="WindowsView.MensagemDeErroPreenchimentoObrig"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WindowsView"
+        mc:Ignorable="d"
+        Title="MensagemDeErroFaltaCampo" Height="147.074" Width="377.56">
+    <Grid>
+        <Label Content="Campos de Preenchimento &#xD;&#xA;            origatório!&#xA;" HorizontalAlignment="Left" Margin="138,10,0,0" VerticalAlignment="Top" Width="193" FontWeight="Bold" FontSize="14" Height="52"/>
+        <Button x:Name="msnFaltaCampo" Content="OK&#xA;" HorizontalAlignment="Left" Margin="165,62,0,0" VerticalAlignment="Top" Width="112" Height="23" Click="msnFaltaCampo_Click"/>
+        <Image Margin="40,23,257.2,42.6" Source="imagem/iconeMensagemErro.png" Stretch="Fill" RenderTransformOrigin="-0.382,-0.16"/>
+
+    </Grid>
+</Window>

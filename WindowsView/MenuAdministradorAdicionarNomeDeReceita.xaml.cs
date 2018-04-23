@@ -59,23 +59,32 @@ namespace WindowsView
 
         private void btnExcluirDescricao_Click(object sender, RoutedEventArgs e)
         {
-            ControllerReceita Cr = new ControllerReceita();
-            Receita receita = ComboListBoxDescricaoOperacoes.SelectedItem as Receita;
-            MensagemRatificacaoDeMudanca msn = new MensagemRatificacaoDeMudanca();
-            msn.ShowDialog();
-            if (msn.RetornarOpcaoExlcuirOperacao())
+
+            try
             {
-                if (Cr.ExcluirReceita(receita.ReceitaID))
+                ControllerReceita Cr = new ControllerReceita();
+                Receita receita = ComboListBoxDescricaoOperacoes.SelectedItem as Receita;
+                MensagemRatificacaoDeMudanca msn = new MensagemRatificacaoDeMudanca();
+                msn.ShowDialog();
+                if (msn.RetornarOpcaoExlcuirOperacao())
                 {
-                    MensagemDeSucesso msnSucesso = new MensagemDeSucesso();
-                    msnSucesso.ShowDialog();
-                    Close();
+                    if (Cr.ExcluirReceita(receita.ReceitaID))
+                    {
+                        MensagemDeSucesso msnSucesso = new MensagemDeSucesso();
+                        msnSucesso.ShowDialog();
+                        Close();
+                    }
+                    else
+                    {
+                        MensagemDeErro msnErro = new MensagemDeErro();
+                        msnErro.ShowDialog();
+                    }
                 }
-                else
-                {
-                    MensagemDeErro msnErro = new MensagemDeErro();
-                    msnErro.ShowDialog();
-                }
+            }
+            catch (NullReferenceException)
+            {
+                MensagemDeErroPreenchimentoObrig msnCampoObrigatorio = new MensagemDeErroPreenchimentoObrig();
+                msnCampoObrigatorio.ShowDialog();
             }
         }
 

@@ -48,17 +48,17 @@ namespace WindowsView
                 Close();
 
             }
-            catch(FormatException)
+            catch (FormatException)
             {
-                // personalizar uma mensagem com a informação que o campo é inválido ou em branco 
 
-                MensagemDeErro msn = new MensagemDeErro();
-                msn.ShowDialog();
+                MensagemDeErroCampoInvalido msnCampoInvalido = new  MensagemDeErroCampoInvalido();
+                msnCampoInvalido.ShowDialog();
             }
             catch (NullReferenceException)
             {
-
-            }     
+                MensagemDeErroPreenchimentoObrig msnCampoObrigatorio = new MensagemDeErroPreenchimentoObrig();
+                msnCampoObrigatorio.ShowDialog();
+            }
         }
 
         private void btnCancela_Click(object sender, RoutedEventArgs e)

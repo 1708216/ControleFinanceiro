@@ -71,6 +71,14 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="MensagemDeErroCampoInvalido.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MensagemDeErroPreenchimentoObrig.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MensagemDeSucesso.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -89,6 +97,12 @@
     </Compile>
     <Compile Include="MensagemDeErro.xaml.cs">
       <DependentUpon>MensagemDeErro.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MensagemDeErroCampoInvalido.xaml.cs">
+      <DependentUpon>MensagemDeErroCampoInvalido.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MensagemDeErroPreenchimentoObrig.xaml.cs">
+      <DependentUpon>MensagemDeErroPreenchimentoObrig.xaml</DependentUpon>
     </Compile>
     <Compile Include="MensagemDeSucesso.xaml.cs">
       <DependentUpon>MensagemDeSucesso.xaml</DependentUpon>

@@ -2,6 +2,7 @@
 using System.Windows.Controls;
 using Controllers;
 using Model;
+using System;
 
 namespace WindowsView
 {
@@ -32,19 +33,27 @@ namespace WindowsView
 
         private void btnAdminExcluir_Click(object sender, RoutedEventArgs e)
         {
-            int idUsuario = int.Parse(txtIdExcluir.Text);
-            ControllerUsuario cu = new ControllerUsuario();
 
-            if (cu.ExcluirUsuario(idUsuario,usuarioLogadoID))
+            try
             {
-                MensagemDeSucesso msn = new MensagemDeSucesso();
-                msn.ShowDialog();
-                Close();
-            }
-            else
+                int idUsuario = int.Parse(txtIdExcluir.Text);
+                ControllerUsuario cu = new ControllerUsuario();
+
+                if (cu.ExcluirUsuario(idUsuario, usuarioLogadoID))
+                {
+                    MensagemDeSucesso msn = new MensagemDeSucesso();
+                    msn.ShowDialog();
+                    Close();
+                }
+                else
+                {
+                    MensagemDeErro msn = new MensagemDeErro();
+                    msn.ShowDialog();
+                }
+            }catch (FormatException)
             {
-                MensagemDeErro msn = new MensagemDeErro();
-                msn.ShowDialog();
+                MensagemDeErroPreenchimentoObrig msnCampoObrigatorio = new MensagemDeErroPreenchimentoObrig();
+                msnCampoObrigatorio.ShowDialog();
             }
         }
     }

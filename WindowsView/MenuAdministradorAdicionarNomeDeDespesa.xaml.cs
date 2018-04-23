@@ -1,4 +1,5 @@
-﻿using System.Windows;
+﻿using System;
+using System.Windows;
 using System.Windows.Controls;
 using Controllers;
 using Model;
@@ -35,7 +36,7 @@ namespace WindowsView
                 MensagemDeErro mn = new MensagemDeErro();
                 mn.ShowDialog();
             }
-            
+
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -50,21 +51,28 @@ namespace WindowsView
             MensagemRatificacaoDeMudanca msn = new MensagemRatificacaoDeMudanca();
             msn.ShowDialog();
 
-            if (msn.RetornarOpcaoExlcuirOperacao())
-            {     
-                if (Cd.ExcluirDespesa(despesa.DespesaID))
+            try
+            {
+                if (msn.RetornarOpcaoExlcuirOperacao())
                 {
-                    MensagemDeSucesso msnSucesso = new MensagemDeSucesso();
-                    msnSucesso.ShowDialog();
-                    Close();
-                }
-                else
-                {
-                    MensagemDeErro msnErro = new MensagemDeErro();
-                    msnErro.ShowDialog();
+                    if (Cd.ExcluirDespesa(despesa.DespesaID))
+                    {
+                        MensagemDeSucesso msnSucesso = new MensagemDeSucesso();
+                        msnSucesso.ShowDialog();
+                        Close();
+                    }
+                    else
+                    {
+                        MensagemDeErro msnErro = new MensagemDeErro();
+                        msnErro.ShowDialog();
+                    }
                 }
             }
-
+            catch (NullReferenceException)
+            {
+                MensagemDeErroPreenchimentoObrig msnCampoObrigatorio = new MensagemDeErroPreenchimentoObrig();
+                msnCampoObrigatorio.ShowDialog();
+            }
         }
 
 
