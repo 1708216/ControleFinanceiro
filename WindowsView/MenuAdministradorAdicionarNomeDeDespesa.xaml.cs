@@ -13,8 +13,6 @@ namespace WindowsView
     {
         public MenuAdministradorAdicionarNomeDeDespesa()
         {
-
-
             InitializeComponent();
             ControllerDespesa Cd = new ControllerDespesa();
             ComboListBoxDescricaoOperacoes.ItemsSource = Cd.RetornarListaDeDespesa();
@@ -26,10 +24,18 @@ namespace WindowsView
             Despesa novaDespesa = new Despesa();
             novaDespesa.Descricao = txtBoxDescriacao.Text;
             ControllerDespesa Cd = new ControllerDespesa();
-            Cd.SalvarDespesa(novaDespesa);
-            MensagemDeSucesso mn = new MensagemDeSucesso();
-            mn.ShowDialog();
-            Close();
+            if (Cd.SalvarDespesa(novaDespesa))
+            {
+                MensagemDeSucesso mn = new MensagemDeSucesso();
+                mn.ShowDialog();
+                Close();
+            }
+            else
+            {
+                MensagemDeErro mn = new MensagemDeErro();
+                mn.ShowDialog();
+            }
+            
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -45,9 +51,7 @@ namespace WindowsView
             msn.ShowDialog();
 
             if (msn.RetornarOpcaoExlcuirOperacao())
-            {
-            
-
+            {     
                 if (Cd.ExcluirDespesa(despesa.DespesaID))
                 {
                     MensagemDeSucesso msnSucesso = new MensagemDeSucesso();

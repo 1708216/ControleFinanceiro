@@ -38,6 +38,6 @@
         <Button x:Name="btnAdmEditarUsuario" HorizontalAlignment="Left" Margin="447,211,0,0" VerticalAlignment="Top" Width="120" Height="86" Background="#FF060937" Click="btnAdmEditarUsuario_Click">
             <Image Height="64" Width="84" Source="imagem/iconeMenueditarUsuario.jpg"/>
         </Button>
-        <Button x:Name="btnDescricaoOperacao" Content="Cadastrar Descrição &#xA;de Receita" HorizontalAlignment="Left" Margin="173,211,0,0" VerticalAlignment="Top" Width="256" Height="86" Foreground="White" BorderBrush="#FF060937" Background="#FF060937" FontWeight="Bold" FontSize="16"/>
+        <Button x:Name="btnDescricaoOperacao" Content="Cadastrar Descrição &#xA;de Receita" HorizontalAlignment="Left" Margin="173,211,0,0" VerticalAlignment="Top" Width="256" Height="86" Foreground="White" BorderBrush="#FF060937" Background="#FF060937" FontWeight="Bold" FontSize="16" Click="btnDescricaoOperacao_Click"/>
     </Grid>
 </Window>

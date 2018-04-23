@@ -32,25 +32,36 @@ namespace WindowsView
         private void btnAdminSalvarEditar_Click(object sender, RoutedEventArgs e)
         {
 
-            ControllerUsuario cU = new ControllerUsuario();
-            Usuario usuario = new Usuario();
-
-            usuario.UsuarioID = int.Parse(txtIdEditar.Text);
-            usuario.nomeUsuario = txtNomeSelecionado.Text;
-            usuario.loginUsuario = txtLogin.Text;
-            usuario.senhaUsuario = txtSenha.Text;
-            usuario.nivelDePermissão = Convert.ToInt32(txtNivelPermissao.Text);
-
-            if (cU.EditarUsuario(usuario))
+            try
             {
-                MensagemDeSucesso msn = new MensagemDeSucesso();
-                msn.ShowDialog();
+
+                ControllerUsuario cU = new ControllerUsuario();
+                Usuario usuario = new Usuario();
+
+                usuario.UsuarioID = int.Parse(txtIdEditar.Text);
+                usuario.nomeUsuario = txtNomeSelecionado.Text;
+                usuario.loginUsuario = txtLogin.Text;
+                usuario.senhaUsuario = txtSenha.Text;
+                usuario.nivelDePermissão = Convert.ToInt32(txtNivelPermissao.Text);
+
+                if (cU.EditarUsuario(usuario))
+                {
+                    MensagemDeSucesso msn = new MensagemDeSucesso();
+                    msn.ShowDialog();
+                }
+                else
+                {
+                    MensagemDeErro msn = new MensagemDeErro();
+                    msn.ShowDialog();
+                }
             }
-            else
+            catch (FormatException)
             {
                 MensagemDeErro msn = new MensagemDeErro();
                 msn.ShowDialog();
             }
+
+
         }
 
         private void btnCancelarMnEditar_Click(object sender, RoutedEventArgs e)

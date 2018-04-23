@@ -47,5 +47,11 @@ namespace WindowsView
             mnLogin.Show();
             Close();
         }
+
+        private void btnDescricaoOperacao_Click(object sender, RoutedEventArgs e)
+        {
+            MenuAdministradorAdicionarNomeDeReceita mnAdicionarNomeReceita = new MenuAdministradorAdicionarNomeDeReceita();
+            mnAdicionarNomeReceita.ShowDialog();
+        }
     }
 }

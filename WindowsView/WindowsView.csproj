@@ -108,6 +108,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="MenuAdministradorAdicionarNomeDeReceita.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MenuAdministradorCadastrarNovoUsuario.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -163,6 +167,9 @@
     </Compile>
     <Compile Include="MenuAdministradorAdicionarNomeDeDespesa.xaml.cs">
       <DependentUpon>MenuAdministradorAdicionarNomeDeDespesa.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MenuAdministradorAdicionarNomeDeReceita.xaml.cs">
+      <DependentUpon>MenuAdministradorAdicionarNomeDeReceita.xaml</DependentUpon>
     </Compile>
     <Compile Include="MenuAdministradorCadastrarNovoUsuario.xaml.cs">
       <DependentUpon>MenuAdministradorCadastrarNovoUsuario.xaml</DependentUpon>

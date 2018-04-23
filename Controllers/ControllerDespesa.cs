@@ -12,10 +12,10 @@ namespace Controllers
     {
         public Boolean SalvarDespesa(Despesa despesaRecebida)
         {
-            Despesa Iddespesa = ProcurarDespesaPorId(despesaRecebida.DespesaID);
-            Despesa Descricaodespesa = ProcurarDespesaPorNome(despesaRecebida.Descricao);
+            Despesa teste1 = ProcurarDespesaPorId(despesaRecebida.DespesaID);
+            Despesa teste2 = ProcurarDespesaPorNome(despesaRecebida.Descricao);
 
-            if (Iddespesa == null && Descricaodespesa == null)
+            if (teste1 == null && teste2 == null)
             {
                 ContextoSigleton.Instancia.Despesas.Add(despesaRecebida);
                 ContextoSigleton.Instancia.SaveChanges();
@@ -77,8 +77,6 @@ namespace Controllers
             {
                 return false;
             }
-
         }
-
     }
 }

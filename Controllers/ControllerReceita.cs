@@ -12,9 +12,10 @@ namespace Controllers
     {
         public Boolean SalvarReceita(Receita receitaRecebida)
         {
-            Receita receita = ProcurarReceitaPorId(receitaRecebida.ReceitaID);
+            Receita teste1 = ProcurarReceitaPorId(receitaRecebida.ReceitaID);
+            Receita teste2 = ProcurarReceitaPorNome(receitaRecebida.Descricao);
 
-            if (receita == null)
+            if (teste1 == null && teste2 == null)
             {
                 ContextoSigleton.Instancia.Receitas.Add(receitaRecebida);
                 ContextoSigleton.Instancia.SaveChanges();
@@ -65,7 +66,7 @@ namespace Controllers
         public Boolean ExcluirReceita(int receitaID)
         {
             Despesa d = ContextoSigleton.Instancia.Despesas.Find(receitaID);
-            if (d != null)
+            if (d != null && receitaID > 11)
             {
                 ContextoSigleton.Instancia.Entry(d).State = System.Data.Entity.EntityState.Deleted;
                 ContextoSigleton.Instancia.SaveChanges();
