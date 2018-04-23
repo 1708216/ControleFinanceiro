@@ -156,6 +156,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="MenuVisualizacaoReceitas.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MensagemRatificacaoDeMudanca.xaml.cs">
@@ -199,6 +203,9 @@
     </Compile>
     <Compile Include="MenuVisualizacaoDespesas.xaml.cs">
       <DependentUpon>MenuVisualizacaoDespesas.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MenuVisualizacaoReceitas.xaml.cs">
+      <DependentUpon>MenuVisualizacaoReceitas.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>

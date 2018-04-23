@@ -8,8 +8,8 @@ namespace Model
 {
     public class RegistroDeDespesa : Registro
     {
-        public int RegistroDeDespesaID { get; set; }
-        public int DespesaID { get; set; }
-        public virtual Despesa despesa { get; set; }
+        public int RegistroDeDespesaID { get; set;}
+        public int DespesaID { get; set;}
+        public virtual Despesa _despesa { get; set;}
     }
 }

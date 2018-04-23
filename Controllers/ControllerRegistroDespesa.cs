@@ -78,7 +78,7 @@ namespace Controllers
             {
                 registroParaEditar.Data = registroEditado.Data;
                 registroParaEditar.UsuarioID = registroEditado.UsuarioID;
-                registroParaEditar.despesa = registroEditado.despesa;
+                registroParaEditar._despesa = registroEditado._despesa;
 
                 ContextoSigleton.Instancia.Entry(registroParaEditar).State =
                     System.Data.Entity.EntityState.Modified;

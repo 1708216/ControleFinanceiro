@@ -31,12 +31,11 @@ namespace WindowsView
 
         private void btnAdicionarDespesa_Click(object sender, RoutedEventArgs e)
         {
-
             try
             {
 
                 RegistroDeDespesa registro = new RegistroDeDespesa();
-                registro.despesa = despesaParaAdicionar;
+                registro._despesa = despesaParaAdicionar;
                 Usuario usuario = ComboListaUsuario.SelectedItem as Usuario;
                 registro.UsuarioID = usuario.UsuarioID;
 
@@ -55,16 +54,12 @@ namespace WindowsView
 
                 MensagemDeErro msn = new MensagemDeErro();
                 msn.ShowDialog();
-            }
-
-            
-
+            }      
         }
 
         private void btnCancela_Click(object sender, RoutedEventArgs e)
         {
             Close();
         }
-
     }
 }

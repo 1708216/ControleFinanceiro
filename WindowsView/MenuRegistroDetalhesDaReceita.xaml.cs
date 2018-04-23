@@ -42,7 +42,7 @@ namespace WindowsView
             try
             {
                 RegistroDeReceita registro = new RegistroDeReceita();
-                registro.receita = receitaParaAdicionar;
+                registro._receita = receitaParaAdicionar;
                 Usuario usuario = ComboListaUsuario.SelectedItem as Usuario;
                 registro.UsuarioID = usuario.UsuarioID;
 

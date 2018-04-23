@@ -46,19 +46,19 @@ namespace Model.DAL
             itensDoMenuInserirDespesas.Add(new Despesa() { DespesaID = 12, Descricao = "DESPESAS MÉDICAS" });
             itensDoMenuInserirDespesas.Add(new Despesa() { DespesaID = 13, Descricao = "BAR" });
             itensDoMenuInserirDespesas.Add(new Despesa() { DespesaID = 14, Descricao = "DENTISTA" });
-            itensDoMenuInserirDespesas.Add(new Despesa() { DespesaID = 12, Descricao = "SALÃO DE BELEZA" });
-            itensDoMenuInserirDespesas.Add(new Despesa() { DespesaID = 13, Descricao = "EMPREGADA DOMESTICA" });
-            itensDoMenuInserirDespesas.Add(new Despesa() { DespesaID = 14, Descricao = "GASOLINA" });
-            itensDoMenuInserirDespesas.Add(new Despesa() { DespesaID = 12, Descricao = "CONDOMÍNIO" });
-            itensDoMenuInserirDespesas.Add(new Despesa() { DespesaID = 13, Descricao = "IPVA" });
-            itensDoMenuInserirDespesas.Add(new Despesa() { DespesaID = 14, Descricao = "GÁS" });
-            itensDoMenuInserirDespesas.Add(new Despesa() { DespesaID = 12, Descricao = "DESPESAS COM VIAGEM" });
-            itensDoMenuInserirDespesas.Add(new Despesa() { DespesaID = 13, Descricao = "PRESENTE" });
-            itensDoMenuInserirDespesas.Add(new Despesa() { DespesaID = 14, Descricao = "FINANCIAMENTO IMOBILIÁRIO" });
-            itensDoMenuInserirDespesas.Add(new Despesa() { DespesaID = 12, Descricao = "IPTU" });
-            itensDoMenuInserirDespesas.Add(new Despesa() { DespesaID = 13, Descricao = "FARMÁCIA" });
-            itensDoMenuInserirDespesas.Add(new Despesa() { DespesaID = 14, Descricao = "PLANO DO CELULAR" });
-            itensDoMenuInserirDespesas.Add(new Despesa() { DespesaID = 12, Descricao = "LAZER" });
+            itensDoMenuInserirDespesas.Add(new Despesa() { DespesaID = 15, Descricao = "SALÃO DE BELEZA" });
+            itensDoMenuInserirDespesas.Add(new Despesa() { DespesaID = 16, Descricao = "EMPREGADA DOMESTICA" });
+            itensDoMenuInserirDespesas.Add(new Despesa() { DespesaID = 17, Descricao = "GASOLINA" });
+            itensDoMenuInserirDespesas.Add(new Despesa() { DespesaID = 18, Descricao = "CONDOMÍNIO" });
+            itensDoMenuInserirDespesas.Add(new Despesa() { DespesaID = 19, Descricao = "IPVA" });
+            itensDoMenuInserirDespesas.Add(new Despesa() { DespesaID = 20, Descricao = "GÁS" });
+            itensDoMenuInserirDespesas.Add(new Despesa() { DespesaID = 21, Descricao = "DESPESAS COM VIAGEM" });
+            itensDoMenuInserirDespesas.Add(new Despesa() { DespesaID = 22, Descricao = "PRESENTE" });
+            itensDoMenuInserirDespesas.Add(new Despesa() { DespesaID = 23, Descricao = "FINANCIAMENTO IMOBILIÁRIO" });
+            itensDoMenuInserirDespesas.Add(new Despesa() { DespesaID = 24, Descricao = "IPTU" });
+            itensDoMenuInserirDespesas.Add(new Despesa() { DespesaID = 25, Descricao = "FARMÁCIA" });
+            itensDoMenuInserirDespesas.Add(new Despesa() { DespesaID = 26, Descricao = "PLANO DO CELULAR" });
+            itensDoMenuInserirDespesas.Add(new Despesa() { DespesaID = 27, Descricao = "LAZER" });
 
             itensDoMenuInserirReceita.Add(new Receita() { ReceitaID = 1, Descricao = "SALÁRIO" });
             itensDoMenuInserirReceita.Add(new Receita() { ReceitaID = 2, Descricao = "BOLSA DE ESTUDOS" });
@@ -69,11 +69,12 @@ namespace Model.DAL
             itensDoMenuInserirReceita.Add(new Receita() { ReceitaID = 7, Descricao = "PENSÃO" });
             itensDoMenuInserirReceita.Add(new Receita() { ReceitaID = 8, Descricao = "RESTITUIÇÃO DO IRRF" });
             itensDoMenuInserirReceita.Add(new Receita() { ReceitaID = 9, Descricao = "HORAS EXTRAS" });
-            itensDoMenuInserirReceita.Add(new Receita() { ReceitaID = 10, Descricao = "APOSENTADORIA”" });
+            itensDoMenuInserirReceita.Add(new Receita() { ReceitaID = 10, Descricao = "APOSENTADORIA" });
             itensDoMenuInserirReceita.Add(new Receita() { ReceitaID = 11, Descricao = "VENDA" });
             itensDoMenuInserirReceita.Add(new Receita() { ReceitaID = 12, Descricao = "DIVERSAS" });
 
             contexto.Despesas.AddRange(itensDoMenuInserirDespesas);
+            contexto.Receitas.AddRange(itensDoMenuInserirReceita);
             contexto.Usuarios.AddRange(usuarioAdministrador);
             contexto.SaveChanges();
 

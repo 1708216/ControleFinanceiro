@@ -1,16 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
+﻿using System.Windows;
 using Model;
 
 namespace WindowsView
@@ -30,19 +18,11 @@ namespace WindowsView
             nomeUsuario.Text = "Olá, " + usuarioLogado.nomeUsuario;
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+
+        private void btnAdicionarDespesa_Click(object sender, RoutedEventArgs e)
         {
-            MainWindow menuLogin = new MainWindow();
-            menuLogin.Show();
-            Close();
-        }
-
-        private void btnAdicionarDespesa_Click_1(object sender, RoutedEventArgs e)
-        {
-
-            MenuUsuarioAdicionarDespesaRapida mnAddDespesaRapida = new MenuUsuarioAdicionarDespesaRapida();
-            mnAddDespesaRapida.ShowDialog();
-
+            MenuUsuarioAdicionarDespesaRapida menuDespesa = new MenuUsuarioAdicionarDespesaRapida();
+            menuDespesa.ShowDialog();
         }
 
         private void btnVisualizarDespesas_Click(object sender, RoutedEventArgs e)
@@ -57,12 +37,25 @@ namespace WindowsView
             menuMes.ShowDialog();
         }
 
+        private void btnVisualizarReceitas_Click(object sender, RoutedEventArgs e)
+        {
+            MenuVisualizacaoReceitas visualizar = new MenuVisualizacaoReceitas();
+            visualizar.ShowDialog();
+        }
+
+        private void btnLogout_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow menuLogin = new MainWindow();
+            menuLogin.Show();
+            Close();
+        }
+
         private void btnAdicionarReceita_Click(object sender, RoutedEventArgs e)
         {
             MenuUsuarioAdicionarReceitaRapida menuReceita = new MenuUsuarioAdicionarReceitaRapida();
             menuReceita.ShowDialog();
         }
 
- 
+
     }
 }
