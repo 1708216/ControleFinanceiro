@@ -10,12 +10,18 @@
         <Label Content="Nome:" HorizontalAlignment="Left" Margin="101,95,0,0" VerticalAlignment="Top"/>
         <Label Content="Login :" HorizontalAlignment="Left" Margin="101,135,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.389,2.123"/>
         <Label Content="Senha :" HorizontalAlignment="Left" Margin="101,174,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.389,2.123"/>
-        <Label Content="Permissão de Usuário : " HorizontalAlignment="Left" Margin="101,217,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.389,2.123"/>
         <TextBox x:Name="txtNomeUsuario" HorizontalAlignment="Left" Height="23" Margin="174,95,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="342"/>
         <TextBox x:Name="txtLogin" HorizontalAlignment="Left" Height="23" Margin="174,135,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="342"/>
         <TextBox x:Name="txtSenha" HorizontalAlignment="Left" Height="23" Margin="174,174,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="342"/>
-        <Button x:Name="btnAdminCadastrarUsuario" Content="Cadastrar" HorizontalAlignment="Left" Margin="253,272,0,0" VerticalAlignment="Top" Width="75" Click="btnAdminCadastrarUsuario_Click" />
-        <Button x:Name="btnCancelarCadastro" Content="Cancel" HorizontalAlignment="Left" Margin="361,272,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="0.163,0.794" Click="btnCancelarCadastro_Click" />
+        
+        <StackPanel>
+            <Label Content="Permissão de Usuário : " HorizontalAlignment="Left" Margin="101,217,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.389,2.123"/>
+            <RadioButton x:Name="rb1" GroupName="permissao" Content="Usuário"       Checked="RadioButton_Checked"    Margin="234,0,0.2,0" HorizontalAlignment="Left" MinWidth="1" FontSize="14" FontWeight="Bold" IsChecked="True" />
+            <RadioButton x:Name="rb2" GroupName="permissao" Content="Administrador" Checked="RadioButton_Checked"    Margin="234,0,0,0" Height="21" HorizontalAlignment="Left" MinWidth="1" VerticalAlignment="Bottom"  Width="133" FontSize="14" FontWeight="Bold"/>
+        </StackPanel>
+        
+        <Button x:Name="btnAdminCadastrarUsuario" Content="Cadastrar" HorizontalAlignment="Left" Margin="233,293,0,0" VerticalAlignment="Top" Width="75" Click="btnAdminCadastrarUsuario_Click" />
+        <Button x:Name="btnCancelarCadastro" Content="Cancel" HorizontalAlignment="Left" Margin="371,293,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="0.163,0.794" Click="btnCancelarCadastro_Click" />
         <Label Content="Cadastro de Usuário" HorizontalAlignment="Left" Margin="101,24,0,0" VerticalAlignment="Top" Width="220" FontSize="20"/>
         <Image Margin="-154,148,402.2,151.8" Source="imagem/retanguloAzulDasLaterais.jpg" Stretch="Fill" RenderTransformOrigin="0.5,0.5">
             <Image.RenderTransform>
@@ -27,6 +33,5 @@
                 </TransformGroup>
             </Image.RenderTransform>
         </Image>
-
     </Grid>
 </Window>
