@@ -4,7 +4,7 @@ using System.Data.Entity;
 
 namespace Model.DAL
 {
-    public class ControleFinanceiroDBInitializer : DropCreateDatabaseIfModelChanges<Contexto>
+    public class ControleFinanceiroDBInitializer : DropCreateDatabaseAlways <Contexto>
     {
 
         protected override void Seed(Contexto contexto)
@@ -37,7 +37,7 @@ namespace Model.DAL
             itensDoMenuInserirDespesas.Add(new Despesa() { DespesaID = 3, Descricao = "LUZ" });
             itensDoMenuInserirDespesas.Add(new Despesa() { DespesaID = 4, Descricao = "ÁGUA" });
             itensDoMenuInserirDespesas.Add(new Despesa() { DespesaID = 5, Descricao = "CARTÃO DE CRÉDITO" });
-            itensDoMenuInserirDespesas.Add(new Despesa() { DespesaID = 6, Descricao = "EDUCACÃO" });
+            itensDoMenuInserirDespesas.Add(new Despesa() { DespesaID = 6, Descricao = "EDUCAÇÃO" });
             itensDoMenuInserirDespesas.Add(new Despesa() { DespesaID = 7, Descricao = "SEGURO DO CARRO" });
             itensDoMenuInserirDespesas.Add(new Despesa() { DespesaID = 8, Descricao = "LANCHE" });
             itensDoMenuInserirDespesas.Add(new Despesa() { DespesaID = 9, Descricao = "ALMOÇO" });
@@ -47,7 +47,7 @@ namespace Model.DAL
             itensDoMenuInserirDespesas.Add(new Despesa() { DespesaID = 13, Descricao = "BAR" });
             itensDoMenuInserirDespesas.Add(new Despesa() { DespesaID = 14, Descricao = "DENTISTA" });
             itensDoMenuInserirDespesas.Add(new Despesa() { DespesaID = 15, Descricao = "SALÃO DE BELEZA" });
-            itensDoMenuInserirDespesas.Add(new Despesa() { DespesaID = 16, Descricao = "EMPREGADA DOMESTICA" });
+            itensDoMenuInserirDespesas.Add(new Despesa() { DespesaID = 16, Descricao = "EMPREGADA DOMÉSTICA" });
             itensDoMenuInserirDespesas.Add(new Despesa() { DespesaID = 17, Descricao = "GASOLINA" });
             itensDoMenuInserirDespesas.Add(new Despesa() { DespesaID = 18, Descricao = "CONDOMÍNIO" });
             itensDoMenuInserirDespesas.Add(new Despesa() { DespesaID = 19, Descricao = "IPVA" });
@@ -63,14 +63,14 @@ namespace Model.DAL
             itensDoMenuInserirReceita.Add(new Receita() { ReceitaID = 1, Descricao = "SALÁRIO" });
             itensDoMenuInserirReceita.Add(new Receita() { ReceitaID = 2, Descricao = "BOLSA DE ESTUDOS" });
             itensDoMenuInserirReceita.Add(new Receita() { ReceitaID = 3, Descricao = "ALUGUEL" });
-            itensDoMenuInserirReceita.Add(new Receita() { ReceitaID = 4, Descricao = "13° SALÁRIO" });
+            itensDoMenuInserirReceita.Add(new Receita() { ReceitaID = 4, Descricao = "13º SALÁRIO" });
             itensDoMenuInserirReceita.Add(new Receita() { ReceitaID = 5, Descricao = "FÉRIAS" });
             itensDoMenuInserirReceita.Add(new Receita() { ReceitaID = 6, Descricao = "INVESTIMENTOS" });
             itensDoMenuInserirReceita.Add(new Receita() { ReceitaID = 7, Descricao = "PENSÃO" });
             itensDoMenuInserirReceita.Add(new Receita() { ReceitaID = 8, Descricao = "RESTITUIÇÃO DO IRRF" });
             itensDoMenuInserirReceita.Add(new Receita() { ReceitaID = 9, Descricao = "HORAS EXTRAS" });
             itensDoMenuInserirReceita.Add(new Receita() { ReceitaID = 10, Descricao = "APOSENTADORIA" });
-            itensDoMenuInserirReceita.Add(new Receita() { ReceitaID = 11, Descricao = "VENDA" });
+            itensDoMenuInserirReceita.Add(new Receita() { ReceitaID = 11, Descricao = "VENDA EXTRA" });
             itensDoMenuInserirReceita.Add(new Receita() { ReceitaID = 12, Descricao = "DIVERSAS" });
 
             contexto.Despesas.AddRange(itensDoMenuInserirDespesas);

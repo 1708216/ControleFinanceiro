@@ -13,14 +13,15 @@ namespace WindowsView
         public MenuVisualizacaoReceitas()
         {
             InitializeComponent();
-        }
-
-        private void DataGridDeDespesas_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
             ControllerRegistroReceita CrReceitas = new ControllerRegistroReceita();
             DataGridDeReceitas.ItemsSource = CrReceitas.RetornarTodosOsRegistrosReceitas();
             //bloqueia a edição do DataGrid
             DataGridDeReceitas.IsReadOnly = true;
+        }
+
+        private void DataGridDeDespesas_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
         }
 
         private void btnFechar_Click(object sender, RoutedEventArgs e)

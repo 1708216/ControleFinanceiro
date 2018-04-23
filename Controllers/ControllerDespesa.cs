@@ -12,9 +12,10 @@ namespace Controllers
     {
         public Boolean SalvarDespesa(Despesa despesaRecebida)
         {
-            Despesa despesa = ProcurarDespesaPorId(despesaRecebida.DespesaID);
+            Despesa Iddespesa = ProcurarDespesaPorId(despesaRecebida.DespesaID);
+            Despesa Descricaodespesa = ProcurarDespesaPorNome(despesaRecebida.Descricao);
 
-            if (despesa == null)
+            if (Iddespesa == null && Descricaodespesa == null)
             {
                 ContextoSigleton.Instancia.Despesas.Add(despesaRecebida);
                 ContextoSigleton.Instancia.SaveChanges();
@@ -65,7 +66,8 @@ namespace Controllers
         public Boolean ExcluirDespesa(int despesaID)
         {
             Despesa d = ContextoSigleton.Instancia.Despesas.Find(despesaID);
-            if (d != null)
+
+            if (d != null && despesaID > 27)
             {
                 ContextoSigleton.Instancia.Entry(d).State = System.Data.Entity.EntityState.Deleted;
                 ContextoSigleton.Instancia.SaveChanges();

@@ -8,9 +8,9 @@
         Title="MensagemRatificacaoDeMudanca" Height="142.683" Width="401.707">
     <Grid>
         <Image HorizontalAlignment="Left" Height="58" Margin="22,16,0,0" VerticalAlignment="Top" Width="58" Source="imagem/iconeMensagemErro.png"/>
-        <Label Content="Ao excluir o item todas as descrições associadoas&#xD;&#xA; à operação serão apagadas! &#xD;&#xA;Tem certeza que deseja deletar a operação ? " HorizontalAlignment="Left" Margin="85,10,0,0" VerticalAlignment="Top" Width="275" Height="67"/>
-        <Button x:Name="btnSim" Content="Sim" HorizontalAlignment="Left" Margin="111,77,0,0" VerticalAlignment="Top" Width="75" Click="btnSim_Click"/>
-        <Button x:Name="btnNao" Content="Não" HorizontalAlignment="Left" Margin="218,77,0,0" VerticalAlignment="Top" Width="75" Click="btnNao_Click_1"/>
+        <Label Content="Ao excluir o item de despesa, todas os registros &#xD;&#xA;associadoas à operação serão perdidos! &#xA;Tem certeza que deseja deletar &#xD;&#xA;o tipo de Despesa ? " HorizontalAlignment="Left" Margin="91,5,0,0" VerticalAlignment="Top" Width="275" Height="72"/>
+        <Button x:Name="btnSim" Content="Sim" HorizontalAlignment="Left" Margin="113,84,0,0" VerticalAlignment="Top" Width="75" Click="btnSim_Click"/>
+        <Button x:Name="btnNao" Content="Não" HorizontalAlignment="Left" Margin="219,84,0,0" VerticalAlignment="Top" Width="75" Click="btnNao_Click_1"/>
 
     </Grid>
 </Window>

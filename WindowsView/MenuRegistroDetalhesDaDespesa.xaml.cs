@@ -54,7 +54,11 @@ namespace WindowsView
 
                 MensagemDeErro msn = new MensagemDeErro();
                 msn.ShowDialog();
-            }      
+            }
+            catch (NullReferenceException)
+            {
+
+            }     
         }
 
         private void btnCancela_Click(object sender, RoutedEventArgs e)

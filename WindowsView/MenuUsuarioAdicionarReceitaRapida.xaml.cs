@@ -51,12 +51,12 @@ namespace WindowsView
 
         private void btnReceitaAluguel_Click(object sender, RoutedEventArgs e)
         {
-            CadastrarReceitaClicada("ALUGUEL”");
+            CadastrarReceitaClicada("ALUGUEL");
         }
 
         private void btnReceita13Salario_Click(object sender, RoutedEventArgs e)
         {
-            CadastrarReceitaClicada("13 SALÁRIO");
+            CadastrarReceitaClicada("13º SALÁRIO");
         }
 
         private void btnReceitaFerias_Click(object sender, RoutedEventArgs e)
@@ -91,7 +91,7 @@ namespace WindowsView
 
         private void btnReceitaVendaExtra_Click(object sender, RoutedEventArgs e)
         {
-            CadastrarReceitaClicada("APOSENTADORIA");
+            CadastrarReceitaClicada("VENDA EXTRA");
         }
 
         private void btnFecharJanela_Click(object sender, RoutedEventArgs e)

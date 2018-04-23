@@ -30,10 +30,19 @@ namespace WindowsView
             {
                 //criar mensagem personalizada.
             }
-            MenuRegistroDetalhesDaDespesa rgDetalhes = new MenuRegistroDetalhesDaDespesa(despesa);
-            rgDetalhes.ShowDialog();
+
+            if (despesa != null)
+            {
+                MenuRegistroDetalhesDaDespesa rgDetalhes = new MenuRegistroDetalhesDaDespesa(despesa);
+                rgDetalhes.ShowDialog();
+            }
+            else
+            {
+                MensagemDeErro msn = new MensagemDeErro();
+                msn.ShowDialog();
+            }
         }
-        
+
         private void btnDespesaMercado_Click(object sender, RoutedEventArgs e)
         {
             CadastrarDespesaClicada("MERCADO");

@@ -11,7 +11,7 @@
         <Label Content="Descrição " HorizontalAlignment="Left" Margin="123,46,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.661,0.375" Width="104"/>
         <TextBox x:Name="txtBoxDescriacao" HorizontalAlignment="Left" Height="23" Margin="219,48,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="418"/>
         <Button x:Name="btnCadastrar" Content="Cadastrar" HorizontalAlignment="Left" Margin="221,77,0,0" VerticalAlignment="Top" Width="75" Click="btnCadastrar_Click"/>
-        <Button x:Name="btnCancelar" Content="Cancelar" HorizontalAlignment="Left" Margin="321,77,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="btnCancelar" Content="Cancelar" HorizontalAlignment="Left" Margin="321,77,0,0" VerticalAlignment="Top" Width="75" Click="btnCancelar_Click"/>
         <GroupBox Header="Cadastrar Descrição de Operacção&#xD;&#xA;" HorizontalAlignment="Left" Height="104" Margin="107,0,0,0" VerticalAlignment="Top" Width="584"/>
         <ListBox x:Name="ComboListBoxDescricaoOperacoes" HorizontalAlignment="Left" Height="203" Margin="112,117,0,0" VerticalAlignment="Top" Width="584" SelectionChanged="ComboListBoxDescricaoOperacoes_SelectionChanged"/>
         <Button x:Name="btnExcluirDescricao" Content="Excluir" HorizontalAlignment="Left" Margin="123,333,0,0" VerticalAlignment="Top" Width="75" Background="#FFCB0A0A" Click="btnExcluirDescricao_Click"/>

@@ -13,6 +13,8 @@ namespace WindowsView
     {
         public MenuAdministradorAdicionarNomeDeDespesa()
         {
+
+
             InitializeComponent();
             ControllerDespesa Cd = new ControllerDespesa();
             ComboListBoxDescricaoOperacoes.ItemsSource = Cd.RetornarListaDeDespesa();
@@ -39,23 +41,33 @@ namespace WindowsView
         {
             ControllerDespesa Cd = new ControllerDespesa();
             Despesa despesa = ComboListBoxDescricaoOperacoes.SelectedItem as Despesa;
-            if( despesa.DespesaID > 28)
+            MensagemRatificacaoDeMudanca msn = new MensagemRatificacaoDeMudanca();
+            msn.ShowDialog();
+
+            if (msn.RetornarOpcaoExlcuirOperacao())
             {
-                MensagemRatificacaoDeMudanca msn = new MensagemRatificacaoDeMudanca();
-                msn.ShowDialog();
-                if (msn.RetornarOpcaoExlcuirOperacao())
+            
+
+                if (Cd.ExcluirDespesa(despesa.DespesaID))
                 {
-                    Cd.ExcluirDespesa(despesa.DespesaID);
+                    MensagemDeSucesso msnSucesso = new MensagemDeSucesso();
+                    msnSucesso.ShowDialog();
+                    Close();
                 }
-                Close();
+                else
+                {
+                    MensagemDeErro msnErro = new MensagemDeErro();
+                    msnErro.ShowDialog();
+                }
             }
-            else
-            {
-                MensagemDeErro msn = new MensagemDeErro();
-                msn.ShowDialog();
-            }
+
         }
 
+
+        private void btnCancelar_Click(object sender, RoutedEventArgs e)
+        {
+            txtBoxDescriacao.Clear();
+        }
 
         private void ListBoxDescricaoOperacoes_ContextMenuClosing(object sender, ContextMenuEventArgs e)
         {
@@ -66,5 +78,7 @@ namespace WindowsView
         {
 
         }
+
+
     }
 }

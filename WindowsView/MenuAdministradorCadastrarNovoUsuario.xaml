@@ -15,7 +15,7 @@
         <TextBox x:Name="txtLogin" HorizontalAlignment="Left" Height="23" Margin="174,135,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="342"/>
         <TextBox x:Name="txtSenha" HorizontalAlignment="Left" Height="23" Margin="174,174,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="342"/>
         <Button x:Name="btnAdminCadastrarUsuario" Content="Cadastrar" HorizontalAlignment="Left" Margin="253,272,0,0" VerticalAlignment="Top" Width="75" Click="btnAdminCadastrarUsuario_Click" />
-        <Button Content="Cancel" HorizontalAlignment="Left" Margin="361,272,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="0.163,0.794" />
+        <Button x:Name="btnCancelarCadastro" Content="Cancel" HorizontalAlignment="Left" Margin="361,272,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="0.163,0.794" Click="btnCancelarCadastro_Click" />
         <Label Content="Cadastro de Usuário" HorizontalAlignment="Left" Margin="101,24,0,0" VerticalAlignment="Top" Width="220" FontSize="20"/>
         <Image Margin="-154,148,402.2,151.8" Source="imagem/retanguloAzulDasLaterais.jpg" Stretch="Fill" RenderTransformOrigin="0.5,0.5">
             <Image.RenderTransform>

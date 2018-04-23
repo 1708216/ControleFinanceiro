@@ -37,5 +37,10 @@ namespace WindowsView
                 msn.ShowDialog();
             }
         }
+
+        private void btnCancelarCadastro_Click(object sender, RoutedEventArgs e)
+        {
+            Close();
+        }
     }
 }
