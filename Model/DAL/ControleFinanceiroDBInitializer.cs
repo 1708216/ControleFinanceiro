@@ -4,7 +4,7 @@ using System.Data.Entity;
 
 namespace Model.DAL
 {
-    public class ControleFinanceiroDBInitializer : DropCreateDatabaseAlways <Contexto>
+    public class ControleFinanceiroDBInitializer : DropCreateDatabaseIfModelChanges <Contexto>
     {
 
         protected override void Seed(Contexto contexto)
