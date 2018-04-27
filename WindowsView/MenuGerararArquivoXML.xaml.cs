@@ -14,8 +14,7 @@ using System.Windows.Shapes;
 using Controllers;
 using Model;
 using ClosedXML.Excel;
-
-
+using System.IO;
 
 namespace WindowsView
 {
@@ -49,41 +48,48 @@ namespace WindowsView
 
             //unindo as células para inserir otítulo
             ws.Cell("B2").Value = " RELATÓRIO MENSAL";
-            var range = ws.Range("B2:G2");
+            var range = ws.Range("B2:H2");
             range.Merge().Style.Font.SetBold().Font.FontSize = 20;
 
             // Cabeçalhos do Relatório
-            ws.Cell("B3").Value = "ID Registro";
-            ws.Cell("C3").Value = "ID Despesa";
-            ws.Cell("D3").Value = "DESCRIÇÃO";
-            ws.Cell("E3").Value = "MÊS";
-            ws.Cell("F3").Value = "VALOR";
-            ws.Cell("G3").Value = "USUARIO";
+            ws.Cell("C3").Value = "ID Registro";
+            ws.Cell("D3").Value = "ID Despesa";
+            ws.Cell("E3").Value = "DESCRIÇÃO";
+            ws.Cell("F3").Value = "MÊS";
+            ws.Cell("G3").Value = "VALOR";
+            ws.Cell("H3").Value = "USUARIO";
 
 
             // Corpo do relatório
-            var linha = 4;
-
-            var rangeWithData = ws.Cell(7, 1).InsertData(registrosDeDespesas.AsEnumerable());
-
-
+             var linha = 4;
+            var rangeWithData = ws.Cell(4, 2).InsertData(registrosDeDespesas.AsEnumerable());
 
             // Ajusto a numeração da linha
-            linha--;
+          //  linha--;
             
             // Crio a formatação do Tipo "Money" para o nosso "Subtotal"
         //    ws.Range("I4:I" + linha.ToString()).Style.NumberFormat.Format = "R$ #,#.##00";
             
             // Crio uma Tabela para ativar os Filtros
-            range = ws.Range("B3:G" + linha.ToString());
+            range = ws.Range("C3:G" + linha.ToString());
             range.CreateTable();
             
             // Ajusto o tamanho da coluna com o conteúdo da coluna
-            ws.Columns("2-7").AdjustToContents();
-           
-            // Salvar o arquivo em Disco
-            wb.SaveAs(@"C:\Users\marce\Documents\testesplanilhas\teste_tne.xlsx");
-            
+            ws.Columns("2-8").AdjustToContents();
+
+
+            try
+            {
+                // Salvar o arquivo em Disco
+                wb.SaveAs(@"C:\Users\marce\Documents\testesplanilhas\teste_tne.xlsx");
+
+            }
+            catch (IOException)
+            {
+
+                MensagemDeErro msnErroJaUsado = new MensagemDeErro();
+                msnErroJaUsado.ShowDialog();
+            }
             // Liberar objetos
             ws.Dispose();
             wb.Dispose();
