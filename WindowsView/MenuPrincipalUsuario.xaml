@@ -21,11 +21,11 @@
             <ColumnDefinition Width="70*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="93*"/>
+            <RowDefinition Height="80*"/>
             <RowDefinition Height="100*"/>
-            <RowDefinition Height="10*"/>
+            <RowDefinition Height="5*"/>
             <RowDefinition Height="100*"/>
-            <RowDefinition Height="10*"/>
+            <RowDefinition Height="5*"/>
             <RowDefinition Height="100*"/>
             <RowDefinition Height="24*"/>
         </Grid.RowDefinitions>
@@ -35,22 +35,22 @@
             </Image.OpacityMask>
         </Image>
         <Label Content="Menu Usuário" HorizontalAlignment="Left" Margin="52.4,23,0,0" VerticalAlignment="Top" FontSize="22" FontWeight="Bold" FontFamily="Segoe UI Semibold" Height="39" Width="150" Grid.Column="1" Grid.ColumnSpan="3"/>
-        <Button x:Name="btnVisualizarSituacaFinanceira" Margin="0.2,0.381,68.4,10.011" Background="#FF060937" Grid.Column="9" Grid.ColumnSpan="2" Click="btnVisualizarSituacaFinanceira_Click" Grid.Row="1" Grid.RowSpan="2">
+        <Button x:Name="btnVisualizarSituacaFinanceira" Margin="0.2,91,69.4,5.2" Background="#FF060937" Grid.Column="9" Grid.ColumnSpan="2" Click="btnVisualizarSituacaFinanceira_Click" Grid.RowSpan="3">
             <Image Height="61" Width="74" Source="imagem/iconeResualtadoDoMes.jpg"/>
         </Button>
-        <Button x:Name="btnAdicionarDespesa" Content="ADICIONAR DESPESA&#xA;RÁPIDA" Margin="0.6,1.2,0.8,1.8" Background="#FF060937" RenderTransformOrigin="0.441,0.884" Grid.ColumnSpan="3" Grid.Column="3" Grid.Row="1" FontSize="22" Foreground="White" FontWeight="Bold" Click="btnAdicionarDespesa_Click"/>
-        <Button x:Name="btnVisualizarDespesas" Margin="0,1.2,0.4,1.8" Background="#FF060937" Grid.Row="1" Grid.Column="6" Grid.ColumnSpan="2" HorizontalAlignment="Right" Width="120" Click="btnVisualizarDespesas_Click">
+        <Button x:Name="btnAdicionarDespesa" Content="ADICIONAR DESPESA&#xA;RÁPIDA" Margin="9.2,91,9.4,5.2" Background="#FF060937" RenderTransformOrigin="0.441,0.884" Grid.ColumnSpan="5" Grid.Column="2" FontSize="22" Foreground="White" FontWeight="Bold" Click="btnAdicionarDespesa_Click" Grid.RowSpan="3"/>
+        <Button x:Name="btnVisualizarDespesas" Margin="0,91,0.4,5.2" Background="#FF060937" Grid.Column="6" Grid.ColumnSpan="2" HorizontalAlignment="Right" Width="120" Click="btnVisualizarDespesas_Click" Grid.RowSpan="3">
             <Image Height="61" Width="74" Source="imagem/iconeVisualizar.png"/>
         </Button>
-        <Button x:Name="btnAdicionarReceita" HorizontalAlignment="Left" Margin="8.2,0,0,10.403" Width="252" Background="#FF060937" Grid.Row="3" Grid.Column="6" Grid.ColumnSpan="5" Content="ADICIONAR RECEITA&#xD;&#xA;RÁPIDA" FontSize="22" FontWeight="Bold" Foreground="#FFF7F7F7" Height="108" VerticalAlignment="Bottom" Click="btnAdicionarReceita_Click" Grid.RowSpan="2"/>
-        <Button x:Name="btnVisualizarReceitas" Margin="0.2,10.22,9.4,10.466" Background="#FF060937" Grid.Row="2" Grid.Column="5" Grid.ColumnSpan="2" Click="btnVisualizarReceitas_Click" Grid.RowSpan="3">
+        <Button x:Name="btnAdicionarReceita" HorizontalAlignment="Left" Margin="0.6,0,0,5.2" Width="250" Background="#FF060937" Grid.Row="2" Grid.Column="7" Grid.ColumnSpan="4" Content="ADICIONAR RECEITA&#xD;&#xA;RÁPIDA" FontSize="22" FontWeight="Bold" Foreground="#FFF7F7F7" Height="115" VerticalAlignment="Bottom" Click="btnAdicionarReceita_Click" Grid.RowSpan="3"/>
+        <Button x:Name="btnVisualizarReceitas" Margin="0.2,5.4,9.4,5.2" Background="#FF060937" Grid.Row="2" Grid.Column="5" Grid.ColumnSpan="2" Click="btnVisualizarReceitas_Click" Grid.RowSpan="3">
             <Image Height="61" Width="74" Source="imagem/iconeVisualizar.png"/>
         </Button>
-        <Button x:Name="btnLogout" Grid.Column="2" Margin="9.2,1.036,0,0" Grid.Row="3" Grid.ColumnSpan="2" Background="#FF060937" HorizontalAlignment="Left" Width="120" Height="107" VerticalAlignment="Top" Click="btnLogout_Click">
+        <Button x:Name="btnLogout" Grid.Column="2" Margin="9.2,0.8,0,0" Grid.Row="3" Grid.ColumnSpan="2" Background="#FF060937" HorizontalAlignment="Left" Width="120" Height="114" VerticalAlignment="Top" Click="btnLogout_Click" Grid.RowSpan="2">
             <Image Height="61" Width="74" Source="imagem/logout.png" Cursor="AppStarting"/>
         </Button>
         <TextBox x:Name="nomeUsuario" Grid.ColumnSpan="4" Grid.Column="7" HorizontalAlignment="Left" Height="23" Margin="61.6,31,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="208" Text="Nome do Usuário" Background="White" BorderBrush="White" FontWeight="Bold" FontSize="18" SelectionBrush="#FFF7F8F9" IsEnabled="False" Foreground="Red"/>
-        <Button Grid.Column="9" HorizontalAlignment="Left" Margin="0.2,10.703,0,0" Grid.Row="4" VerticalAlignment="Top" Width="122" Grid.ColumnSpan="2" Grid.RowSpan="3" Height="109" Background="#FF060937">
+        <Button x:Name="btnGerarArquivoXML" Grid.Column="9" HorizontalAlignment="Left" Margin="0.2,5.4,0,0" Grid.Row="4" VerticalAlignment="Top" Width="120" Grid.ColumnSpan="2" Grid.RowSpan="3" Height="115" Background="#FF060937" Click="btnGerarArquivoXML_Click">
             <Image Height="79" Width="80" Source="imagem/iconeExcel.png"/>
         </Button>
     </Grid>

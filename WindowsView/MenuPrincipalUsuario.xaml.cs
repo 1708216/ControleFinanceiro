@@ -56,6 +56,10 @@ namespace WindowsView
             menuReceita.ShowDialog();
         }
 
-
+        private void btnGerarArquivoXML_Click(object sender, RoutedEventArgs e)
+        {
+            MenuGerarArquivoXML menuXml = new MenuGerarArquivoXML();
+            menuXml.ShowDialog();
+        }
     }
 }

@@ -1,0 +1,17 @@
+﻿<Window x:Class="WindowsView.MenuGerarArquivoXML"
+                xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WindowsView"
+        Height="454.39" Width="751.464">
+    <Grid>
+        <DataGrid x:Name="DataGridDeDespesas" HorizontalAlignment="Left" Height="283" Margin="30,83,0,0" VerticalAlignment="Top" Width="693"  GridLinesVisibility="Horizontal" SelectedCellsChanged="DataGridDeDespesas_SelectedCellsChanged" SelectionChanged="DataGridDeDespesas_SelectionChanged" />
+
+        <Button x:Name="btnGerarPlanilhaXml" Content="Exportar" HorizontalAlignment="Left" Margin="453,384,0,0" VerticalAlignment="Top" Width="75" Height="19" RenderTransformOrigin="0.864,0.368" Click="btnGerarPlanilhaXml_Click"/>
+        <Button x:Name="btnFechar" Content="Fechar" HorizontalAlignment="Left" Margin="558,384,0,0" VerticalAlignment="Top" Width="75"/>
+        <ComboBox x:Name="ComboBoxMesesDoAno" HorizontalAlignment="Left" Margin="311,35,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="ComboBoxMesesDoAno_SelectionChanged"/>
+        <Label Content="Selecione o Mês : " HorizontalAlignment="Left" Margin="184,35,0,0" VerticalAlignment="Top" Width="122"/>
+
+    </Grid>
+</Window>
