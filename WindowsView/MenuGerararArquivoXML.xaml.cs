@@ -35,7 +35,7 @@ namespace WindowsView
         private void ComboBoxMesesDoAno_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             ControllerRegistroDespesa Cr = new ControllerRegistroDespesa();
-            String mes = ComboBoxMesesDoAno.SelectedItem as String;     
+            String mes = ComboBoxMesesDoAno.SelectedItem as String;
             DataGridDeDespesas.ItemsSource = Cr.RetornarAsDespesaDoMes(mes).ToList();
             registrosDeDespesas =  Cr.RetornarAsDespesaDoMes(mes).ToList();
         }
@@ -47,9 +47,10 @@ namespace WindowsView
 
 
             //unindo as células para inserir otítulo
+            
             ws.Cell("B2").Value = " RELATÓRIO MENSAL";
-            var range = ws.Range("B2:H2");
-            range.Merge().Style.Font.SetBold().Font.FontSize = 20;
+            var planilha = ws.Range("B2:H2");
+            planilha.Merge().Style.Font.SetBold().Font.FontSize = 20;
 
             // Cabeçalhos do Relatório
             ws.Cell("C3").Value = "ID Registro";
@@ -61,32 +62,35 @@ namespace WindowsView
 
 
             // Corpo do relatório
-             var linha = 4;
-            var rangeWithData = ws.Cell(4, 2).InsertData(registrosDeDespesas.AsEnumerable());
+            var linha = 4;
+            var tabela = ws.Cell(4, 2).InsertData(registrosDeDespesas);
+           
 
-            // Ajusto a numeração da linha
-          //  linha--;
+            //// Ajusto a numeração da linha
+             linha++;
             
-            // Crio a formatação do Tipo "Money" para o nosso "Subtotal"
-        //    ws.Range("I4:I" + linha.ToString()).Style.NumberFormat.Format = "R$ #,#.##00";
+            //// Crio a formatação do Tipo "Money" para o nosso os valores das despesas
+            // ws.Range("G:I" + linha.ToString()).Style.NumberFormat.Format = "R$ #,#.##00";
             
             // Crio uma Tabela para ativar os Filtros
-            range = ws.Range("C3:G" + linha.ToString());
-            range.CreateTable();
+            planilha = ws.Range("C3:H");
+            planilha.CreateTable();
             
             // Ajusto o tamanho da coluna com o conteúdo da coluna
-            ws.Columns("2-8").AdjustToContents();
+            ws.Columns("3-8").AdjustToContents();
 
 
             try
             {
                 // Salvar o arquivo em Disco
-                wb.SaveAs(@"C:\Users\marce\Documents\testesplanilhas\teste_tne.xlsx");
+                wb.SaveAs(@"C:\Users\marce\Documents\testesplanilhas\planilhaDeGastos.xlsx");
+
+                MensagemDeSucesso msn = new MensagemDeSucesso();
+                msn.ShowDialog();
 
             }
             catch (IOException)
             {
-
                 MensagemDeErro msnErroJaUsado = new MensagemDeErro();
                 msnErroJaUsado.ShowDialog();
             }
@@ -94,8 +98,6 @@ namespace WindowsView
             ws.Dispose();
             wb.Dispose();
 
-            MensagemDeSucesso msn = new MensagemDeSucesso();
-            msn.ShowDialog();
         }
 
         private void DataGridDeDespesas_SelectedCellsChanged(object sender, SelectedCellsChangedEventArgs e)
