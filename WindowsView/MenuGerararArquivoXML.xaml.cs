@@ -37,7 +37,8 @@ namespace WindowsView
             ControllerRegistroDespesa Cr = new ControllerRegistroDespesa();
             String mes = ComboBoxMesesDoAno.SelectedItem as String;
             DataGridDeDespesas.ItemsSource = Cr.RetornarAsDespesaDoMes(mes).ToList();
-            registrosDeDespesas =  Cr.RetornarAsDespesaDoMes(mes).ToList();
+            registrosDeDespesas = Cr.RetornarAsDespesaDoMes(mes).ToList();
+
         }
 
         private void btnGerarPlanilhaXml_Click(object sender, RoutedEventArgs e)
@@ -49,8 +50,8 @@ namespace WindowsView
             //unindo as células para inserir otítulo
             
             ws.Cell("B2").Value = " RELATÓRIO MENSAL";
-            var planilha = ws.Range("B2:H2");
-            planilha.Merge().Style.Font.SetBold().Font.FontSize = 20;
+            var range = ws.Range("B2:H2");
+            range.Merge().Style.Font.SetBold().Font.FontSize = 20;
 
             // Cabeçalhos do Relatório
             ws.Cell("C3").Value = "ID Registro";
@@ -63,22 +64,18 @@ namespace WindowsView
 
             // Corpo do relatório
             var linha = 4;
-            var tabela = ws.Cell(4, 2).InsertData(registrosDeDespesas);
+            var rangeWithData = ws.Cell(4, 2).InsertData(registrosDeDespesas.AsEnumerable());
            
-
             //// Ajusto a numeração da linha
              linha++;
+      
             
-            //// Crio a formatação do Tipo "Money" para o nosso os valores das despesas
-            // ws.Range("G:I" + linha.ToString()).Style.NumberFormat.Format = "R$ #,#.##00";
-            
-            // Crio uma Tabela para ativar os Filtros
-            planilha = ws.Range("C3:H");
-            planilha.CreateTable();
+           // Crio uma Tabela para ativar os Filtros
+            range = ws.Range("C3:H" + linha.ToString());
+            range.CreateTable();
             
             // Ajusto o tamanho da coluna com o conteúdo da coluna
             ws.Columns("3-8").AdjustToContents();
-
 
             try
             {
@@ -94,10 +91,12 @@ namespace WindowsView
                 MensagemDeErro msnErroJaUsado = new MensagemDeErro();
                 msnErroJaUsado.ShowDialog();
             }
-            // Liberar objetos
-            ws.Dispose();
-            wb.Dispose();
-
+            finally
+            {
+                // Liberar objetos
+                ws.Dispose();
+                wb.Dispose();
+            }
         }
 
         private void DataGridDeDespesas_SelectedCellsChanged(object sender, SelectedCellsChangedEventArgs e)
